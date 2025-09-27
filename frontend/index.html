@@ -305,11 +305,21 @@
         <header>
             <h1>⚖️ Legal Topology</h1>
             <p class="subtitle">Czech Civil Law Research System - Multi-layer legal reasoning with weighted semantic topology</p>
+            <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #e8f4f8 0%, #f0e6f8 100%); border-radius: 10px; border-left: 4px solid #667eea;">
+                <strong>🆕 New Features:</strong>
+                <ul style="margin: 10px 0 0 20px; color: #555;">
+                    <li><strong>Legal Concept Extraction:</strong> Automatically identifies legal terminology and relevant sections</li>
+                    <li><strong>Query Decomposition:</strong> Breaks complex questions into separate legal issues</li>
+                    <li><strong>Parallel Research:</strong> Searches each issue independently for comprehensive coverage</li>
+                    <li><strong>Adverse Possession Detection:</strong> Now correctly handles vydržení queries (§1089-§1091)</li>
+                </ul>
+            </div>
         </header>
 
         <div class="tabs">
             <button class="tab active" onclick="switchTab('query', event)">🔍 Query System</button>
             <button class="tab" onclick="switchTab('synthesize', event)">🧠 Legal Analysis</button>
+            <button class="tab" onclick="switchTab('multi-issue', event)">🎯 Multi-Issue Analysis</button>
             <button class="tab" onclick="switchTab('ingest-code', event)">📚 Ingest Civil Code</button>
             <button class="tab" onclick="switchTab('ingest-decision', event)">⚖️ Ingest Decision</button>
             <button class="tab" onclick="switchTab('stats', event)">📊 System Stats</button>
@@ -348,7 +358,7 @@
         <!-- Synthesize Panel -->
         <div id="synthesize-panel" class="panel">
             <h2>Legal Analysis with AI</h2>
-            <p style="margin-bottom: 20px; color: #666;">Get comprehensive legal analysis combining statutes and case law</p>
+            <p style="margin-bottom: 20px; color: #666;">Get comprehensive legal analysis combining statutes and case law (for simple queries)</p>
 
             <div class="input-group">
                 <label for="synth-question">Legal Question:</label>
@@ -363,6 +373,26 @@
             <button onclick="performSynthesis()">🧠 Analyze</button>
 
             <div id="synth-result"></div>
+        </div>
+
+        <!-- Multi-Issue Analysis Panel -->
+        <div id="multi-issue-panel" class="panel">
+            <h2>🎯 Multi-Issue Legal Analysis</h2>
+            <p style="margin-bottom: 20px; color: #666;">Advanced analysis that decomposes complex questions into separate legal issues and researches each thoroughly</p>
+
+            <div class="input-group">
+                <label for="multi-question">Complex Legal Question:</label>
+                <textarea id="multi-question" placeholder="Např.: V březnu 2023 jsem koupil rodinný dům za 5 milionů Kč. Prodávající mi zatajil, že dům má vážné vady. Navíc soused tvrdí, že má právo cesty přes můj pozemek na základě ústní dohody z roku 2010, kterou prý užíval 13 let. Když jsem mu odpojil jeho přípojku vody, vyhrožoval mi a poškodil mi plot. Co mám dělat?" style="min-height: 200px;"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="multi-facts">Client Facts (Optional JSON):</label>
+                <textarea id="multi-facts" placeholder='{"contract_date": "2023-03-01", "property_value": 5000000, "defect_estimate": 1500000}'></textarea>
+            </div>
+
+            <button onclick="performMultiIssue()">🎯 Analyze All Issues</button>
+
+            <div id="multi-result"></div>
         </div>
 
         <!-- Ingest Civil Code Panel -->
@@ -448,6 +478,7 @@
                 const tabMap = {
                     'query': '🔍 Query System',
                     'synthesize': '🧠 Legal Analysis',
+                    'multi-issue': '🎯 Multi-Issue Analysis',
                     'ingest-code': '📚 Ingest Civil Code',
                     'ingest-decision': '⚖️ Ingest Decision',
                     'stats': '📊 System Stats'
@@ -593,6 +624,22 @@
                     Found: ${data.metadata.statutes_found} statutes, ${data.metadata.cases_found} judicial decisions
                 </p>`;
 
+            // Show legal reasoning if available
+            if (data.legal_reasoning) {
+                html += `<div style="background: #e8f4f8; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #667eea;">
+                    <h4 style="color: #333; margin-bottom: 10px;">🔍 Legal Concept Extraction</h4>
+                    <p><strong>Extracted Terms:</strong> ${data.legal_reasoning.extracted_concepts.join(', ')}</p>
+                    <p style="margin-top: 8px;"><strong>Suggested Sections:</strong> ${data.legal_reasoning.suggested_sections.join(', ')}</p>
+                    <p style="margin-top: 8px;"><strong>Legal Area:</strong> ${data.legal_reasoning.legal_area}</p>
+                    <details style="margin-top: 10px;">
+                        <summary style="cursor: pointer; color: #667eea; font-weight: 600;">Show Enriched Query</summary>
+                        <p style="margin-top: 10px; padding: 10px; background: white; border-radius: 5px; font-family: monospace; font-size: 0.9em;">
+                            ${data.legal_reasoning.enriched_query}
+                        </p>
+                    </details>
+                </div>`;
+            }
+
             if (data.statutory_foundation.length > 0) {
                 html += '<h4 style="margin-top: 20px; color: #667eea;">📚 Statutory Foundation</h4>';
                 data.statutory_foundation.forEach(statute => {
@@ -622,6 +669,144 @@
             </div></div>`;
 
             document.getElementById('synth-result').innerHTML = html;
+        }
+
+        async function performMultiIssue() {
+            const question = document.getElementById('multi-question').value;
+            const factsText = document.getElementById('multi-facts').value.trim();
+
+            if (!question) {
+                showError('multi-result', 'Please enter a legal question');
+                return;
+            }
+
+            showLoading('multi-result');
+
+            try {
+                const body = { question, topK: 10 };
+
+                if (factsText) {
+                    try {
+                        body.facts = JSON.parse(factsText);
+                    } catch {
+                        throw new Error('Invalid JSON in facts field');
+                    }
+                }
+
+                const response = await fetch(`${API_BASE}/synthesize-multi`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Analysis failed');
+                }
+
+                displayMultiIssueResults(data);
+            } catch (error) {
+                showError('multi-result', error.message);
+            }
+        }
+
+        function displayMultiIssueResults(data) {
+            let html = `<div class="result">
+                <h3>🎯 Multi-Issue Legal Analysis</h3>`;
+
+            // Query Decomposition
+            if (data.query_decomposition) {
+                const complexity = data.query_decomposition.complexity;
+                const complexityColor = complexity === 'complex' ? '#e74c3c' : complexity === 'moderate' ? '#f39c12' : '#27ae60';
+                const complexityEmoji = complexity === 'complex' ? '🔴' : complexity === 'moderate' ? '🟡' : '🟢';
+
+                html += `
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid ${complexityColor};">
+                        <h4 style="color: #333; margin-bottom: 15px;">📋 Query Decomposition</h4>
+                        <p><strong>Complexity:</strong> ${complexityEmoji} ${complexity.toUpperCase()}</p>
+                        <p style="margin-top: 10px;"><strong>Identified ${data.query_decomposition.total_issues} Legal Issues:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 25px;">`;
+
+                data.query_decomposition.issues.forEach((issue, i) => {
+                    const priorityStars = '⭐'.repeat(6 - issue.priority);
+                    html += `<li style="margin: 8px 0;">
+                        <strong>#${i + 1}: ${issue.description}</strong><br>
+                        <span style="color: #666;">Type: ${issue.type} ${priorityStars}</span>
+                    </li>`;
+                });
+
+                html += `</ul></div>`;
+            }
+
+            // Legal Research Summary
+            if (data.legal_research) {
+                html += `<div style="background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h4 style="color: #333; margin-bottom: 15px;">🔍 Research Summary</h4>`;
+
+                data.legal_research.forEach((research, i) => {
+                    html += `<div style="margin: 10px 0; padding: 10px; background: white; border-radius: 5px;">
+                        <strong>Issue ${i + 1} (${research.issue}):</strong>
+                        ${research.statutes_found} statutes, ${research.cases_found} cases
+                        <span style="color: #667eea;"> → ${research.top_sections.join(', ')}</span>
+                    </div>`;
+                });
+
+                html += `</div>`;
+            }
+
+            // Statutory Foundation
+            if (data.statutory_foundation && data.statutory_foundation.length > 0) {
+                html += '<h4 style="margin-top: 20px; color: #667eea;">📚 Statutory Foundation (All Issues)</h4>';
+                data.statutory_foundation.forEach(statute => {
+                    const issuesBadges = statute.relevant_to_issues
+                        ? statute.relevant_to_issues.map(id => `<span style="background: #e8f4f8; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px;">${id}</span>`).join('')
+                        : '';
+
+                    html += `<div class="statute-item">
+                        <strong>${statute.section}</strong>
+                        <span class="relevance">${(statute.relevance * 100).toFixed(1)}%</span>
+                        <div style="margin-top: 5px;">${issuesBadges}</div>
+                        <p style="margin-top: 10px;">${statute.text}</p>
+                    </div>`;
+                });
+            }
+
+            // Case Law
+            if (data.case_law && data.case_law.length > 0) {
+                html += '<h4 style="margin-top: 20px; color: #764ba2;">⚖️ Case Law (All Issues)</h4>';
+                data.case_law.forEach(caseItem => {
+                    const issuesBadges = caseItem.relevant_to_issues
+                        ? caseItem.relevant_to_issues.map(id => `<span style="background: #f0e6f8; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px;">${id}</span>`).join('')
+                        : '';
+
+                    html += `<div class="case-item">
+                        <strong>${caseItem.case_id}</strong>
+                        <span class="weight">Weight: ${caseItem.weight.toFixed(1)}</span>
+                        <span class="relevance">${(caseItem.relevance * 100).toFixed(1)}%</span>
+                        <div style="margin-top: 5px;">${issuesBadges}</div>
+                        <p style="margin-top: 10px;">${caseItem.text}</p>
+                    </div>`;
+                });
+            }
+
+            // AI Analysis
+            html += `<div class="analysis">
+                <h4 style="margin-bottom: 15px; color: #333;">📝 Comprehensive AI Analysis</h4>
+                <div style="white-space: pre-wrap; line-height: 1.8;">${data.analysis}</div>
+            </div>`;
+
+            // Metadata
+            if (data.metadata) {
+                html += `<div style="margin-top: 20px; padding: 15px; background: #f0f4ff; border-radius: 8px; color: #666; font-size: 0.9em;">
+                    <strong>Research Metadata:</strong>
+                    ${data.metadata.total_statutes} unique statutes found, ${data.metadata.total_cases} unique cases,
+                    Model: ${data.metadata.model}
+                </div>`;
+            }
+
+            html += '</div>';
+            document.getElementById('multi-result').innerHTML = html;
         }
 
         async function ingestCivilCode() {

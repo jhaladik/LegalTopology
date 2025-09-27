@@ -1,0 +1,384 @@
+{
+  "test_suite_version": "1.0",
+  "created": "2025-09-27",
+  "description": "Comprehensive test suite for topology-native legal reasoning",
+
+  "single_issue_tests": [
+    {
+      "id": "SI-01",
+      "name": "Unauthorized Subletting - Enrichment",
+      "category": "unjust_enrichment",
+      "question": "Pronajímám byt za 20,000 Kč. Zjistil jsem, že nájemce ho bez mého souhlasu podnajímá za 40,000 Kč. Můžu požadovat rozdíl?",
+      "expected_primary_statute": "§2991",
+      "expected_doctrines": ["unjust_enrichment", "lease"],
+      "expected_NOT_found": ["profit_sharing", "partnership"],
+      "key_facts": {
+        "unauthorized": true,
+        "profit_differential": "20,000 Kč",
+        "legal_basis": "none"
+      },
+      "correct_answer_includes": ["bezdůvodné obohacení", "vydání prospěchu", "§2991", "neoprávněný zisk"]
+    },
+    {
+      "id": "SI-02",
+      "name": "Partnership Profit Distribution",
+      "category": "partnership",
+      "question": "S partnerem podnikáme. Letos jsme měli zisk 500,000 Kč. Jak se má rozdělit, když smlouva neříká nic o podílech?",
+      "expected_primary_statute": "§2728",
+      "expected_doctrines": ["profit_sharing_partnership"],
+      "expected_NOT_found": ["unjust_enrichment"],
+      "key_facts": {
+        "unauthorized": false,
+        "consensual": true,
+        "profit_amount": "500,000 Kč"
+      },
+      "correct_answer_includes": ["společníci", "rovným dílem", "§2728", "podíl na zisku"]
+    },
+    {
+      "id": "SI-03",
+      "name": "Adverse Possession - Time Element",
+      "category": "adverse_possession",
+      "question": "Soused používá mou cestu přes pozemek už 12 let bez mého souhlasu. Může tvrdit, že má právo cesty?",
+      "expected_primary_statute": "§1089",
+      "expected_doctrines": ["adverse_possession"],
+      "expected_NOT_found": ["lease", "profit_sharing"],
+      "key_facts": {
+        "time_period": "12 let",
+        "continuous_use": true,
+        "without_permission": true
+      },
+      "correct_answer_includes": ["vydržení", "služebnost", "§1089", "dobrou víru"]
+    },
+    {
+      "id": "SI-04",
+      "name": "Simple Lease Termination",
+      "category": "lease_termination",
+      "question": "Nájemce mi neplatí nájem už 3 měsíce. Můžu vypovědět nájem okamžitě?",
+      "expected_primary_statute": "§2232",
+      "expected_doctrines": ["lease"],
+      "expected_NOT_found": ["enrichment", "adverse_possession"],
+      "key_facts": {
+        "breach": "non-payment",
+        "duration": "3 měsíce"
+      },
+      "correct_answer_includes": ["výpověď", "bez výpovědní doby", "§2232", "závažné porušení"]
+    },
+    {
+      "id": "SI-05",
+      "name": "Contract Defects - Withdrawal",
+      "category": "contract_law",
+      "question": "Koupil jsem auto za 300,000 Kč. Po týdnu jsem zjistil závažnou vadu, o které prodávající věděl, ale neřekl mi to. Můžu odstoupit?",
+      "expected_primary_statute": "§2106",
+      "expected_doctrines": ["contract_defects"],
+      "expected_NOT_found": ["enrichment", "lease"],
+      "key_facts": {
+        "hidden_defect": true,
+        "seller_knew": true
+      },
+      "correct_answer_includes": ["odstoupení", "vada", "§2106", "kupní smlouva"]
+    },
+    {
+      "id": "SI-06",
+      "name": "Prescription Period",
+      "category": "prescription",
+      "question": "Půjčil jsem kolegovi 100,000 Kč před 5 lety. Nic jsem nedělal. Můžu ještě požadovat vrácení?",
+      "expected_primary_statute": "§609",
+      "expected_doctrines": ["prescription"],
+      "expected_NOT_found": ["enrichment", "adverse_possession"],
+      "key_facts": {
+        "time_elapsed": "5 let",
+        "no_action": true
+      },
+      "correct_answer_includes": ["promlčení", "§609", "tříletá lhůta"]
+    },
+    {
+      "id": "SI-07",
+      "name": "Dishonest Possessor - Property Use",
+      "category": "property_law",
+      "question": "Někdo neoprávněně užívá můj byt už rok. Můžu požadovat náhradu za užívání?",
+      "expected_primary_statute": "§1000",
+      "expected_doctrines": ["unjust_enrichment", "property"],
+      "expected_NOT_found": ["lease", "partnership"],
+      "key_facts": {
+        "unauthorized_use": true,
+        "duration": "rok",
+        "property": "byt"
+      },
+      "correct_answer_includes": ["nepoctivý držitel", "vydání užitku", "§1000"]
+    },
+    {
+      "id": "SI-08",
+      "name": "Silent Partnership",
+      "category": "partnership",
+      "question": "Vložil jsem 500,000 Kč do podnikání přítele jako tichý společník. Podnik má zisk 200,000 Kč. Kolik mi náleží?",
+      "expected_primary_statute": "§2751",
+      "expected_doctrines": ["silent_partnership"],
+      "expected_NOT_found": ["enrichment", "lease"],
+      "key_facts": {
+        "investment": "500,000 Kč",
+        "silent_partner": true
+      },
+      "correct_answer_includes": ["tichý společník", "§2751", "podíl na zisku"]
+    },
+    {
+      "id": "SI-09",
+      "name": "Rent Increase Request",
+      "category": "lease",
+      "question": "Chci zvýšit nájem o 30%. Může nájemce odmítnout?",
+      "expected_primary_statute": "§2249",
+      "expected_doctrines": ["lease"],
+      "expected_NOT_found": ["enrichment", "partnership"],
+      "key_facts": {
+        "increase": "30%",
+        "tenant_rights": true
+      },
+      "correct_answer_includes": ["zvýšení nájemného", "§2249", "20 procent", "srovnatelné nájemné"]
+    },
+    {
+      "id": "SI-10",
+      "name": "Improper Gain Prohibition",
+      "category": "unjust_enrichment",
+      "question": "Zprostředkovatel adoptovala dítě a požaduje 100,000 Kč 'provizi'. Je to legální?",
+      "expected_primary_statute": "§798",
+      "expected_doctrines": ["unjust_enrichment"],
+      "expected_NOT_found": ["partnership", "lease"],
+      "key_facts": {
+        "adoption": true,
+        "improper_gain": true
+      },
+      "correct_answer_includes": ["nepatřičný zisk", "§798", "osvojení"]
+    }
+  ],
+
+  "multi_issue_tests": [
+    {
+      "id": "MI-01",
+      "name": "Airbnb Subletting - Complex",
+      "category": "multi_doctrine",
+      "question": "Pronajímám byt v Praze za 25,000 Kč měsíčně. Po 6 měsících jsem zjistil, že nájemce byt bez mého souhlasu podnajímá turistům přes Airbnb za 3,000 Kč/noc (obsazenost cca 20 dní měsíčně = 60,000 Kč). Sousedi si stěžují na hluk, SVJ mi hrozí pokutou 50,000 Kč za porušení stanov. Nájemce tvrdí, že pouze 'příležitostně ubytovává kamarády' a že mu dávají jen 'příspěvek na náklady'. Mám kauci 50,000 Kč. Chci: buď okamžitě ukončit nájem, nebo ať mi nájemce platí vyšší nájem a podíl ze zisku z Airbnb.",
+      "expected_issues": [
+        {
+          "issue": "unauthorized_subletting",
+          "statute": "§2276",
+          "priority": 1
+        },
+        {
+          "issue": "unjust_enrichment",
+          "statute": "§2991",
+          "priority": 1,
+          "note": "Nájemce profituje 35k Kč/měsíc bez práva"
+        },
+        {
+          "issue": "lease_termination",
+          "statute": "§2232",
+          "priority": 1
+        },
+        {
+          "issue": "security_deposit",
+          "statute": "§2254",
+          "priority": 2
+        },
+        {
+          "issue": "noise_nuisance",
+          "statute": "§1013",
+          "priority": 3
+        }
+      ],
+      "competing_doctrines": {
+        "profit_handling": {
+          "wrong": "profit_sharing (§2728)",
+          "correct": "unjust_enrichment (§2991)",
+          "reason": "Profit bez souhlasu → enrichment, ne partnership"
+        }
+      },
+      "strategic_options": [
+        "Immediate termination + deposit claim",
+        "Unjust enrichment claim for 35k/month difference",
+        "Renegotiate rent + profit share (unlikely to succeed)"
+      ],
+      "correct_answer_includes": ["bezdůvodné obohacení", "§2991", "§2276", "výpověď", "vydání prospěchu"]
+    },
+    {
+      "id": "MI-02",
+      "name": "Property Defects + Adverse Possession",
+      "category": "multi_doctrine",
+      "question": "Koupil jsem dům s vadami za 5M. Soused chodí přes můj pozemek 13 let. Co mám dělat?",
+      "expected_issues": [
+        {
+          "issue": "contract_defects",
+          "statute": "§2106",
+          "priority": 1
+        },
+        {
+          "issue": "adverse_possession",
+          "statute": "§1089",
+          "priority": 1
+        }
+      ],
+      "competing_doctrines": {
+        "time_element": {
+          "correct": "vydržení (13 let > 10 let threshold)",
+          "note": "Soused may have acquired right of way"
+        }
+      },
+      "correct_answer_includes": ["vady", "§2106", "vydržení", "§1089", "13 let"]
+    },
+    {
+      "id": "MI-03",
+      "name": "Partnership + Unauthorized Use",
+      "category": "doctrine_conflict",
+      "question": "S kolegou podnikáme společně. Zjistil jsem, že bez mého vědomí používá firemní auto na soukromé účely a pronajímá ho přes platformu za 5,000 Kč/měsíc. Jak rozdělit zisk z podnikání a co s autem?",
+      "expected_issues": [
+        {
+          "issue": "partnership_profit",
+          "statute": "§2728",
+          "priority": 1,
+          "note": "For legitimate business profit"
+        },
+        {
+          "issue": "unauthorized_use",
+          "statute": "§3012",
+          "priority": 1,
+          "note": "For car rental income"
+        }
+      ],
+      "competing_doctrines": {
+        "profit_from_car": {
+          "wrong": "part of partnership profit (§2728)",
+          "correct": "unauthorized enrichment (§3012)",
+          "reason": "Car rental bez souhlasu = separate from business profit"
+        }
+      },
+      "correct_answer_includes": ["§2728", "společníci", "§3012", "upotřebení cizí věci"]
+    },
+    {
+      "id": "MI-04",
+      "name": "Lease Non-Payment + Time Lapse",
+      "category": "prescription",
+      "question": "Nájemce mi nedluží 50,000 Kč za nájemné z roku 2020. Nic jsem nedělal. Teď ho chci vystěhovat a vymáhat dluh. Je to možné?",
+      "expected_issues": [
+        {
+          "issue": "lease_termination",
+          "statute": "§2232",
+          "priority": 1
+        },
+        {
+          "issue": "prescription",
+          "statute": "§609",
+          "priority": 1,
+          "note": "5 let elapsed → likely prescribed"
+        }
+      ],
+      "competing_doctrines": {
+        "debt_recovery": {
+          "issue": "Termination YES, debt recovery MAYBE NO (prescription)",
+          "statutes": ["§2232 (termination)", "§609 (prescription)"]
+        }
+      },
+      "correct_answer_includes": ["výpověď", "§2232", "promlčení", "§609"]
+    },
+    {
+      "id": "MI-05",
+      "name": "Defective Purchase + Enrichment",
+      "category": "doctrine_conflict",
+      "question": "Koupil jsem stroj za 1M s vadou. Prodávající o vadě věděl. Přesto jsem stroj používal rok a vydělal 500k. Chci odstoupit a vrátit stroj. Musím vrátit i zisk?",
+      "expected_issues": [
+        {
+          "issue": "contract_defects",
+          "statute": "§2106",
+          "priority": 1
+        },
+        {
+          "issue": "enrichment_good_faith",
+          "statute": "§3001",
+          "priority": 2,
+          "note": "Buyer used defective machine in good faith"
+        }
+      ],
+      "competing_doctrines": {
+        "profit_retention": {
+          "question": "Can buyer keep 500k profit?",
+          "depends_on": "good faith (§3001) vs. bad faith (§3004)",
+          "note": "If buyer didn't know defect → keep profit"
+        }
+      },
+      "correct_answer_includes": ["odstoupení", "§2106", "bezdůvodné obohacení", "dobrá víra"]
+    }
+  ],
+
+  "topology_stress_tests": [
+    {
+      "id": "TS-01",
+      "name": "Ambiguous Profit Context",
+      "question": "Vydělal jsem 100,000 Kč. Musím se o to podělit?",
+      "expected_behavior": "System should ask for more context OR present multiple doctrines",
+      "possible_doctrines": ["partnership", "enrichment", "employment"],
+      "note": "Tests system's ability to detect insufficient context"
+    },
+    {
+      "id": "TS-02",
+      "name": "Keyword Collision - Souhlas",
+      "question": "Partner souhlasil s rozdělením zisku 60-40. Je to platné?",
+      "expected_behavior": "Should NOT trigger 'unauthorized' pattern despite 'souhlas' keyword",
+      "correct_doctrine": "partnership (consensual)",
+      "note": "Tests false positive avoidance"
+    },
+    {
+      "id": "TS-03",
+      "name": "Multiple Time Elements",
+      "question": "Pronajímám 10 let. Nájemce neplatí 4 měsíce. Soused používá pozemek 8 let.",
+      "expected_behavior": "Distinguish lease duration vs. prescription vs. adverse possession time",
+      "note": "Tests time element disambiguation"
+    }
+  ],
+
+  "expected_failure_modes": [
+    {
+      "scenario": "Very rare doctrine not in corpus",
+      "example": "Specific maritime law question",
+      "expected": "System finds general contract law, flags low confidence"
+    },
+    {
+      "scenario": "Recent law change (2024+)",
+      "example": "Amendment not yet ingested",
+      "expected": "System cites old version, warns about potential updates"
+    },
+    {
+      "scenario": "Pure procedural question",
+      "example": "How to file with district court?",
+      "expected": "System provides substantive law, states procedure is separate"
+    },
+    {
+      "scenario": "Economic calculation needed",
+      "example": "What's the NPV of pursuing claim?",
+      "expected": "System finds legal basis, doesn't compute economics"
+    }
+  ],
+
+  "evaluation_criteria": {
+    "doctrine_identification": {
+      "excellent": "Identifies correct primary doctrine + competing doctrines with reasoning",
+      "good": "Identifies correct primary doctrine",
+      "acceptable": "Identifies relevant doctrines, may miss secondary",
+      "poor": "Wrong primary doctrine"
+    },
+    "statute_retrieval": {
+      "excellent": "Top 3 results include expected statute",
+      "good": "Top 5 results include expected statute",
+      "acceptable": "Top 10 results include expected statute",
+      "poor": "Expected statute not in top 10"
+    },
+    "doctrine_conflict_handling": {
+      "excellent": "Identifies conflict, explains why one applies over another",
+      "good": "Identifies conflict, mentions both",
+      "acceptable": "Finds both doctrines but doesn't flag conflict",
+      "poor": "Chooses wrong doctrine without mentioning alternative"
+    },
+    "topological_transparency": {
+      "excellent": "Explains how vector context shaped results",
+      "good": "Shows which patterns triggered search modifications",
+      "acceptable": "Returns results without topology explanation",
+      "poor": "No indication of how topology was used"
+    }
+  }
+}

@@ -111,17 +111,17 @@ export function inferQueryContext(question: string): string | null {
 
   if ((lowerQ.includes('syn') || lowerQ.includes('potomci') || lowerQ.includes('potomk')) &&
       (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') ||
-       lowerQ.includes('alimenty') || lowerQ.match(/v[yi][zž]ivn/))) {
+       lowerQ.includes('alimenty') || lowerQ.match(/v[yi].ivn/))) {
     return 'parent_child_support';
   }
 
   if ((lowerQ.includes('dítě') || lowerQ.includes('dite') || lowerQ.includes('rodič') || lowerQ.includes('rodic')) &&
-      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi][zž]ivn/))) {
+      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi].ivn/))) {
     return 'child_support';
   }
 
   if ((lowerQ.includes('manžel') || lowerQ.includes('manzel') || lowerQ.includes('rozvedený') || lowerQ.includes('rozveden')) &&
-      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi][zž]ivn/))) {
+      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi].ivn/))) {
     return 'spousal_support';
   }
 

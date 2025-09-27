@@ -50,16 +50,9 @@ export async function queryTopology(
     const inferredContext = inferQueryContext(question);
 
     const queryOptions: any = {
-      topK: inferredContext ? topK * 2 : topK,
+      topK: topK,
       returnMetadata: true
     };
-
-    if (filter || inferredContext) {
-      queryOptions.filter = {
-        ...filter,
-        ...(inferredContext ? { legal_framework: inferredContext } : {})
-      };
-    }
 
     console.log('Query context inferred:', inferredContext);
     console.log('Applied filter:', queryOptions.filter);

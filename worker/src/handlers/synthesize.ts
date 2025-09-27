@@ -1,5 +1,6 @@
 import { Env } from '../embedding/openai-client';
 import { inferQueryContext } from '../classification/legal-classifier';
+import { extractLegalConcepts } from '../reasoning/legal-concept-extractor';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -33,28 +34,45 @@ export async function synthesizeInterpretation(
       );
     }
 
+    const concepts = await extractLegalConcepts(question, env);
+
+    console.log('[Synthesis] Original question:', question);
+    console.log('[Synthesis] Enriched query:', concepts.enriched_query);
+    console.log('[Synthesis] Legal terms:', concepts.legal_terms);
+    console.log('[Synthesis] Suggested sections:', concepts.relevant_sections);
+
     const { getEmbedding } = await import('../embedding/openai-client');
-    const queryEmbedding = await getEmbedding(question, env);
+    const queryEmbedding = await getEmbedding(concepts.enriched_query, env);
 
     const inferredContext = inferQueryContext(question);
 
     const queryOptions: any = {
-      topK: inferredContext ? topK * 2 : topK,
+      topK: inferredContext ? topK * 3 : topK,
       returnMetadata: true
     };
 
     if (inferredContext) {
-      queryOptions.filter = { legal_framework: inferredContext };
-      console.log('Synthesis using context filter:', inferredContext);
+      console.log('Synthesis context inferred (filter disabled - Vectorize issue):', inferredContext);
     }
 
     const results = await env.VECTORIZE.query(queryEmbedding, queryOptions);
 
-    const statutes = results.matches
+    let matches = results.matches;
+
+    if (inferredContext) {
+      matches = matches.map((m: any) => {
+        if (m.metadata?.legal_framework === inferredContext) {
+          return { ...m, score: m.score * 1.5 };
+        }
+        return m;
+      }).sort((a: any, b: any) => b.score - a.score);
+    }
+
+    const statutes = matches
       .filter((m: any) => m.metadata?.type === 'statute' || m.metadata?.type === 'civil_code')
       .slice(0, 5);
 
-    const cases = results.matches
+    const cases = matches
       .filter((m: any) => m.metadata?.type === 'judicial')
       .slice(0, 5);
 
@@ -149,6 +167,12 @@ Provide a comprehensive legal analysis.`;
       JSON.stringify({
         question,
         facts,
+        legal_reasoning: {
+          extracted_concepts: concepts.legal_terms,
+          suggested_sections: concepts.relevant_sections,
+          legal_area: concepts.legal_area,
+          enriched_query: concepts.enriched_query
+        },
         statutory_foundation: statutes.map((s: any) => ({
           section: `§${s.metadata.section}`,
           text: s.metadata.text,

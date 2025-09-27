@@ -25,47 +25,58 @@ export async function ingestDecision(
   }
 
   try {
-    const formData = await request.formData();
-    const file = formData.get('file') as File | null;
-    const textContent = formData.get('text') as string | null;
-    const metadataJson = formData.get('metadata') as string | null;
-
+    const contentType = request.headers.get('content-type') || '';
     let decisionText: string;
+    let metadata: DecisionMetadata;
+    let parsed: any;
+    let file: File | null = null;
 
-    if (textContent) {
-      decisionText = textContent;
-    } else if (file) {
-      const pdfBuffer = await file.arrayBuffer();
-      decisionText = await extractPDFText(pdfBuffer);
+    if (contentType.includes('application/json')) {
+      const body = await request.json() as { text: string; metadata: DecisionMetadata };
+      decisionText = body.text;
+      parsed = parseDecision(decisionText);
+      metadata = { ...body.metadata, ...parsed };
     } else {
-      return new Response('File or text required', { status: 400 });
-    }
+      const formData = await request.formData();
+      file = formData.get('file') as File | null;
+      const textContent = formData.get('text') as string | null;
+      const metadataJson = formData.get('metadata') as string | null;
 
-    const parsed = parseDecision(decisionText);
+      if (textContent) {
+        decisionText = textContent;
+      } else if (file) {
+        const pdfBuffer = await file.arrayBuffer();
+        decisionText = await extractPDFText(pdfBuffer);
+      } else {
+        return new Response('File or text required', { status: 400 });
+      }
 
-    const metadata: DecisionMetadata = metadataJson
-      ? { ...JSON.parse(metadataJson), ...parsed }
-      : {
-          case_id: parsed.case_id,
-          court: parsed.court,
-          date: parsed.date,
-          is_binding: true,
-          citation_count: 0
-        };
+      parsed = parseDecision(decisionText);
 
-    if (file) {
-      const pdfBuffer = await file.arrayBuffer();
-      await env.DOCUMENTS.put(
-        `decisions/${metadata.case_id.replace(/\s+/g, '_')}.pdf`,
-        pdfBuffer,
-        {
-          customMetadata: {
-            case_id: metadata.case_id,
-            court: metadata.court,
-            date: metadata.date
-          } as any
+      metadata = metadataJson
+        ? { ...JSON.parse(metadataJson), ...parsed }
+        : {
+            case_id: parsed.case_id,
+            court: parsed.court,
+            date: parsed.date,
+            is_binding: true,
+            citation_count: 0
+          };
+
+        if (file) {
+          const pdfBuffer = await file.arrayBuffer();
+          await env.DOCUMENTS.put(
+            `decisions/${metadata.case_id.replace(/\s+/g, '_')}.pdf`,
+            pdfBuffer,
+            {
+              customMetadata: {
+                case_id: metadata.case_id,
+                court: metadata.court,
+                date: metadata.date
+              } as any
+            }
+          );
         }
-      );
     }
 
     const weight = calculateDecisionWeight(metadata);

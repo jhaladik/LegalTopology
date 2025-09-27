@@ -1,0 +1,185 @@
+{
+  "test_case": "Airbnb Unauthorized Sublease",
+  "question": "Pronajímám byt v Praze za 25,000 Kč měsíčně. Po 6 měsících jsem zjistil, že nájemce byt bez mého souhlasu podnajímá turistům přes Airbnb za 3,000 Kč/noc (obsazenost cca 20 dní měsíčně = 60,000 Kč). Sousedi si stěžují na hluk, SVJ mi hrozí pokutou 50,000 Kč za porušení stanov. Nájemce tvrdí, že pouze 'příležitostně ubytovává kamarády' a že mu dávají jen 'příspěvek na náklady'. Mám kauci 50,000 Kč. Chci: buď okamžitě ukončit nájem, nebo ať mi nájemce platí vyšší nájem a podíl ze zisku z Airbnb.",
+
+  "performance": {
+    "response_time_seconds": 47,
+    "model": "gpt-4o",
+    "max_tokens": 16000,
+    "complexity": "complex"
+  },
+
+  "query_decomposition": {
+    "total_issues": 5,
+    "issues": [
+      {
+        "id": "unauthorized_subletting",
+        "type": "lease",
+        "description": "Unauthorized subletting of the apartment by the tenant without landlord's consent",
+        "priority": 1
+      },
+      {
+        "id": "noise_complaints",
+        "type": "nuisance",
+        "description": "Noise complaints from neighbors due to tenant's activities",
+        "priority": 2
+      },
+      {
+        "id": "termination_of_lease",
+        "type": "lease",
+        "description": "Possibility of terminating the lease due to tenant's breach of contract",
+        "priority": 1
+      },
+      {
+        "id": "security_deposit",
+        "type": "lease",
+        "description": "Use of security deposit in case of lease termination or damages",
+        "priority": 3
+      },
+      {
+        "id": "profit_sharing",
+        "type": "lease",
+        "description": "Negotiating higher rent and profit sharing from Airbnb income",
+        "priority": 4
+      }
+    ]
+  },
+
+  "research_quality": {
+    "total_statutes_found": 23,
+    "total_cases_found": 3,
+    "per_issue": [
+      {"issue": "unauthorized_subletting", "statutes": 5, "cases": 1, "top_sections": ["§2275", "§2220", "§2273"]},
+      {"issue": "noise_complaints", "statutes": 5, "cases": 0, "top_sections": ["§1182", "§1013", "§2259"]},
+      {"issue": "termination_of_lease", "statutes": 5, "cases": 2, "top_sections": ["§2278", "§2277", "§2232"]},
+      {"issue": "security_deposit", "statutes": 5, "cases": 0, "top_sections": ["§2254", "§2256", "§2264"]},
+      {"issue": "profit_sharing", "statutes": 5, "cases": 0, "top_sections": ["§730", "§2752", "§2728"]}
+    ]
+  },
+
+  "key_findings": {
+    "primary_statute": "§2275 - Unauthorized subletting requires written consent",
+    "termination_basis": "§2232 - Severe breach allows termination without notice",
+    "security_deposit": "§2254 - Can be used for damages and unpaid rent",
+    "unjust_enrichment": "Not directly addressed - system found profit sharing statutes instead"
+  },
+
+  "strengths": [
+    "✅ Correctly decomposed complex question into 5 separate legal issues",
+    "✅ Found highly relevant statutes for each issue (§2275, §2232, §2254)",
+    "✅ Identified case law for unauthorized subletting and lease termination",
+    "✅ Provided practical recommendations per issue",
+    "✅ Response time acceptable (~47 seconds)",
+    "✅ Proper prioritization of issues"
+  ],
+
+  "limitations": [
+    "❌ CRITICAL: Missing §2991+ unjust enrichment analysis for tenant's profit",
+    "❌ Profit sharing issue (#5) focused on partnership law (§730, §2752) not restitution",
+    "❌ Analysis doesn't quantify tenant's unjust enrichment (40k Kč/month excess profit)",
+    "❌ No case law found for noise complaints, SVJ penalties, or profit issues",
+    "❌ Missing strategic synthesis - which option to prioritize: termination vs. renegotiation?",
+    "❌ No cost-benefit analysis (50k deposit vs. 50k SVJ fine vs. ongoing profit loss)",
+    "❌ Encoding issues in API response (Czech characters garbled)",
+    "❌ Analysis doesn't address SVJ penalty liability and mitigation strategies",
+    "❌ No discussion of burden of proof for Airbnb income",
+    "❌ Missing procedural steps timeline"
+  ],
+
+  "critical_gaps": {
+    "unjust_enrichment": {
+      "expected": "§2991-2992 bezdůvodné obohacení - tenant profiting 35k Kč/month without right",
+      "actual": "System searched for profit sharing (partnership law), not restitution",
+      "impact": "Client doesn't know they can claim tenant's excess profit, not just terminate"
+    },
+    "strategic_synthesis": {
+      "expected": "Compare 3 options: (1) immediate termination + deposit, (2) renegotiation + profit share, (3) unjust enrichment claim",
+      "actual": "Analysis treats issues separately, no overall strategy or recommendation",
+      "impact": "Client still doesn't know WHICH path to choose"
+    },
+    "business_impact": {
+      "expected": "Calculate: deposit 50k vs SVJ fine 50k vs ongoing loss 35k/month vs litigation costs",
+      "actual": "No economic analysis provided",
+      "impact": "Client can't make informed business decision"
+    }
+  },
+
+  "client_presentation_readiness": {
+    "for_demo": {
+      "rating": "7/10",
+      "pros": [
+        "Impressive query decomposition demonstration",
+        "Good statute retrieval accuracy",
+        "Professional structure with issue breakdown",
+        "Fast enough for live demo"
+      ],
+      "cons": [
+        "Missing critical unjust enrichment angle - makes lawyer look incomplete",
+        "No clear strategic recommendation - client will ask 'but what should I DO?'",
+        "Encoding issues look unprofessional"
+      ]
+    },
+    "for_production": {
+      "rating": "5/10",
+      "blockers": [
+        "Unjust enrichment gap is serious omission",
+        "No strategic synthesis = incomplete advice",
+        "Encoding issues must be fixed",
+        "Need economic analysis module"
+      ]
+    }
+  },
+
+  "recommended_improvements": {
+    "immediate": [
+      "1. Fix UTF-8 encoding in API responses",
+      "2. Add unjust enrichment detection: if query mentions profit/income/obohacení → force search §2991+",
+      "3. Add strategic synthesis section in prompt: 'After analyzing all issues, provide OVERALL RECOMMENDATION with prioritized action plan'"
+    ],
+    "short_term": [
+      "4. Economic calculator: extract amounts from query, compute scenarios",
+      "5. Case law boost for common scenarios (subletting has only 1 case, need 3-5)",
+      "6. Add SVJ/HOA-specific statute search when 'SVJ' or 'společenství vlastníků' mentioned"
+    ],
+    "medium_term": [
+      "7. Reasoning chain visibility: show why each issue was identified",
+      "8. Confidence scoring per recommendation",
+      "9. Procedure timeline generator",
+      "10. Citation network: show which cases cite which statutes"
+    ]
+  },
+
+  "clear_limitations_for_presentation": [
+    "✋ SYSTEM BOUNDARIES - Be upfront with clients:",
+    "",
+    "1. SCOPE: Civil law only (contracts, property, torts). No criminal, tax, or administrative law.",
+    "",
+    "2. CASE LAW COVERAGE: ~1000 Supreme Court decisions. District/regional courts not included. May miss niche precedents.",
+    "",
+    "3. STRATEGIC SYNTHESIS: System analyzes issues separately. Final strategy requires human lawyer judgment on business priorities.",
+    "",
+    "4. ECONOMIC ANALYSIS: System doesn't calculate cost-benefit. Lawyer must add financial assessment.",
+    "",
+    "5. SPECIFIC DOCTRINES: Some advanced concepts (unjust enrichment, prescription periods) need targeted prompting. Not auto-detected.",
+    "",
+    "6. PROCEDURAL GUIDANCE: System provides substantive law. Procedural steps (filing deadlines, court procedures) need separate lookup.",
+    "",
+    "7. UPDATE FREQUENCY: Civil Code and case law current as of ingestion date. Recent amendments may not be reflected.",
+    "",
+    "8. CONFIDENCE: No confidence scores yet. All recommendations require lawyer verification.",
+    "",
+    "VALUE PROPOSITION:",
+    "✅ Cuts research time from 2-3 hours to 5 minutes",
+    "✅ Never misses obvious statutes (human fatigue factor eliminated)",
+    "✅ Parallel issue analysis (human does sequential)",
+    "✅ Finds relevant case law automatically",
+    "✅ Provides structured starting point for analysis",
+    "",
+    "⚠️ BUT: Lawyer must still:",
+    "- Verify all citations",
+    "- Add strategic business judgment",
+    "- Calculate economics",
+    "- Check for recent developments",
+    "- Apply professional experience to edge cases"
+  ]
+}

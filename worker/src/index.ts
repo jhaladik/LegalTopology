@@ -3,7 +3,11 @@ import { ingestDecision } from './handlers/ingest-decision';
 import { queryTopology } from './handlers/query';
 import { recomputeWeights } from './handlers/recompute-weights';
 import { synthesizeInterpretation } from './handlers/synthesize';
+import { synthesizeMultiIssue } from './handlers/synthesize-multi';
 import { migrateClassifications } from './handlers/migrate-classifications';
+import { exploreTopology } from './handlers/explore-topology';
+import { queryTopology as queryTopologyV2 } from './handlers/query-topology';
+import { synthesizeTopology } from './handlers/synthesize-topology';
 import { QueueService } from './services/queue-service';
 import { ProcessorService } from './services/processor-service';
 
@@ -45,6 +49,9 @@ export default {
         case '/api/synthesize':
           return await synthesizeInterpretation(request, env, ctx);
 
+        case '/api/synthesize-multi':
+          return await synthesizeMultiIssue(request, env, ctx);
+
         case '/api/weights/recompute':
           return await recomputeWeights(request, env, ctx);
 
@@ -62,6 +69,15 @@ export default {
 
         case '/api/migrate/classifications':
           return await migrateClassifications(request, env, ctx);
+
+        case '/api/topology/explore':
+          return await exploreTopology(request, env, ctx);
+
+        case '/api/topology/query':
+          return await queryTopologyV2(request, env, ctx);
+
+        case '/api/topology/synthesize':
+          return await synthesizeTopology(request, env, ctx);
 
         case '/api/health':
           return new Response(

@@ -1,0 +1,560 @@
+Právní věta: 
+Započtení není způsobem či formou (s)plnění dluhu, takže pro účely posouzení, zda nejde o neúčinný  právní úkon ve smyslu § 111 insolvenčního zákona, započtení nemůže (objektivně vzato) odporovat  pravidlu vyjádřenému v odstavci 1 větě druhé tohoto ustanovení. Započtení, k němuž došlo poté, co  nastaly účinky spojené se zahájením insolvenčního řízení na majetek dlužníka, není ani úkonem  vedoucím k „nikoli zanedbatelnému zmenšení majetku náležejícího do majetkové podstaty dlužníka“.  Jestliže právní úkon, jímž dlužník poté, kdy nastaly účinky spojené se zahájením insolvenčního  řízení, započetl svou pohledávku proti pohledávce věřitele, nevedl k podstatné změně ve skladbě,  využití nebo určení majetku, který může náležet do jeho majetkové podstaty, pak nejde o neúčinný  právní úkon bez zřetele k tomu, že současně nešlo o právní úkon ve smyslu § 111 odst. 2  insolvenčního zákona.
+
+Soud: Nejvyšší soud
+
+Spisová značka: 29 ICdo 85/2017
+
+Datum rozhodnutí: 28.11.2018
+
+Typ rozhodnutí: ROZSUDEK
+
+
+Heslo: Započtení pohledávky, Insolvenční řízení, Odporovatelnost
+
+Dotčené předpisy: § 111 odst. 1 a 2 IZ., § 140 IZ.
+
+Kategorie rozhodnutí: A
+
+
+Publikováno ve sbírce pod číslem: 116 / 2019
+
+
+
+	KSHK 41 INS 22280/2013					      INS 
+2392/2010 
+41 ICm 298/2015
+ 29 ICdo 85/2017-164
+ 
+
+
+
+ČESKÁ REPUBLIKA
+ROZSUDEK
+JMÉNEM REPUBLIKY	 
+ 
+
+Nejvyšší soud České republiky rozhodl v senátě složeném z předsedy JUDr. Zdeňka 
+Krčmáře a soudců JUDr. Petra Gemmela a Mgr. Milana Poláška v právní věci 
+žalobce České insolvenční v. o. s., se sídlem v Hradci Králové – Pražském 
+Předměstí, Fráni Šrámka 1139/2, PSČ 500 02, identifikační číslo osoby 28810341, 
+jako insolvenčního správce dlužníka ROSS Holding a. s., zastoupeného Mgr. 
+Zuzanou Zlatohlávkovou, advokátkou, se sídlem v Pardubicích, Svaté Anežky České 
+32, PSČ 530 02, proti žalovanému LACHMAN INTERIER DESIGN, s. r. o., se sídlem v 
+Prostějově, Plumlovská 522/44, PSČ 796 01, identifikační číslo osoby 46995480, 
+zastoupeného Mgr. Daliborem Lachmanem, advokátem, se sídlem v Prostějově, 
+Plumlovská 522/44, PSČ 796 01, o určení neplatnosti eventuálně neúčinnosti 
+právního úkonu dlužníka, vedené u Krajského soudu v Hradci Králové pod sp. zn. 
+41 ICm 298/2015, jako incidenční spor v insolvenční věci dlužníka ROSS Holding 
+a. s., se sídlem v Havlíčkově Brodě, Jihlavská 893, PSČ 580 01, identifikační 
+číslo osoby 25259741, vedené u Krajského soudu v Hradci Králové pod sp. zn. 
+KSHK 41 INS 22280/2013, o dovolání žalobce proti rozsudku Vrchního soudu v 
+Praze ze dne 2. února 2017, č. j. 41 ICm 298/2015, 101 VSPH 613/2016-144 (KSHK 
+41 INS 22280/2013), takto:
+
+I.	Dovolání proti rozsudku Vrchního soudu v Praze ze dne 2. února 2017, 
+č. j. 41 ICm 298/2015, 101 VSPH 613/2016-144 (KSHK 41 INS 22280/2013), se 
+odmítá v rozsahu, v němž směřuje proti druhému výroku o nákladech odvolacího 
+řízení a proti té části prvního výroku rozsudku, kterou odvolací soud potvrdil 
+rozsudek soudu prvního stupně v bodu I. výroku a ve výroku o nákladech řízení.
+II.	Ve zbývající části se dovolání zamítá.
+III.	Žalobce je povinen zaplatit žalovanému na náhradě nákladů 
+dovolacího řízení částku 4.114 Kč, do 3 dnů od právní moci tohoto rozhodnutí, k 
+rukám zástupce žalovaného.
+
+Odůvodnění:
+
+
+ [1] Rozsudkem ze dne 13. dubna 2016, č. j. 41 ICm 298/2015-122, Krajský soud v 
+Hradci Králové (dále jen „insolvenční soud“):
+1/ Zamítl žalobu, kterou se žalobce (Česká insolvenční v. o. s., jako 
+insolvenční správce dlužníka ROSS Holding a. s.) domáhal vůči žalovanému 
+(LACHMAN INTERIER DESIGN, s. r. o.) určení, že dohoda o vzájemném zápočtu 
+závazků a pohledávek uzavřená mezi dlužníkem a žalovaným dne 16. srpna 2013 
+(dále též jen „dohoda o započtení“) je neplatná (bod I. výroku). 
+2/ Zamítl žalobu, kterou se žalobce domáhal vůči žalovanému určení, že dohoda o 
+započtení je vůči věřitelům dlužníka právně neúčinná (bod II. výroku). 
+3/ Zamítl žalobu, kterou se žalobce domáhal vůči žalovanému zaplacení částky 
+319.392 Kč do majetkové podstaty dlužníka (bod III. výroku).
+4/ Určil, že žádný z účastníků nemá právo na náhradu nákladů řízení (bod IV. 
+výroku).
+[2] Insolvenční soud – vycházeje z ustanovení § 37 a násl. a § 49a zákona č. 
+40/1964 Sb., občanského zákoníku (dále jen „obč. zák.“), z ustanovení § 267 a 
+násl. zákona č. 513/1991 Sb., obchodního zákoníku, a z ustanovení § 111, § 140, 
+§ 205 odst. 2, § 231, § 239 odst. 3, § 240 a § 241 zákona č. 182/2006 Sb., o 
+úpadku a způsobech jeho řešení (insolvenčního zákona) – dospěl po provedeném 
+dokazování k následujícím závěrům:
+[3] Dohoda o započtení není neplatná ve smyslu § 37 a násl. obč. zák., ani pro 
+obcházení insolvenčního zákona nebo pro rozpor se zákonem daný přímým úmyslem 
+obou smluvních stran krátit ostatní věřitele.
+[4] Dohoda o započtení není neúčinná; jelikož k ní došlo po zahájení 
+insolvenčního řízení, nelze její neúčinnost posuzovat podle ustanovení § 240 až 
+§ 242 insolvenčního zákona a předpoklady neúčinnosti podle § 111 insolvenčního 
+zákona nejsou splněny. 
+[5] Zamítnutí žaloby o vydání plnění z neúčinného právního úkonu do majetkové 
+podstaty dlužníka plyne ze zamítnutí žaloby o určení, že tento právní úkon 
+(dohoda o započtení) je neúčinný (určení neúčinnosti a vydání plnění z 
+neúčinného právního úkonu bylo požadováno formou tzv. eventuálního petitu k 
+požadavku o určení neplatnosti dohody o započtení uplatněnému tzv. petitem 
+primárním).   
+[6] K odvolání žalobce Vrchní soud v Praze rozsudkem ze dne 2. února 2017, č. 
+j. 41 ICm 298/2015, 101 VSPH 613/2016-144 (KSHK 41 INS 22280/2013):
+1/ Potvrdil rozsudek insolvenčního soudu (první výrok).
+2/ Určil, že žádný z účastníků nemá právo na náhradu nákladů odvolacího řízení 
+(druhý výrok).
+[7] Odvolací soud – odkazuje na ustanovení § 111, § 140 a § 240 až § 242 
+insolvenčního zákona – dospěl po přezkoumání napadeného rozhodnutí k 
+následujícím závěrům:
+[8]  Insolvenční soud si pro své rozhodnutí obstaral dostatek skutkových 
+podkladů a také jeho právní argumentace je správná a lze na ni odkázat. 
+[9] Odvolací soud sdílí bez výhrad závěr insolvenčního soudu, že žalobce 
+nepředložil žádné relevantní důkazy vedoucí k závěru, že smluvní strany 
+uzavřely dohodu o započtení s přímým úmyslem krátit ostatní věřitele dlužníka.
+[10] Odvolací soud nesdílí názor žalobce, že neúčinnost právního úkonu, který 
+dlužník učinil po zahájení insolvenčního řízení, je nutné posuzovat nejen z 
+hledisek uvedených v § 111 odst. 1 insolvenčního zákona, ale též podle 
+ustanovení § 240 až § 242 insolvenčního zákona. Neúčinnost právního úkonu, 
+který dlužník učinil (jako v této věci) po zahájení insolvenčního lze dovodit 
+jen podle zákonných předpokladů uvedených v § 111 odst. 1 insolvenčního zákona. 
+[11] Jestliže insolvenční zákon připouští (v § 140 odst. 2), že započtení 
+vzájemných pohledávek dlužníka a věřitele je přípustné i po rozhodnutí o 
+úpadku, jestliže zákonné podmínky tohoto započtení byly splněny před 
+rozhodnutím o způsobu řešení úpadku, a jestliže bylo prokázáno, že v této věci 
+dlužník uzavřel se žalovaným dohodu o započtení ještě před vykonatelností 
+předběžného opatření, kterým soud zakázal zápočty mezi dlužníkem a jeho 
+věřiteli do právní moci rozhodnutí o insolvenčním návrhu, a není-li dohoda o 
+započtení nepřípustnou z hledisek uvedených v § 140 odst. 3 insolvenčního 
+zákona (což nebylo ani tvrzeno, ani prokázáno), pak je třeba pokládat dohodu o 
+započtení za platnou a její případnou neúčinnost lze dovodit, jen kdyby jí byla 
+porušena zákonná omezení dlužníka v nakládání s majetkovou podstatou uvedená v 
+§ 111 odst. 1 insolvenčního zákona.
+[12] Odvolací soud sdílí názor insolvenčního soudu, že dohoda o započtení není 
+neúčinným právním úkonem dlužníka již proto, že v jejím důsledku nedošlo k 
+podstatné změně skladby v majetkové podstatě dlužníka, v jejím využití nebo 
+určení, stejně tak jako v jejím důsledku nedošlo k nikoliv zanedbatelnému 
+zmenšení majetku dlužníka; tato dohoda byla naopak učiněna za podmínek 
+obvyklých v obchodním styku a dlužník na jejím základě obdržel i přiměřené 
+protiplnění.
+[13] Dohodou o započtení se majetek dlužníka podstatně nezmenšil a v jejím 
+důsledku nedošlo k podstatné změně ve skladbě tohoto majetku, uváží-li se, že 
+předmětem započtení byla částka 319.392 Kč, kdežto hodnota majetku dlužníka v 
+době uzavření dohody o započtení činila přes 490 miliónů Kč. O neúčinnou dohodu 
+o započtení by za této situace nešlo, ani kdyby byl dlužník v době jejího 
+uzavření v úpadku. 
+[14] Proti rozsudku odvolacího soudu (a to výslovně proti oběma jeho výrokům) 
+podal žalobce dovolání, jehož přípustnost vymezuje ve smyslu ustanovení § 237 
+zákona č. 99/1963 Sb., občanského soudního řádu (dále též jen „o. s. ř.“), 
+argumentem, že napadené rozhodnutí závisí na vyřešení otázky hmotného práva, 
+která v rozhodování dovolacího soudu dosud nebyla vyřešena. Dovolatel namítá, 
+že napadené rozhodnutí spočívá na nesprávném právním posouzení věci (dovolací 
+důvod dle § 241a odst. 1 o. s. ř.), a požaduje, aby Nejvyšší soud napadené 
+rozhodnutí zrušil a věc vrátil odvolacímu soudu k dalšímu řízení.
+[15] V mezích uplatněného dovolacího důvodu dovolatel především nesouhlasí se 
+závěrem, že při posuzování neúčinnosti dohody o započtení nelze aplikovat 
+ustanovení § 240 až § 242 insolvenčního zákona.   
+[16] Pro případ, že by se dovolací soud ztotožnil s názorem, že je namístě 
+aplikovat pouze § 111 odst. 1 insolvenčního zákona, nelze podle dovolatele 
+vycházet z té části tohoto ustanovení, která určuje, že dlužník je povinen 
+zdržet se od okamžiku, kdy nastaly účinky spojené se zahájením insolvenčního 
+řízení, nakládání s majetkovou podstatou a s majetkem, který do ní může 
+náležet, pokud by mělo jít o podstatné změny ve skladbě, využití nebo určení 
+tohoto majetku anebo o jeho nikoli zanedbatelné zmenšení, přičemž toto omezení 
+se netýká úkonů nutných k provozování podniku v rámci obvyklého hospodaření. 
+Podle dovolatele by bylo možné vyjít pouze z § 111 odst. 1 druhé věty 
+insolvenčního zákona, když takové závazky (jako pohledávka žalovaného) byl 
+dlužník oprávněn plnit pouze v režimu těch ustanovení insolvenčního zákona, 
+která upravují konkurs (prohlášený na majetek dlužníka po zápočtu).
+[17] Závěr soudů, že dohoda o započtení byla úkonem uskutečněným za podmínek 
+obvyklých v obchodním styku, na jehož základě dlužník obdržel i přiměřené 
+protiplnění, neplyne podle dovolatele z provedených důkazů. Předpoklad, že 
+peněžitý závazek vzniklý před zahájením insolvenčního řízení splnil dlužník za 
+podmínek stanovených insolvenčním zákonem (§ 111 odst. 1 druhé věty 
+insolvenčního zákona), dohoda o započtení též nesplňuje, když dlužník provedl 
+zápočet jen vůči některým věřitelům, což odporuje základním zásadám 
+insolvenčního řízení (§ 5 písm. b/ insolvenčního zákona), neboť někteří z 
+věřitelů byli zápočtem nespravedlivě poškozeni a jiní naopak nedovoleně 
+zvýhodněni. 
+[18] Dále je v dovolání (jeho článku IV.) argumentováno za použití ustanovení § 
+235 a § 237 odst. 1 insolvenčního zákona ve spojení s ustanoveními § 240 až § 
+242 insolvenčního zákona ve prospěch závěru, že zápočet uskutečněný po zahájení 
+insolvenčního řízení je právním úkonem, který dlužník učinil v době, kdy byl v 
+úpadku, že zápočtem „došlo ke zvýhodňujícímu právnímu úkonu“, a že zápočet lze 
+hodnotit jako úkon úmyslně zkracující ve smyslu ustanovení § 242 insolvenčního 
+zákona. Tamtéž se uvádí, že ze zápočtu je dále zřejmé, že dlužník se zavázal 
+uhradit žalovanému částku 1.361.977,78 Kč, čemuž s ohledem na zahájení 
+insolvenční řízení nemohl dostát, přičemž k takovému jednání nebyl dle § 111 
+insolvenčního zákona ani oprávněn (potřeboval k němu souhlas insolvenčního 
+soudu). 
+[19] Žalovaný ve vyjádření navrhuje dovolání zamítnout, maje napadené 
+rozhodnutí za správné. 
+[20] Rozhodné znění občanského soudního řádu pro dovolací řízení (ve znění 
+účinném do 29. září 2017) se podává z bodu 2., článku II, části první zákona č. 
+296/2017 Sb., kterým se mění zákon č. 99/1963 Sb., občanský soudní řád, ve 
+znění pozdějších předpisů, zákon č. 292/2013 Sb., o zvláštních řízeních 
+soudních, ve znění pozdějších předpisů, a některé další zákony. 
+[21] Nejvyšší soud se nejprve zabýval přípustností dovolání v dané věci.
+[22] Dovolatel podal dovolání výslovně proti oběma výrokům napadeného 
+rozhodnutí, přičemž v textu dovolání k tomu zmiňuje, že výrok o nákladech 
+řízení napadá jako závislý na úspěchu ve věci samé. V rozsahu, v němž dovolání 
+směřovalo proti té části prvního výroku napadeného rozhodnutí, kterou odvolací 
+soud potvrdil rozsudek insolvenčního soudu ve výroku o nákladech řízení, a v 
+rozsahu, v němž směřovalo proti druhému výroku napadeného rozhodnutí o 
+nákladech dovolacího řízení, je Nejvyšší soud odmítl podle § 243c odst. 1 věty 
+první o. s. ř., jelikož potud dovolatel (ve vztahu k těmto výrokům) způsobem 
+odpovídajícím požadavku ustanovení § 241a odst. 2 o. s. ř. nevymezil důvod 
+přípustnosti dovolání. To, že jde o výroky závislé na výroku o věci samé, 
+přípustnost dovolání nezakládá, a otázky položené ve vztahu k výroku o věci 
+samé jsou pro účely posouzení přípustnosti dovolání proti výrokům o nákladech 
+řízení právně bezcenné [k přípustnosti dovolání u akcesorických výroků srov. 
+shodně např. usnesení Nejvyššího soudu ze dne 23. března 2011, sen. zn. 29 NSČR 
+12/2011, uveřejněné pod číslem 110/2011 Sbírky soudních rozhodnutí a 
+stanovisek, které je (stejně jako další rozhodnutí Nejvyššího soudu zmíněná 
+níže) dostupné i na webových stránkách Nejvyššího soudu]. K vymezení 
+přípustnosti dovolání srov. především usnesení Nejvyššího soudu ze dne 25. září 
+2013, sp. zn. 29 Cdo 2394/2013, uveřejněné pod číslem 4/2014 Sbírky soudních 
+rozhodnutí a stanovisek, jakož i stanovisko pléna Ústavního soudu ze dne 28. 
+listopadu 2017, sp. zn. Pl ÚS-st. 45/16, uveřejněné pod číslem 460/2017 Sb.  
+[23] V rozsahu, v němž dovolání směřovalo proti té části prvního výroku 
+napadeného rozhodnutí, kterou odvolací soud potvrdil rozsudek insolvenčního 
+soudu v zamítavém výroku o věci samé ohledně primárního petitu (co do požadavku 
+o určení neplatnosti dohody o započtení), je Nejvyšší soud rovněž odmítl podle 
+§ 243c odst. 1 věty první o. s. ř., jelikož potud dovolatel způsobem 
+odpovídajícím požadavku ustanovení § 241a odst. 2 o. s. ř. též nevymezil důvod 
+přípustnosti dovolání (dovolací argumentace se netýká otázek neplatnosti dohody 
+o započtení, nýbrž pouze otázek její neúčinnosti). 
+[24] V rozsahu, v němž dovolání směřuje proti té části prvního výroku 
+napadeného rozhodnutí, kterou odvolací soud potvrdil rozsudek insolvenčního 
+soudu v zamítavém výroku o věci samé ohledně eventuálního petitu (co do 
+požadavku o určení neúčinnosti dohody o započtení a o vydání plnění z 
+neúčinného právního úkonu do majetkové podstaty), může být přípustné jen podle 
+§ 237 o. s. ř., když pro ně neplatí žádné z omezení přípustnosti vypočtených v 
+§ 238 o. s. ř.
+[25] Důvod připustit dovolání v mezích vytyčených předchozím odstavcem k 
+prověření správnosti závěru odvolacího soudu, že ustanovení § 240 až § 242 
+insolvenčního zákona nejsou na danou věc aplikovatelná (reprodukce dovolání, 
+odstavec [15] výše), jakož i k řešení dalších otázek vyplývajících z aplikace § 
+237 odst. 1 a § 240 až § 242 insolvenčního zákona (reprodukce dovolání, 
+odstavec [18] výše) Nejvyšší soud také nemá. 
+[26] V rozsudku ze dne 31. října 2017, sen. zn. 29 ICdo 76/2015, Nejvyšší soud 
+vysvětlil, že právní úkon, který dlužník učinil po zahájení insolvenčního 
+řízení, nepodléhá úpravě obsažené v § 240 až § 242 insolvenčního zákona (srov. 
+§ 240 odst. 3, § 241 odst. 4 a § 242 odst. 3 insolvenčního zákona); jde o 
+právní úkon, jehož neúčinnost má být poměřována úpravou obsaženou v § 111 
+insolvenčního zákona (srov. odstavec [58] tamtéž). V témže rozsudku Nejvyšší 
+soud dále uzavřel (srov. jeho odstavec [61]), že předpoklady, za nichž lze 
+vyslovit neúčinnost právních úkonů, které dlužník učinil před zahájením 
+insolvenčního řízení vedeného na jeho majetek, jsou obecně (a logicky) 
+nastaveny (v § 240 až § 242 insolvenčního zákona) přísněji, než předpoklady za 
+nichž lze označit za neúčinné právní úkony, které dlužník učinil poté, co 
+nastaly účinky spojené se zahájením insolvenčního řízení (§ 111 insolvenčního 
+zákona). Jinak řečeno, není pochyb o tom, že právní úkon, jímž dlužník poruší 
+pravidla formulovaná v § 111 odst. 1 insolvenčního zákona (aniž by šlo o 
+případ, kdy to dovoluje ustanovení § 111 odst. 2 insolvenčního zákona), bude 
+zásadně právním úkonem, kterým dlužník zkracuje možnost uspokojení věřitelů 
+nebo zvýhodňuje některého věřitele na úkor jiných. Odkazovat v této souvislosti 
+na ustanovení § 235 odst. 1 insolvenčního zákona však potřebné není. K těmto 
+závěrům se Nejvyšší soud přihlásil dále např. též v rozsudku ze dne 27. září 
+2018, sen. zn. 29 ICdo 108/2016. 
+[27] V mezích otázek souvisejících s přímou aplikací § 111 insolvenčního zákona 
+je dovolání přípustné podle § 237 o. s. ř., když potud jde o otázky dovolacím 
+soudem beze zbytku nezodpovězené.
+[28] Vady řízení, k nimž Nejvyšší soud u přípustného dovolání přihlíží z úřední 
+povinnosti (§ 242 odst. 3 o. s. ř.), nejsou dovoláním namítány a ze spisu se 
+nepodávají, Nejvyšší soud se proto – v hranicích právních otázek vymezených 
+dovoláním – zabýval tím, zda je dán dovolací důvod uplatněný dovolatelem, tedy 
+správností právního posouzení věci odvolacím soudem.
+[29] Právní posouzení věci je obecně nesprávné, jestliže odvolací soud posoudil 
+věc podle právní normy, jež na zjištěný skutkový stav nedopadá, nebo právní 
+normu, sice správně určenou, nesprávně vyložil, případně ji na daný skutkový 
+stav nesprávně aplikoval.
+[30] Skutkový stav věci, jak byl zjištěn soudy nižších stupňů, dovoláním nebyl 
+(ani nemohl být) zpochybněn a Nejvyšší soud z něj při dalších úvahách vychází. 
+Pro právní posouzení věci jsou rozhodná následující skutková zjištění (z nichž 
+vyšly oba soudy):
+[31] Dlužník (jako objednatel) a žalovaný (jako zhotovitel) uzavřeli v roce 
+2011 smlouvu o dílo, na jejímž základě žalovaný postupně vyfakturoval dlužníku 
+cenu díla ve výši 18.177.168,62 Kč. 
+[32] Dlužník vyúčtoval žalovanému 14. června 2013 částku 5.060 Kč z důvodu 
+úpravy na předmětné zakázce. 
+[33] Dlužník v souladu se smlouvou o dílo vyúčtoval žalovanému fakturou ze dne 
+16. července 2013 na zařízení staveniště 1,5 % z ceny díla (tj. 314.332,52 Kč, 
+po odečtení dílčího plnění ve výši 12.878,59 Kč).
+[34] Podle bankovních výpisů uhradil dlužník 31. července 2013 žalovanému 7 
+faktur v celkové výši 1.500.035,58 Kč. 
+[35] Dne 13. srpna 2013 nastaly účinky spojené se zahájením insolvenčního 
+řízení na majetek dlužníka.
+[36] Dne 16. srpna 2013 uzavřel dlužník s žalovaným dohodu o vzájemném 
+započtení pohledávek tak, že pohledávky dlužníka ve výši 319.392,52 Kč (5.060 
+Kč + 314.332,52 Kč) byly započteny proti pohledávce žalovaného z titulu 
+doplatku ceny díla, přičemž rozdíl ve výši 1.361.977,78 Kč se dlužník zavázal 
+žalovanému uhradit. 
+[37] Dne 28. srpna 2013 podal dlužník návrh na nařízení předběžného opatření, 
+jímž by insolvenční soud zakázal osobám, které mají pohledávky vůči dlužníku, 
+započtení těchto pohledávek. 
+[38] Usnesením ze dne 30. srpna 2013 (č. j. KSHK 41 INS 22280/2013-A-13) 
+nařídil insolvenční soud předběžné opatření, jímž zakázal do právní moci 
+rozhodnutí o insolvenčním návrhu započtení vzájemných pohledávek dlužníka a 
+jeho věřitelů. 
+[39] Usnesením ze dne 21. ledna 2014 (č. j. KSHK 41 INS 22280/2013-A-86) 
+zjistil insolvenční soud úpadek dlužníka. 
+[40] Usnesením ze dne 8. dubna 2014 (č. j. KSHK 41 INS 22280/2013-B-112) 
+povolil insolvenční soud reorganizaci dlužníka
+[41] Usnesením ze dne 4. listopadu 2014 (č. j. KSHK 41 INS 22280/2013-B-158) 
+rozhodl insolvenční soud o přeměně reorganizace v konkurs.
+[42] Pro další úvahy Nejvyššího soudu jsou rozhodná následující ustanovení 
+insolvenčního zákona: 
+Nakládání s majetkovou podstatou
+§ 111 (insolvenčního zákona)
+(1) Nerozhodne-li insolvenční soud jinak, je dlužník povinen zdržet se od 
+okamžiku, kdy nastaly účinky spojené se zahájením insolvenčního řízení, 
+nakládání s majetkovou podstatou a s majetkem, který do ní může náležet, pokud 
+by mělo jít o podstatné změny ve skladbě, využití nebo určení tohoto majetku 
+anebo o jeho nikoli zanedbatelné zmenšení. Peněžité závazky vzniklé před 
+zahájením insolvenčního řízení je dlužník oprávněn plnit jen v rozsahu a za 
+podmínek stanovených tímto zákonem. 
+(2) Omezení podle odstavce 1 se netýká úkonů nutných ke splnění povinností 
+stanovených zvláštními právními předpisy, k provozování podniku v rámci 
+obvyklého hospodaření, k odvrácení hrozící škody, k plnění zákonné vyživovací 
+povinnosti a ke splnění procesních sankcí.  
+(3) Právní úkony, které dlužník učinil v rozporu s omezeními stanovenými v 
+důsledku účinků spojených se zahájením insolvenčního řízení, jsou vůči 
+věřitelům neúčinné. 
+§ 140 (insolvenčního zákona)
+Účinky rozhodnutí o úpadku
+(…)
+(2) Započtení vzájemných pohledávek dlužníka a věřitele je po rozhodnutí o 
+úpadku přípustné, jestliže zákonné podmínky tohoto započtení byly splněny před 
+rozhodnutím o způsobu řešení úpadku, není-li dále stanoveno jinak.  
+(3) Započtení podle odstavce 2 není přípustné, jestliže dlužníkův věřitel 
+a/ se ohledně své započitatelné pohledávky nestal přihlášeným věřitelem, nebo 
+b/ získal započitatelnou pohledávku neúčinným právním úkonem, nebo 
+c/ v době nabytí započitatelné pohledávky věděl o dlužníkově úpadku, anebo 
+d/ dosud neuhradil splatnou pohledávku dlužníka v rozsahu, v němž převyšuje 
+započitatelnou pohledávku tohoto věřitele.  
+(4) Započtení podle odstavce 2 není rovněž přípustné v případech stanovených 
+dále tímto zákonem nebo předběžným opatřením insolvenčního soudu.
+V této podobě, pro věc rozhodné, platila citovaná ustanovení insolvenčního 
+zákona v době, kdy nastaly účinky spojené se zahájením insolvenčního řízení, i 
+v době uzavření dohody o započtení.
+[43] Judikatura Nejvyššího soudu k ustanovení § 111 insolvenčního zákona je 
+ustálena [vedle závěrů citovaných výše (v odstavci [26]) z rozsudků Nejvyššího 
+soudu sen. zn. 29 ICdo 76/2015 a sen. zn. 29 ICdo 108/2016] v těchto závěrech:
+[44] Podal-li insolvenční správce u insolvenčního soudu žalobu, kterou 
+odporoval dlužníkovu právnímu úkonu, v době po 31. prosinci 2013, je pro 
+posouzení, jakým způsobem měl uplatnit zákonnou neúčinnost takového úkonu (§ 
+111 odst. 3 insolvenčního zákona), rozhodné znění insolvenčního zákona od 1. 
+ledna 2014; skutečnost, že dlužník učinil právní úkon před tímto datem, není 
+významná (rozsudek Nejvyššího soudu ze dne 30. srpna 2018, sp. zn. 29 Cdo 
+5517/2016).
+[45] Právní úkony, které dlužník učinil v rozporu s omezeními nastalými v 
+důsledku účinků spojených se zahájením insolvenčního řízení, jsou ve smyslu 
+ustanovení § 111 odst. 3 insolvenčního zákona (ve znění účinném do 31. prosince 
+2013) vůči věřitelům dlužníka neúčinné za předpokladu, že byl posléze zjištěn 
+úpadek dlužníka (usnesení Nejvyššího soudu ze dne 29. února 2016, sen. zn. 29 
+NSČR 67/2014, uveřejněné pod číslem 62/2017 Sbírky soudních rozhodnutí a 
+stanovisek).
+[46] Pro účely posouzení, zda jde o neúčinný právní úkon ve smyslu ustanovení § 
+111 odst. 1 a 3 insolvenčního zákona, není významné, zda se takto věřiteli 
+dostalo na úkor ostatních věřitelů vyššího uspokojení, než jaké by mu jinak 
+náleželo v konkursu. Podstatné je, že šlo o právní úkon, který není 
+podřaditelný některé z výjimek nastavených v § 111 odst. 2 insolvenčního 
+zákona. Jedinou další korekcí je rozhodnutí insolvenčního správce, že 
+neúčinnost právního úkonu dlužníka neuplatní, neboť je pro majetkovou podstatu 
+dlužníka v konečném důsledku výhodný (rozsudek Nejvyššího soudu sen. zn. 29 
+ICdo 108/2016). 
+[47] Platba, kterou dlužník učinil poté, co nastaly účinky spojené se zahájením 
+insolvenčního řízení, na peněžitý závazek vzniklý v souvislosti s omezením jeho 
+podnikatelské činnosti (s rušením „dílčích provozoven“ dlužníka), není úkonem 
+nutným k provozování podniku dlužníka v rámci obvyklého hospodaření (§ 111 
+odst. 2 insolvenčního zákona). Pro posouzení, zda dlužník platbou odvracel 
+hrozící škodu, je zpravidla rozhodující povaha platbou hrazeného plnění a jeho 
+význam pro majetkovou podstatu dlužníka (rozsudek Nejvyššího soudu ze dne 27. 
+března 2018, sen. zn. 29 ICdo 17/2016).
+[48] K započtení pohledávek pak byly v rozhodovací praxi Nejvyššího soudu 
+zformulovány (zčásti i pro poměry ustavené § 140 insolvenčního zákona) 
+následující závěry:
+[49] Započtení (kompenzace) je způsob zániku vzájemně se kryjících pohledávek 
+dlužníka a věřitele, jímž odpadá dvojí splnění vzájemných pohledávek. 
+Ustanovení § 580 obč. zák. vymezuje (i pro obchodněprávní vztahy) předpoklady, 
+při jejichž splnění k započtení dochází. Mezi základní předpoklady započtení 
+tak patří vzájemnost pohledávek (musí jít o dva závazky mezi týmiž subjekty, 
+kdy věřitel jedné pohledávky je zároveň dlužníkem druhé a naopak), stejný druh 
+plnění, způsobilost pohledávek k započtení a právní úkon směřující k započtení 
+[srov. rozsudek Nejvyššího soudu ze dne 17. února 2010, sp. zn. 32 Cdo 
+4407/2009, uveřejněný v časopise Soudní judikatura číslo 9, ročník 2010, pod 
+číslem 127, nebo rozsudek Nejvyššího soudu ze dne 30. listopadu 2016, sp. zn. 
+29 Cdo 1430/2014, uveřejněný pod číslem 63/2018 Sbírky soudních rozhodnutí a 
+stanovisek (dále jen „R 63/2018“)].
+[50] Započtení pohledávek nelze považovat za „nějaký jiný“ způsob či formu 
+plnění dluhu; jde o způsob zániku nesplněného závazku, při němž naopak dvojí 
+plnění odpadá (povinnost plnit zaniká) [srov. rozsudek Nejvyššího soudu ze dne 
+31. ledna 2006, sp. zn. 32 Odo 1143/2004, uveřejněný pod číslem 90/2006 Sbírky 
+soudních rozhodnutí a stanovisek, nebo rozsudek Nejvyššího soudu ze dne 28. 
+února 2017, sen. zn. 29 ICdo 12/2015, uveřejněný pod číslem 92/2018 Sbírky 
+soudních rozhodnutí a stanovisek (dále jen „R 92/2018“)].
+[51] Započtením se stranám zápočtu nedostává žádného plnění, natož takového 
+plnění, které by mohlo být využitelné k (byť jen částečnému) uspokojení 
+přihlášených pohledávek jiných věřitelů dlužníka; nelze však přehlédnout, že 
+započtením dlužník „ztrácí“ majetek (pohledávku), který by mohl být využitelný 
+k shora zmíněnému účelu. Z povahy započtení přitom současně plyne, že jde vždy 
+o úkon „ekvivalentní“ (vzájemné pohledávky zanikají jen v rozsahu, v němž se 
+kryjí). Není-li započtení plněním dluhu, je zároveň pojmově vyloučeno, aby šlo 
+o neúčinný právní úkon podle ustanovení § 240 insolvenčního zákona (R 92/2018).
+[52] Insolvenční řízení je soudním řízením, jehož předmětem je dlužníkův úpadek 
+nebo hrozící úpadek a jeho řešení některým ze stanovených způsobů tak, aby 
+došlo k uspořádání majetkových vztahů k osobám dotčeným dlužníkovým úpadkem 
+nebo hrozícím úpadkem a k co nejvyššímu a zásadně poměrnému uspokojení 
+dlužníkových věřitelů (srov. § 1 písm. a/ a § 2 písm. a/ insolvenčního zákona). 
+Toto řízení musí být vedeno tak, aby žádný z účastníků nebyl nespravedlivě 
+poškozen nebo nedovoleně zvýhodněn (§ 5 písm. a/ insolvenčního zákona). 
+Vzhledem k účelu insolvenčního řízení proto zákonodárce upravil možnost 
+započtení v jednotlivých fázích insolvenčního řízení tak, aby vyřešil střet 
+mezi zájmy jednotlivých věřitelů uspokojit v maximální možné míře svou 
+pohledávku a nadřazeným společným zájmem, jehož cílem by, při respektování 
+postavení věřitelů, mělo být maximální možné uspokojení pohledávek všech 
+věřitelů (R 63/2018).
+[53] Ve fázi od podání insolvenčního návrhu do rozhodnutí, kterým se zjišťuje 
+úpadek dlužníka, není zásadně započtení zakázáno (za dodržení § 111 
+insolvenčního zákona). Výjimku představuje doba, po kterou trvá moratorium (§ 
+122 odst. 3 insolvenčního zákona). Od účinnosti rozhodnutí o úpadku (jež 
+nastává zveřejněním tohoto rozhodnutí v insolvenčním rejstříku, srov. § 89 
+insolvenčního zákona) je započtení přípustné pouze za podmínek uvedených v § 
+140 odst. 2 až 4 insolvenčního zákona (R 63/2018). 
+[54] U pohledávek za majetkovou podstatou (§ 168 insolvenčního zákona) a 
+pohledávek postavených na roveň pohledávkám za majetkovou podstatou (§ 169 
+insolvenčního zákona) bude vyplývat nepřípustnost započtení zpravidla již z 
+nemožnosti dostát podmínce uvedené v § 140 odst. 3 písm. a/ insolvenčního 
+zákona (tyto pohledávky nebudou přihlášeny do insolvenčního řízení) [R 63/2018]
+.
+[55] Je-li úpadek řešen reorganizací, je započítávání zakázáno od doby 
+zveřejnění návrhu na povolení reorganizace (§ 324 odst. 3 insolvenčního zákona) 
+bez ohledu na to, zda k němu mohlo dojít (již) ve fázi před rozhodnutím o 
+úpadku. Předběžným opatřením insolvenčního soudu může být pro určité pohledávky 
+stanovena výjimka a započtení může být připuštěno (§ 82 odst. 3 písm. b/ 
+insolvenčního zákona). Samotné povolení reorganizace nemá na zákaz započtení 
+plynoucí z § 324 odst. 3 insolvenčního zákona vliv, a to přesto, že právní mocí 
+rozhodnutí o povolení reorganizace se ruší omezení dispozičních oprávnění 
+dlužníka, ke kterým došlo ze zákona nebo rozhodnutím insolvenčního soudu v 
+dosavadním průběhu insolvenčního řízení, ledaže insolvenční soud rozhodne podle 
+§ 332 jinak (§ 330 odst. 1 insolvenčního zákona) [R 63/2018].
+[56] Zákaz započtení plynoucí z § 324 odst. 3 insolvenčního zákona pomíjí buď 
+rozhodnutím insolvenčního soudu dle § 237 odst. 1 insolvenčního zákona, 
+účinností reorganizačního plánu (§ 352 odst. 3 insolvenčního zákona) nebo 
+přeměnou reorganizace v konkurs (§ 363 odst. 5 věta druhá insolvenčního 
+zákona). Přitom je nepochybné, že rozhodnutím insolvenčního soudu dle § 237 
+odst. 1 insolvenčního zákona či přeměnou reorganizace v konkurs před účinností 
+reorganizačního plánu nepomíjí omezení započtení plynoucí z § 140 odst. 2 až 4 
+insolvenčního zákona (R 63/2018).
+[57] Vzhledem k odlišnostem v právní úpravě institutu započtení v insolvenčním 
+zákoně (oproti úpravě obsažené v zákoně č. 328/1991 Sb., o konkursu a 
+vyrovnání) je nezbytné judikaturní výstupy, k nimž dospěla soudní praxe při 
+posuzování odporovatelnosti a neúčinnosti započtení v konkursním právu, pro 
+poměry té které věci vždy poměřovat úpravou, která v insolvenčním zákonu 
+započtení (za určitých podmínek a nikoli v každé fázi insolvenčního řízení) 
+připouští. Korektivem by zde měla být úvaha, že započtení nebude neúčinným 
+právním úkonem, kdyby se stejným výsledkem mohlo být provedeno i v průběhu 
+insolvenčního řízení. Přitom i v poměrech zákona o konkursu a vyrovnání se 
+judikatura vyslovovala k neúčinnosti započtení vždy ve vazbě na (ne)účinnost 
+smlouvy, z níž vzešla započítávaná pohledávka.  Jinými slovy, na „neúčinnost“ 
+započtení lze zásadně usuzovat jen na základě posouzení právního úkonu, z nějž 
+vzešla pohledávka, kterou věřitel dlužníka, ohledně kterého je vedeno 
+insolvenční řízení, použil k započtení, jako neúčinného (R 92/2018).
+[58] Ve výše uvedeném judikatorním rámci lze k právním otázkám, pro jejichž 
+zodpovězení Nejvyšší soud připustil dovolání, přijmout následující závěry:
+[59] Dohoda o započtení byla uzavřena 16. srpna 2013, tedy poté, co dne 13. 
+srpna 2013 nastaly účinky spojené se zahájením insolvenčního řízení (okamžikem 
+zveřejnění vyhlášky, kterou se oznamuje zahájení insolvenčního řízení, v 
+insolvenčním rejstříku) a předtím, než insolvenční soud zjistil úpadek dlužníka 
+(21. ledna 2014), předtím, než byl v insolvenčním rejstříku zveřejněn dlužníkův 
+návrh na povolení reorganizace z 24. března 2014 (25. března 2014, B-93) a 
+předtím, než insolvenční soud reorganizaci povolil (8. dubna 2014). V intencích 
+závěrů plynoucích z R 63/2018 (srov. odstavce [52], [53], [55] a [56] výše) tak 
+započtení bylo možné či přípustné (insolvenční zákon je nevylučoval) při 
+současném dodržení podmínek uvedených v § 111 insolvenčního zákona.
+[60] Z dovolací argumentace (jak byla reprodukována výše v odstavcích [16] a 
+[17]) se rovněž podává, že dovolatel pokládá započtení za způsob (s)plnění 
+dluhu. Judikatura Nejvyššího soudu však stojí na závěru jiném; totiž na tom, že 
+započtení není nějakým „jiným“ způsobem či formou splnění dluhu (R 92/2018, jak 
+citováno v odstavci [50] a [51] výše). To ovšem činí nesprávným dovolatelův 
+názor, že dohoda o započtení má být při konfrontaci s úpravou obsaženou v § 111 
+insolvenčního zákona poměřována pouze pravidlem vyjádřeným v odstavci 1 větě 
+druhé tohoto ustanovení. Ve skutečnosti je tomu právě naopak. Započtení není 
+způsobem či formou (s)plnění dluhu, takže pro účely posouzení, zda nejde o 
+neúčinný právní úkon ve smyslu § 111 insolvenčního zákona, započtení nemůže 
+(objektivně vzato) odporovat pravidlu vyjádřenému v odstavci 1 větě druhé 
+tohoto ustanovení. Dovolání proto není ani potud opodstatněné. 
+[61] Započtení, k němuž došlo poté, co nastaly účinky spojené se zahájením 
+insolvenčního řízení na majetek dlužníka, není ani úkonem vedoucím k „nikoli 
+zanedbatelnému zmenšení majetku náležejícího do majetkové podstaty dlužníka“; z 
+jeho povahy totiž plyne, že jde vždy o úkon ekvivalentní (R 92/2018, jak 
+citováno v odstavci [51] výše). Takové započtení však může vést „k podstatné 
+změně ve skladbě, využití nebo určení majetku náležejícího do majetkové 
+podstaty dlužníka“. V dané věci nebyla otázka změny ve využití nebo určení 
+majetku ani nastolena (že by dohoda o započtení směřovala k porušení těchto 
+pravidel, nebylo ani tvrzeno); s otázkou, zda uzavřením dohody o započtení v 
+dané věci nedošlo k podstatné změně ve skladbě majetku náležejícího do 
+majetkové podstaty dlužníka, se pak odvolací soud přiléhavě vypořádal (srov. 
+odstavce [12] a [13] výše). 
+[62] Ve vztahu k jiným částem ustanovení § 111 insolvenčního zákona (než k 
+odstavci 1 větě druhé tohoto ustanovení) dovolatel zpochybňuje výklad podaný 
+odvolacím soudem jen potud, že závěr, že dohoda o započtení byla úkonem 
+uskutečněným za podmínek obvyklých v obchodním styku, neplyne z provedených 
+důkazů (srov. odstavec [17] výše). Dovolatel nicméně přehlédl, že ustanovení § 
+111 odst. 2 insolvenčního zákona se coby výjimka ze zákazu formulovaného v § 
+111 odst. 1 insolvenčního zákona může prosadit (a je důvod je zkoumat) za 
+předpokladu, že právní úkon dlužníka vybočil z rámce vytyčeného mu pro 
+nakládání s majetkovou podstatou a s majetkem, který do ní může náležet, právě 
+ustanovením § 111 odst. 1 insolvenčního zákona. Jinak řečeno, jestliže právní 
+úkon, jímž dlužník poté, kdy nastaly účinky spojené se zahájením insolvenčního 
+řízení, započetl svou pohledávku proti pohledávce věřitele, nevedl k podstatné 
+změně ve skladbě, využití nebo určení majetku, který může náležet do jeho 
+majetkové podstaty, pak nejde o neúčinný právní úkon bez zřetele k tomu, že 
+současně nešlo o právní úkon ve smyslu § 111 odst. 2 insolvenčního zákona. 
+Zkoumání, zda dohoda o započtení byla úkonem uskutečněným za podmínek obvyklých 
+v obchodním styku, tak nemělo (a nemá) žádný vliv na výsledek řízení. 
+[63] Ke vztahu základních zásad insolvenčního řízení k institutu započtení v 
+průběhu insolvenčního řízení se Nejvyšší soud již vyjádřil v R 63/2018 (srov. 
+opět odstavec [52] výše), přičemž k dovolatelově námitce v uvedeném směru lze 
+jen dodat, že pouze z toho, že dohoda o započtení se týkala pouze jednoho z 
+dlužníkových věřitelů, žádný rozpor se zásadami insolvenčního řízení neplyne a 
+plynout nemůže. Zjevně nezákonné by naopak byly postupy, jimiž by insolvenční 
+soud započtení jen proto zakazoval.
+[64] Tento závěr s sebou nese konečné posouzení podaného dovolání jako 
+nedůvodného; Nejvyšší soud proto, aniž nařizoval jednání (§ 243a odst. 1 věta 
+první o. s. ř.), dovolání ve zbývající části zamítl (§ 243d písm. a/ o. s. ř.).
+[65] Výrok o nákladech dovolacího řízení se opírá o ustanovení § 243c odst. 3, 
+§ 224 odst. 1, § 142 odst. 1 a § 146 odst. 3 o. s. ř., když dovolání bylo 
+zčásti odmítnuto a zčásti zamítnuto, čímž žalovanému vzniklo právo na náhradu 
+účelně vynaložených nákladů dovolacího řízení.  
+[66] Náklady žalovaného v dovolacím řízení sestávají z odměny advokáta za jeden 
+úkon právní služby (vyjádření k dovolání z 2. června 2017), určené podle 
+vyhlášky Ministerstva spravedlnosti č. 177/1996 Sb., o odměnách advokátů a 
+náhradách advokátů za poskytování právních služeb (advokátní tarif), ve znění 
+účinném do 30. června 2018.
+[67] Incidenční spor o odpůrčí žalobě je ve smyslu ustanovení § 9 odst. 4 písm. 
+c/ advokátního tarifu sporem ve věcech rozhodovaných v insolvenčním nebo 
+obdobném řízení, u kterého se považuje za tarifní hodnotu částka 50.000 Kč 
+(srov. dále § 7 bod 5. advokátního tarifu). Tomu odpovídá mimosmluvní odměna za 
+1 úkon právní služby ve výši 3.100 Kč (srov. § 11 odst. 1 písm. k/ advokátního 
+tarifu). Spolu s náhradou hotových výdajů dle § 13 odst. 3 advokátního tarifu 
+ve výši 300 Kč a částkou odpovídající 21% dani z přidané hodnoty (714 Kč) tak 
+dovolací soud přiznal žalovanému k tíži žalobce celkem částku 4.114 Kč. 
+[68] V tom, že jde o odpůrčí žalobu a že žalobcem je insolvenční správce, v 
+žádném případě netkví (jak pro případ, že s dovoláním neuspěje, tvrdil 
+dovolatel) důvod hodný zvláštního zřetele pro nepřiznání náhrady nákladů 
+dovolacího řízení úspěšnému žalovanému (§ 150 o. s. ř.).
+Poučení: Toto rozhodnutí se považuje za doručené okamžikem zveřejnění v 
+insolvenčním rejstříku; účastníkům incidenčního sporu se však doručuje i 
+zvláštním způsobem. 
+Proti tomuto rozhodnutí není přípustný opravný prostředek.
+Nesplní-li povinný, co mu ukládá vykonatelné rozhodnutí, může se oprávněný 
+domáhat exekuce (výkonu rozhodnutí).   
+
+
+V Brně dne 28. listopadu 2018
+
+
+	JUDr. Zdeněk Krčmář
+	předseda senátu
+
+
