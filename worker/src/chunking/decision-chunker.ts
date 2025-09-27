@@ -1,5 +1,6 @@
 import { DecisionChunk } from '../types/chunks';
 import { extractStatuteReferences } from './utils';
+import { classifyDecision } from '../classification/legal-classifier';
 
 interface DecisionBaseMetadata {
   case_id: string;
@@ -141,6 +142,11 @@ export function chunkDecision(
 
   const statuteRefs = extractStatuteReferences(text);
 
+  const classification = classifyDecision({
+    ...metadata,
+    statute_refs: statuteRefs
+  });
+
   chunks.push({
     id: `decision_${caseIdSafe}_principle`,
     text: parsed.pravni_veta,
@@ -155,7 +161,10 @@ export function chunkDecision(
       en_banc: metadata.en_banc,
       citation_count: metadata.citation_count || 0,
       overruled: metadata.overruled || false,
-      cites: metadata.cites
+      cites: metadata.cites,
+      ...classification,
+      classified: true,
+      classification_version: '1.0'
     }
   });
 
@@ -183,7 +192,10 @@ export function chunkDecision(
         en_banc: metadata.en_banc,
         citation_count: metadata.citation_count || 0,
         overruled: metadata.overruled || false,
-        cites: metadata.cites
+        cites: metadata.cites,
+        ...classification,
+        classified: true,
+        classification_version: '1.0'
       }
     });
   });

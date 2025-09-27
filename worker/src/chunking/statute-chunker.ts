@@ -4,6 +4,7 @@ import {
   slidingWindowChunk,
   estimateTokens
 } from './utils';
+import { classifyStatute } from '../classification/legal-classifier';
 
 interface StatuteBaseMetadata {
   version_date: string;
@@ -29,6 +30,7 @@ export function chunkStatute(
 
     const fullSectionText = sectionText.trim();
     const estimatedTokens = estimateTokens(fullSectionText);
+    const classification = classifyStatute(sectionNum, fullSectionText);
 
     if (estimatedTokens > 1000) {
       const subChunks = slidingWindowChunk(fullSectionText, 4000, 400);
@@ -40,7 +42,10 @@ export function chunkStatute(
             type: 'statute',
             section: sectionNum,
             sub_chunk: subIdx,
-            ...baseMetadata
+            ...baseMetadata,
+            ...classification,
+            classified: true,
+            classification_version: '1.0'
           }
         });
       });
@@ -51,7 +56,10 @@ export function chunkStatute(
         metadata: {
           type: 'statute',
           section: sectionNum,
-          ...baseMetadata
+          ...baseMetadata,
+          ...classification,
+          classified: true,
+          classification_version: '1.0'
         }
       });
     }

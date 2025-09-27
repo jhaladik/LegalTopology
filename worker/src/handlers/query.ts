@@ -1,4 +1,5 @@
 import { Env, getEmbedding } from '../embedding/openai-client';
+import { inferQueryContext } from '../classification/legal-classifier';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -46,14 +47,22 @@ export async function queryTopology(
 
     const queryEmbedding = await getEmbedding(question, env);
 
+    const inferredContext = inferQueryContext(question);
+
     const queryOptions: any = {
-      topK: topK,
+      topK: inferredContext ? topK * 2 : topK,
       returnMetadata: true
     };
 
-    if (filter) {
-      queryOptions.filter = filter;
+    if (filter || inferredContext) {
+      queryOptions.filter = {
+        ...filter,
+        ...(inferredContext ? { legal_framework: inferredContext } : {})
+      };
     }
+
+    console.log('Query context inferred:', inferredContext);
+    console.log('Applied filter:', queryOptions.filter);
 
     const results = await env.VECTORIZE.query(queryEmbedding, queryOptions);
 
@@ -72,6 +81,8 @@ export async function queryTopology(
     return new Response(
       JSON.stringify({
         query: question,
+        inferred_context: inferredContext,
+        applied_filter: queryOptions.filter,
         total_results: results.matches.length,
         results: {
           all: weightedResults.slice(0, 10),

@@ -3,6 +3,7 @@ import { ingestDecision } from './handlers/ingest-decision';
 import { queryTopology } from './handlers/query';
 import { recomputeWeights } from './handlers/recompute-weights';
 import { synthesizeInterpretation } from './handlers/synthesize';
+import { migrateClassifications } from './handlers/migrate-classifications';
 import { QueueService } from './services/queue-service';
 import { ProcessorService } from './services/processor-service';
 
@@ -58,6 +59,9 @@ export default {
 
         case '/api/queue/retry':
           return await handleRetryFailed(env);
+
+        case '/api/migrate/classifications':
+          return await migrateClassifications(request, env, ctx);
 
         case '/api/health':
           return new Response(
