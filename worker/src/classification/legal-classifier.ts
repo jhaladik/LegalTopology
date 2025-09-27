@@ -109,15 +109,19 @@ export function classifyDecision(metadata: any): LegalClassification {
 export function inferQueryContext(question: string): string | null {
   const lowerQ = question.toLowerCase();
 
-  if (lowerQ.includes('syn') && (lowerQ.includes('výživné') || lowerQ.includes('alimenty'))) {
+  if ((lowerQ.includes('syn') || lowerQ.includes('potomci') || lowerQ.includes('potomk')) &&
+      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') ||
+       lowerQ.includes('alimenty') || lowerQ.match(/v[yi][zž]ivn/))) {
     return 'parent_child_support';
   }
 
-  if (lowerQ.includes('dítě') && lowerQ.includes('výživné')) {
+  if ((lowerQ.includes('dítě') || lowerQ.includes('dite') || lowerQ.includes('rodič') || lowerQ.includes('rodic')) &&
+      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi][zž]ivn/))) {
     return 'child_support';
   }
 
-  if ((lowerQ.includes('manžel') || lowerQ.includes('rozvedený')) && lowerQ.includes('výživné')) {
+  if ((lowerQ.includes('manžel') || lowerQ.includes('manzel') || lowerQ.includes('rozvedený') || lowerQ.includes('rozveden')) &&
+      (lowerQ.includes('výživné') || lowerQ.includes('vyživné') || lowerQ.includes('vyživovac') || lowerQ.match(/v[yi][zž]ivn/))) {
     return 'spousal_support';
   }
 
@@ -125,7 +129,7 @@ export function inferQueryContext(question: string): string | null {
     return 'insurance_consent';
   }
 
-  if (lowerQ.includes('smlouva') && (lowerQ.includes('platnost') || lowerQ.includes('uzavření'))) {
+  if (lowerQ.includes('smlouva') && (lowerQ.includes('platnost') || lowerQ.includes('uzavření') || lowerQ.includes('uzavreni'))) {
     return 'contract_formation';
   }
 
