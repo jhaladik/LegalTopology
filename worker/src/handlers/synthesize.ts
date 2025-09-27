@@ -1,4 +1,5 @@
 import { Env } from '../embedding/openai-client';
+import { inferQueryContext } from '../classification/legal-classifier';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -35,10 +36,19 @@ export async function synthesizeInterpretation(
     const { getEmbedding } = await import('../embedding/openai-client');
     const queryEmbedding = await getEmbedding(question, env);
 
-    const results = await env.VECTORIZE.query(queryEmbedding, {
-      topK: topK,
+    const inferredContext = inferQueryContext(question);
+
+    const queryOptions: any = {
+      topK: inferredContext ? topK * 2 : topK,
       returnMetadata: true
-    });
+    };
+
+    if (inferredContext) {
+      queryOptions.filter = { legal_framework: inferredContext };
+      console.log('Synthesis using context filter:', inferredContext);
+    }
+
+    const results = await env.VECTORIZE.query(queryEmbedding, queryOptions);
 
     const statutes = results.matches
       .filter((m: any) => m.metadata?.type === 'statute' || m.metadata?.type === 'civil_code')
