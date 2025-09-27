@@ -1,0 +1,269 @@
+Rozsudek Nejvyššího soudu ze dne
+02.03.2021, sp. zn. 32 Cdo 3172/2020,
+ECLI:CZ:NS:2021:32.CDO.3172.2020.1
+Číslo:  85/2021
+Právní věta:
+Ustanovení § 2809 o. z. nebrání smluvním stranám pojistné smlouvy sjednat si možnost odmítnutí
+pojistného plnění pro případ, že se oprávněná osoba bude domáhat pojistného plnění uvedením
+vědomě nepravdivých údajů o vzniku a okolnostech tvrzené pojistné události.
+Soud:  Nejvyšší soud
+Datum rozhodnutí:  02.03.2021
+Spisová značka:  32 Cdo 3172/2020
+Číslo rozhodnutí:  85
+Číslo sešitu:  9
+Typ rozhodnutí:  Rozsudek
+Hesla:  Pojištění
+Předpisy:  § 2809 o. z.
+Druh:  Rozhodnutí ve věcech občanskoprávních, obchodních a správních
+Sbírkový text rozhodnutí:
+Nejvyšší soud zamítl dovolání žalobkyně proti rozsudku Městského soudu v Praze ze dne 10. 6. 2020,
+sp. zn. 11 Co 414/2019. 
+I.
+Dosavadní průběh řízení
+1. Žalobkyně se v řízení po žalované domáhala zaplacení částky 62 893 Kč s příslušenstvím z titulu
+pojistného plnění z havarijního pojištění.
+2. Obvodní soud pro Prahu 2 (dále jen „soud prvního stupně“) rozsudkem ze dne 24. 7. 2019, č. j. 11
+C 108/2017 – 131, žalobu zamítl (výrok I.) a rozhodl o nákladech řízení (výroky II. a III.).
+3. K odvolání žalobkyně Městský soud v Praze (dále jen „odvolací soud“) rozsudkem ze dne 10. 6.
+2020, č. j. 11 Co 414/2019-160, rozsudek soudu prvního stupně potvrdil (výrok I.) a rozhodl o
+nákladech odvolacího řízení (výrok II.).
+4. Soudy nižších stupňů vzaly za prokázané, že žalobkyně nepodala žalované pravdivé vysvětlení o
+vzniku pojistné události. Z šetření žalované vyplynulo, že poškození vozidla nekoresponduje snahlášeným nehodovým dějem; žalobkyně uváděla, že vozidlo bylo zaparkované a jeho poškození
+objevila poté, co se k vozidlu vrátila, podle šetření žalované však k poškození vozidla muselo dojít při
+pohybu vozidla. Pojistná smlouva [hlava II čl. 5 odst. 18 písm. g) pojistných podmínek] žalované
+umožňovala odmítnout pojistné plnění, jestliže pojištěný (tu žalobkyně) uvede při uplatňování práva
+na plnění z pojištění vědomě nepravdivé nebo hrubě zkreslené údaje týkající se rozsahu pojistné
+události, nebo pokud podstatné údaje týkající se této události zamlčí.
+5. Po právní stránce soudy nižších stupňů uzavřely, že odmítnutí pojistného plnění bylo v souladu s
+ustanovením hlavy II čl. 5 odst. 18 písm. g) pojistných podmínek, přičemž takový důvod odmítnutí
+mohl být v pojistné smlouvě sjednán, neboť povaha § 2809 zákona č. 89/2012 Sb., občanského
+zákoníku (dále též „o. z.“), je dispozitivní.
+II.
+Dovolání a vyjádření k němu
+6. Proti rozsudku odvolacího soudu (obsahově toliko proti jeho výroku I.) podala žalobkyně (dále jen
+„dovolatelka“)  dovolání.  Splnění  předpokladů  jeho  přípustnosti  spatřuje  v  tom,  že  napadené
+rozhodnutí závisí na vyřešení otázky hmotného práva, která v rozhodování dovolacího soudu dosud
+nebyla řešena, konkrétně otázky povahy § 2809 o. z. (zda jde o ustanovení kogentní či dispozitivní).
+Tuto otázku odvolací soud podle dovolatelky vyřešil nesprávně; důvody pro odmítnutí pojistného
+plnění nemohou být podle ní rozšiřovány ujednáními obsaženými v pojistné smlouvě ani v pojistných
+podmínkách.
+7. Současně dovolatelka namítá, že odvolací soud nedostatečně reagoval na její námitku, že pojistné
+podmínky byly v rozporu s § 2809 o. z., jež je podle ní ustanovením kogentním, a nevypořádal se s její
+argumentací v tomto směru vznesenou, čímž porušil její právo na řádné odůvodnění rozhodnutí, tj.
+právo na soudní ochranu zaručené v čl. 36 odst. 1 Listiny základních práv a svobod; odkazuje přitom
+na judikaturu Ústavního soudu.
+8. Dovolatelka navrhuje, aby Nejvyšší soud rozsudky soudů nižších stupňů zrušil a věc vrátil soudu
+prvního stupně k dalšímu řízení.
+9. Žalovaná vyjádření k dovolání nepodala.
+III.
+Přípustnost dovolání
+10. Vzhledem k datu vydání rozhodnutí odvolacího soudu se uplatní pro dovolací řízení – v souladu s
+bodem 1. čl. II přechodných ustanovení části první zákona č. 296/2017 Sb., kterým se mění zákon č.
+99/1963 Sb., občanský soudní řád, ve znění pozdějších předpisů, zákon č. 292/2013 Sb., o zvláštních
+řízeních soudních, ve znění pozdějších předpisů, a některé další zákony – zákon č. 99/1963 Sb.,
+občanský soudní řád, ve znění účinném od 30. 9. 2017 (dále jen „o. s. ř.“).
+11. Podle § 237 o. s. ř. není-li stanoveno jinak, je dovolání přípustné proti každému rozhodnutí
+odvolacího soudu, kterým se odvolací řízení končí, jestliže napadené rozhodnutí závisí na vyřešení
+otázky hmotného nebo procesního práva, při jejímž řešení se odvolací soud odchýlil od ustálené
+rozhodovací praxe dovolacího soudu nebo která v rozhodování dovolacího soudu dosud nebyla
+vyřešena nebo je dovolacím soudem rozhodována rozdílně anebo má-li být dovolacím soudem
+vyřešená právní otázka posouzena jinak.
+12. Nejvyšší soud shledal dovolání podle § 237 o. s. ř. přípustným v otázce povahy § 2809 o. z. a z
+toho plynoucí možnosti stran sjednat si další důvody odmítnutí pojistného plnění nad rámec § 2809 o.z. v pojistné smlouvě; tato otázka v rozhodování dovolacího soudu dosud nebyla vyřešena.
+IV.
+Důvodnost dovolání
+13. Po přezkoumání napadeného rozsudku ve smyslu § 242 o. s. ř., jež bylo provedeno bez jednání (§
+243a odst. 1 věta první o. s. ř.) a v hranicích vymezených podaným dovoláním, dospěl Nejvyšší soud
+k závěru, že dovolání je nedůvodné.
+14. Podle § 1 odst. 2 o. z. nezakazuje-li to zákon výslovně, mohou si osoby ujednat práva a povinnosti
+odchylně od zákona; zakázána jsou ujednání porušující dobré mravy, veřejný pořádek nebo právo
+týkající se postavení osob, včetně práva na ochranu osobnosti. Nejvyšší soud ve své judikatuře –
+právě s odkazem na § 1 odst. 2 o. z. – dovodil, že právní normy soukromého práva jsou zásadně
+dispozitivními; strany se mohou při úpravě svých práv a povinností od právních norem soukromého
+práva odchýlit, jestliže to zákon nezakazuje (srov. například usnesení Nejvyššího soudu ze dne 19. 9.
+2017, sp. zn. 29 Cdo 5719/2016 , uveřejněné pod č. 152/2018 Sb. rozh. obč. a též dostupné, stejně
+jako dále uváděná rozhodnutí Nejvyššího soudu, na internetových stránkách www.nsoud.cz; dále
+srov. důvodovou zprávu k návrhu občanského zákoníku, sněmovní tisk číslo 362, Poslanecká
+sněmovna Parlamentu České republiky, 6. volební období 2010 – 2013, dále jen „důvodová zpráva“,
+s. 583, a v právní teorii např. Eliáš, K.: K pojetí dispozitivního práva v občanském zákoníku. In:
+Sborník mezinárodní konference XXIII. Karlovarské právnické dny. Praha. Leges, 2015, s. 60, nebo
+Melzer, F., Tégl, P. a kol., Občanský zákoník – velký komentář, Svazek I, § 1-117, Praha: Leges, 2013,
+s 51 a 52).
+15. Nejvyšší soud dále dovodil, že § 1 odst. 2 část věty před středníkem o. z. vychází z toho, že takový
+zákaz odchýlení se bude výslovný. Výslovný zákaz určitého ujednání stran může být přímý i nepřímý.
+V případě přímého zákazu zákon výslovně určuje, že se určité jednání zakazuje. Příkladem přímých
+výslovných zákazů je právě § 1 odst. 2 část věty za středníkem o. z., jež zakazuje ujednání porušující
+dobré mravy, veřejný pořádek nebo právo týkající se postavení osob. Povaha právní normy, od níž se
+taková ujednání odchylují (tj. zda jde o právní normu absolutně či relativně kogentní anebo o právní
+normu dispozitivní), přitom není významná. Jinak řečeno, ani od dispozitivní právní normy se strany
+nemohou odchýlit způsobem popsaným v § 1 odst. 2 části věty za středníkem o. z. Je-li však možno
+jakoukoliv odchylku od určité právní normy považovat (per se) za porušující dobré mravy, veřejný
+pořádek či právo upravující postavení osob, lze takovou právní normu kvalifikovat jako (absolutně)
+kogentní. V případě nepřímého zákazu zákon odchylné ujednání stran reprobuje tím, že je prohlašuje
+za neplatné, případně za zdánlivé, či určuje, že se k němu nepřihlíží. Příkladem nepřímého
+výslovného zákazu je § 580 o. z., podle něhož je neplatné (mimo jiné) právní jednání, které odporuje
+zákonu, pokud to smysl a účel zákona vyžaduje. I v tomto případě platí, že zákon zakazuje každou
+odchylku od určité právní normy, která odporuje jejímu smyslu a účelu, byť by obecně nešlo o právní
+normu (absolutně) kogentní (tedy byť by jiné odchylky od právní normy byly možné). Brání-li však
+smysl a účel určité právní normy jakémukoliv odchylnému ujednání, půjde o právní normu
+(absolutně) kogentní (srov. například usnesení Nejvyššího soudu ze dne 31. 10. 2017, sp. zn. 29 Cdo
+387/2016 , uveřejněné pod č. 10/2019 Sb. rozh. obč.).
+16. Podle § 2809 o. z. může pojistitel pojistné plnění odmítnout, byla-li příčinou pojistné události
+skutečnost, a) o které se dozvěděl až po vzniku pojistné události, b) kterou při sjednávání pojištění
+nebo jeho změny nemohl zjistit v důsledku zaviněného porušení povinnosti stanovené v § 2788 a c)
+pokud by při znalosti této skutečnosti při uzavírání smlouvy tuto smlouvu neuzavřel nebo pokud by ji
+uzavřel za jiných podmínek.
+17. Odmítnutí pojistného plnění podle § 2809 o. z. (vedle odstoupení od smlouvy podle § 2808 o. z.)
+lze chápat coby sankci za takové protiprávní jednání při sjednávání pojištění, jež vedlo k uzavřenísmlouvy, resp. k jejímu uzavření za konkrétních podmínek. Smyslem a účelem § 2809 o. z. je tedy
+stanovit případy (situace), v nichž vždy, tj. i když si to strany při sjednávání pojištění nesmluví, lze
+pojistné plnění odmítnout, jde však o případy (situace) vážící se vždy k době sjednávání pojištění,
+nikoli k době uplatňování práva z pojištění. Na možnost odmítnout pojistné plnění pro jednání v
+rámci uplatňování práva z pojištění § 2809 o. z. nedopadá.
+18. Nejde-li o povinné pojištění, pak v úvahu nepřichází aplikace § 2780 o. z., podle něhož při
+povinném pojištění může pojistitel pojistné plnění odmítnout, jen pokud se na uvedení nepravdivých
+informací, neúplně zodpovězených dotazů učiněných v písemné formě nebo vědomě nepravdivých
+nebo hrubě zkreslených údajů podílel výlučně poškozený nebo i jiná osoba s vědomím poškozeného.
+Nejde-li o povinné pojištění, pak aplikovat nelze ani § 2781 o. z., podle něhož pojistitel má právo
+odstoupit od smlouvy nebo vypovědět povinné pojištění, jen pokud to jiný zákon připouští; to nebrání
+jiným ujednáním zakládajícím pojistiteli jiné právo k postihu pojistníka nebo pojištěného pro případ
+porušení jejich povinnosti. Ve vztahu k jinému než povinnému pojištění přitom občanský zákoník
+obdobnou úpravu neobsahuje.
+19. Záměr zákonodárce, aby § 2809 o. z. na jednání v rámci uplatňování práva z pojištění nedopadal,
+zřetelně vyjádřený v důvodové zprávě tak, že do tohoto ustanovení (záměrně) není přebírána
+skutková podstata dříve uvedená v § 24 odst. 1 písm. b) zákona č. 37/2004 Sb. o pojistné smlouvě a o
+změně souvisejících zákonů (dále „zákon o pojistné smlouvě“), směřuje toliko k nezahrnutí podání
+korektního  (pravdivého)  vysvětlení  vzniku  a  okolností  pojistné  události  pod  zákonné  důvody
+odmítnutí pojistného plnění. Takto vyjádřený zákonodárcův záměr však bez dalšího nic nevypovídá o
+povaze § 2809 o. z., tj. o tom, zda jde o ustanovení kogentní či dispozitivní, resp. o ustanovení, které
+umožňuje smluvně si sjednat odmítnutí pojistného plnění i nad rámec důvodu v něm uvedeného či
+nikoliv, navíc typově v situacích, jež se od situací předvídaných v § 2809 o. z. odlišují (situace vážící
+se k době uplatňování práva z pojištění oproti situacím vážícím se k době sjednávání pojištění).
+20. Přesvědčení vyjádřené v důvodové zprávě, podle něhož pro řešení nepodání korektního
+(pravdivého) vysvětlení vzniku pojistné události postačí jiné právní instituty, rovněž samo o sobě nic
+nevypovídá o (ne)možnosti sjednat si nekorektní (nepravdivé) vysvětlení vzniku (eventuálně jiných
+podstatných okolností) pojistné události coby důvod pro odmítnutí pojistného plnění nad rámec
+zákona. Ani smysl slov, jimiž je do občanského zákoníku vtělena možnost odmítnout pojistné plnění
+pro protiprávní jednání při sjednávání pojištění, ani jasný úmysl zákonodárce, jenž by byl v důvodové
+zprávě vyjádřen (§ 2 odst. 2 o. z.), pro nemožnost sjednat si právo odmítnout pojistné plnění pro
+nekorektní (nepoctivé) jednání při uplatnění požadavku na pojistné plnění nesvědčí. Naopak § 2774
+odst. 1 o. z., podle něhož pojistné podmínky vymezí zpravidla podrobnosti o vzniku, trvání a zániku
+pojištění, pojistnou událost, výluky z pojištění a způsob určení rozsahu pojistného plnění a jeho
+splatnost, ponechává na pojistné smlouvě (na pojistných podmínkách), aby vymezily mimo jiné
+způsob určení rozsahu pojistného plnění, aniž by bylo zapovězeno vymezit tento způsob určení v
+závislosti na korektnosti (poctivosti) jednání při uplatnění požadavku na pojistné plnění, a to až do té
+míry, že pojistné plnění bude odmítnuto.
+21. Ustanovení § 2809 o. z. neobsahuje explicitní ani implicitní zákaz odchylného ujednání o
+důvodech odmítnutí pojistného plnění; nezakazuje ani smluvní vyloučení aplikovatelnosti pravidla
+tam obsaženého, ani ujednání o dalších důvodech odmítnutí pojistného plnění, jež by byly vázány na
+způsob (míru korektnosti) vysvětlení vzniku pojistné události. Ujednání, v rámci smluvní volnosti a
+autonomie vůle (§ 1 odst. 2 o. z.) směřující k tomu, aby vznik pojistné události byl pro vznik
+povinnosti pojistného plnění vysvětlen korektně (pravdivě), nemůže porušovat dobré mravy, veřejný
+pořádek či práva týkající se postavení osob (§ 1 odst. 2 o. z.). Takové ujednání naopak respektuje
+zásadu poctivosti v právním jednání (§ 6 o. z.); není nejmenšího důvodu dovozovat, že by právní
+ochrany mělo požívat jednání, jímž se pojistník domáhá pojistného plnění podáním nekorektního
+(nepravdivého) vysvětlení vzniku a okolností jím tvrzené pojistné události.22. Odmítnutí pojistného plnění nad rámec § 2809 o. z., jenž co do situací, v nichž lze pojistné plnění
+odmítnout, nemá význam enumerativní, pro uvedený případ tudíž bylo možno sjednat.
+23. Proti tomuto závěru nestojí ani – občanským zákoníkem obecně, tj. nikoli pouze ve vztahu k
+odmítnutí plnění podle § 2809 o. z., stanovený – důsledek odmítnutí plnění uvedený v § 2810 o. z.
+Podle tohoto ustanovení pojištění zaniká (mimo jiné) dnem odmítnutí pojistného plnění, aniž by
+takový zánik pojištění byl nutně svázán toliko s odmítnutím pojistného plnění podle § 2809 o. z.
+Naopak tato systematika (tj. „neprovázání“ zániku pojištění v případě odmítnutí pojistného plnění
+podle § 2810 o. z. toliko s odmítnutím pojistného plnění podle § 2809 o. z., jako tomu bylo dříve v §
+24 odst. 1 až 3 zákona o pojistné smlouvě) je argumentem ve prospěch výkladu, podle něhož zánik
+pojištění podle § 2810 o. z. v případě odmítnutí pojistného plnění nastává i v jiných, na § 2809 o. z.
+nezávisle a od něj odchylně smluvně sjednaných případech, kdy došlo k sankčnímu odmítnutí
+pojistného plnění, a tedy i argumentem ve prospěch výkladu, podle něhož občanský zákoník smluvní
+sjednání případů, v nichž může dojít k sankčnímu odmítnutí pojistného plnění nad rámec § 2809 o. z.,
+umožňuje [srov. obdobně k § 2810 o. z. Hulmák, M. a kol.: Občanský zákoník VI. Závazkové právo.
+Zvláštní část (§ 2055 – 3014). Komentář. 1. vydání. Praha: C. H. Beck, 2014; rovněž obdobně k §
+2810 o. z. Švestka, J., Dvořák, J., Fiala, J. a kol., Občanský zákoník. Komentář. Svazek VI. (§ 2521 –
+3081, relativní majetková práva, 2. část), Wolters Kluwer (ČR), Praha, 2014].
+24. K právě uvedenému je třeba dodat, že z důvodů, které svědčí pro dispozitivní povahu § 2809 o. z.,
+lze dovozovat i dispozitivní povahu § 2810 o. z., jež tak (mimo jiné) umožňuje, aby si strany smlouvy
+ve vztahu k důvodům odmítnutí pojistného plnění smluveným nad rámec § 2809 o. z. aplikovatelnost
+§ 2810 o. z. sjednaly jinak, kupř. aby si jeho použití vyloučily. Řešení otázky sjednání odlišného
+pravidla co do zániku pojištění oproti pravidlu vyplývajícímu z § 2810 o. z. v případě sjednání
+sankčního odmítnutí pojistného plnění nad rámec § 2809 o. z. ve vztahu k nyní posuzované věci,
+resp. řešení otázky důsledků odmítnutí pojistného plnění do dalšího trvání pojištění v nyní
+posuzované věci, by však již překračovalo rámec dovoláním vymezeného dovolacího přezkumu.
+25. Dovolatelce lze přisvědčit v tom ohledu, že občanský zákoník se v otázce možnosti odmítnutí
+pojistného plnění výrazně odklonil od předchozí právní úpravy, jelikož do zákonné reglementace
+nepřevzal někdejší princip  fraus omnia corrumpit , tedy možnost odmítnutí pojistného plnění dříve
+upravenou v § 24 odst. 1 písm. b) zákona o pojistné smlouvě, podle kterého mohl pojistitel plnění z
+pojistné smlouvy odmítnout vždy a v celém rozsahu, když oprávněná osoba uvedla při uplatňování
+práva na plnění z pojištění vědomě nepravdivé nebo hrubě zkreslené údaje týkající se rozsahu
+pojistné události nebo podstatné údaje týkající se této události zamlčela. Smluvní sjednání principu
+fraus omnia corrumpit  ve vztahu k nekorektnímu uplatňování práva na pojistné plnění však není
+nadále vyloučeno ani § 2809 o. z., ani jiným ustanovením občanského zákoníku. Nejvyšší soud se již
+ostatně [aniž by bylo na újmu použitelnosti jeho úvah na nyní posuzovanou věc, že tak učinil právě ve
+vztahu k § 24 odst. 1 písm. b) zákona o pojistné smlouvě] k tomuto principu – ve vztahu k uplatňování
+práv na pojistné plnění – vyslovil coby k obecně přijatelnému, morálnímu, ba i potřebnému (srov.
+rozsudek Nejvyššího soudu ze dne 15. 2. 2021, sp. zn. 32 Cdo 3803/2019 , včetně tam obsaženého
+odkazu na literaturu, a dále též např. rozsudky Nejvyššího soudu ze dne 9. 9. 2014, sp. zn. 23 Cdo
+1735/2014 , či ze dne 18. 5. 2017, sp. zn. 32 Cdo 2120/2015 ).
+26. V nyní posuzované věci byla součástí pojistné smlouvy ujednání, podle nichž 1) pojištěný je
+povinen po vzniku pojistné události podat pravdivé vysvětlení o vzniku a rozsahu pojistné události, o
+právech třetích osob a o jakémkoli vícenásobném pojištění a dále je povinen pojistiteli umožnit
+provedení všech úkonů, které souvisejí s vyšetřováním příčin a rozsahu škody, především však nesmí
+měnit stav způsobený pojistnou událostí, a to do doby, dokud pojistitel postižení věci neprohlédne
+[hlava I čl. 8 odst. 3 písm. c) pojistných podmínek], a 2) pojistitel je oprávněn odmítnout pojistné
+plnění, jestliže pojištěný uvede při uplatňování práva na plnění z pojištění vědomě nepravdivé nebo
+hrubě zkreslené údaje týkající se rozsahu pojistné události, nebo pokud podstatné údaje týkající setéto události zamlčí [hlava II čl. 5 odst. 18 písm. g) pojistných podmínek].
+27. V řízení před soudy nižších stupňů vyšlo najevo, že dovolatelka nepodala pravdivé vysvětlení o
+vzniku pojistné události; toto skutkové zjištění nepřísluší Nejvyššímu soudu v dovolacím řízení
+přezkoumávat a nezpochybňuje je ostatně ani dovolatelka.
+28. Navazující konkluzi soudů nižších stupňů, podle níž na podání vědomě nepravdivého vysvětlení o
+vzniku pojistné události dopadalo ujednání podle hlavy II čl. 5 odst. 18 písm. g) pojistných podmínek
+(uvedení vědomě nepravdivých nebo hrubě zkreslených údajů týkajících se rozsahu pojistné události
+nebo zamlčení podstatných údajů týkajících se této události), dovolatelka nezpochybňuje; tato
+konkluze tak není předmětem dovolacího přezkumu. Za tohoto stavu nelze dát dovolatelce za pravdu
+v tom ohledu, že bylo povinností odvolacího soudu zabývat se důsledky podání vědomě nepravdivého
+vysvětlení o vzniku pojistné události; z pravidla obsaženého v hlavě II čl. 5 odst. 18 písm. g)
+pojistných  podmínek  totiž  takové  kritérium  pro  úvahu  ohledně  odmítnutí  pojistného  plnění
+nevyplývá.
+29. Má-li dovolatelka za to, že bylo povinností odvolacího soudu zabývat se otázkou, zda dovolatelka
+svým jednáním ztížila či znemožnila šetření pojistitele, s odkazem na usnesení Nejvyššího soudu ze
+dne 3. 12. 2015, sp. zn. 23 Cdo 2431/2015 , pak nejde o odkaz přiléhavý. V dovolatelkou zmiňované
+věci se Nejvyšší soud vyslovil k otázce regresního plnění podle § 10 písm. d) zákona č. 168/1999 Sb.,
+o pojištění odpovědnosti z provozu vozidla, v tom smyslu, že porušení povinnosti ohlásit řádně
+nehodu policii nemusí mít vždy za následek nemožnost či podstatné ztížení zjištění okolností
+rozhodných pro posouzení vzniku nároku na pojistné plnění.
+30. Na základě shora uvedeného lze tedy uzavřít, že § 2809 občanského zákoníku nebrání smluvním
+stranám pojistné smlouvy sjednat si možnost odmítnutí pojistného plnění pro případ, že se pojistník
+bude domáhat pojistného plnění podáním vědomě nekorektního (nepravdivého) vysvětlení vzniku a
+okolností jím tvrzené pojistné události.
+31. Závěr odvolacího soudu, podle něhož smluvnímu ujednání o možnosti odmítnout pojistné plnění
+pravidlo podávané z § 2809 o. z. nebránilo, je tak správný. Tento závěr byl přitom komplexně,
+uceleně a konzistentně (v bodu 6. rozsudku odvolacího soudu) odůvodněn, vyložil-li odvolací soud
+povahu § 2809 o. z. na základě argumentace ohledně smluvní volnosti při absenci výslovně
+vyjádřeného zákazu odchylky od zákonné úpravy a porušení dobrých mravů, veřejného pořádku nebo
+práv týkajících se postavení osob, výslovně dovodil, že nejde o ujednání v neprospěch spotřebitele,
+resp.  slabší  smluvní  strany,  ani  ujednání  obecně  nepřiměřené,  což  podpořil  odkazem  na
+komentářovou literaturu zastávající obdobný názor a úvahou o zohlednění principů morálních. Takto
+komplexní úvaha současně představuje dostatečnou odpověď na argumentaci dovolatelky. Z § 157
+odst. 2 o. s. ř. (které upravuje náležitosti odůvodnění písemného vyhotovení rozsudku, a přiměřeně
+se prosazuje i pro odůvodnění rozhodnutí vydaných odvolacím soudem; srov. § 211 o. s. ř.) ani z
+práva na spravedlivý proces nelze dovozovat povinnost soudů vypořádat se s každou jednotlivou
+námitkou účastníka řízení (tu konkrétně s dovolatelkou předestíraným názorem, jenž má být podle ní
+obsažen v jiné komentářové literatuře, než kterou na podporu svého názoru citoval odvolací soud);
+jak opakovaně vysvětlil Ústavní soud, není porušením práva na spravedlivý proces, jestliže obecné
+soudy nebudují vlastní závěry na podrobné oponentuře (a vyvracení) jednotlivě vznesených námitek,
+pakliže proti nim staví vlastní ucelený argumentační systém, který logicky a v právu rozumně vyloží
+tak, že podpora správnosti jejich závěrů je sama o sobě dostatečná (srov. nález Ústavního soudu ze
+dne 12. 2. 2009, sp. zn. III. ÚS 989/08 , uveřejněný pod číslem 26/2009 Sbírky nálezů a usnesení
+Ústavního soudu, usnesení Ústavního soudu ze dne 14. 6. 2012, sp. zn. III. ÚS 3122/09 , dostupné na
+internetových stránkách nalus.usoud.cz, a též usnesení Nejvyššího soudu ze dne 19. 12. 2019, sp. zn.
+29 Cdo 137/2018 ).32. Nadto tvrdí-li dovolatelka, že se odvolací soud nevypořádal s údajně opačným závěrem ohledně
+povahy § 2809 o. z. vyplývajícím z komentářové literatury [Švestka, J., Dvořák, J., Fiala, J. a kol.,
+Občanský zákoník. Komentář. Svazek VI. (§ 2521 – 3081, relativní majetková práva, 2. část), Wolters
+Kluwer (ČR), Praha, 2014], pak uvedený komentář v části týkající se § 2809 o. z. (a jeho aplikace v
+„běžném“, tj. v „nepovinném“ pojištění) klade otázku, „zda je možné pojistnou smlouvou platně
+sjednat i jiné, smluvní, předpoklady či důvody sankčního odmítnutí pojistného plnění odlišně od
+předpokladů vymezených v § 2809, zejména předpoklady odpovídající a smluvně nahrazující
+dosavadní zákonnou skutkovou podstatu sankčního odmítnutí pojistného plnění z důvodu lži při
+škodné události podle § 24 odst. 1 písm. b) zák. o pojistné smlouvě“, k jejímuž řešení posléze nabízí
+šest argumentů svědčících pro dispozitivní povahu § 2809 o. z. a naopak dva argumenty svědčící pro
+jeho kogentní povahu, všechny takto uváděné argumenty označuje za „silné“ či „relevantní“, přičemž
+autor vyjadřuje svůj názor, že jde o ustanovení dispozitivní.
+33. Protože rozsudek odvolacího soudu je založen na správném právním posouzení věci, Nejvyšší
+soud dovolání zamítl [§ 243d odst. 1 písm. a) o. s. ř.].

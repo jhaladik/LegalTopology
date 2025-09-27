@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+dist/
+*.log
+.env
+.DS_Store
+worker/.wrangler/
+worker/node_modules/
+worker/dist/
+.claude/

@@ -1,0 +1,45 @@
+name = "legal-topology"
+main = "src/index.ts"
+compatibility_date = "2024-09-26"
+compatibility_flags = ["nodejs_compat"]
+
+# Vectorize binding
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "czech-legal-topology"
+
+# R2 bucket for document storage
+[[r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "legal-documents"
+
+# D1 database for processing queue
+[[d1_databases]]
+binding = "DB"
+database_name = "legal-topology-queue"
+database_id = "a1bb5d9c-8dd0-47f2-a136-96900c65c12f"
+
+# KV namespace for processing state
+[[kv_namespaces]]
+binding = "PROCESSING_QUEUE"
+id = "c4d3410c39f04c2082562de7a36c2778"
+
+# Scheduled cron for processing queue
+[triggers]
+crons = ["* * * * *"]  # Every minute
+
+# Environment variables
+[vars]
+OPENAI_MODEL = "text-embedding-3-large"
+EMBEDDING_DIMENSIONS = "1536"
+
+# Secrets (set via: wrangler secret put OPENAI_API_KEY)
+# OPENAI_API_KEY - Set this using: wrangler secret put OPENAI_API_KEY
+
+# Development configuration
+[env.development]
+name = "legal-topology-dev"
+
+# Production configuration
+[env.production]
+name = "legal-topology-prod"

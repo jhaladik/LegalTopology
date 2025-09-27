@@ -1,0 +1,357 @@
+Rozsudek Nejvyššího soudu ze dne 30. 11.
+2022, sp. zn. 27 Cdo 935/2022,
+ECLI:CZ:NS:2022:27.CDO.935.2022.1
+Číslo:  101/2023
+Právní věta:
+Nedodržení požadavku písemné formy pojistné smlouvy podle § 2758 odst. 2 věty první o. z.
+nezakládá samo o sobě absolutní neplatnost pojistné smlouvy.
+Soud:  Nejvyšší soud
+Datum rozhodnutí:  30.11.2022
+Spisová značka:  27 Cdo 935/2022
+Číslo rozhodnutí:  101
+Číslo sešitu:  10
+Typ rozhodnutí:  Rozsudek
+Hesla:  Forma právních jednání (o. z.) [ Právní jednání (o. z.) ], Neplatnost právního jednání (o. z.),
+Pojištění, Výklad právních jednání (o. z.) [ Právní jednání (o. z.) ]
+Předpisy:  § 2758 odst. 2 o. z.
+§ 556 o. z.
+§ 582 o. z.
+§ 586 o. z.
+§ 588 o. z.
+Druh:  Rozhodnutí ve věcech občanskoprávních, obchodních a správních
+Sbírkový text rozhodnutí:
+Nejvyšší soud k dovolání žalobkyně zrušil rozsudek Městského soudu v Praze ze dne 2. 11. 2021, sp.
+zn. 30 Co 338/2021, a rozsudek Obvodního soudu pro Prahu 8 ze dne 6. 5. 2021, sp. zn. 26 C
+107/2020, a věc vrátil Obvodnímu soudu pro Prahu 8 k dalšímu řízení.
+I.
+Dosavadní průběh řízení
+a) Návrh na zahájení řízení
+1. Žalobkyně se žalobou domáhá, aby soud uložil žalované (dále jen „pojišťovna“) zaplatit jí
+2.000.000 Kč s příslušenstvím z titulu nevyplaceného pojistného plnění.
+b) Řízení před soudem prvního stupně
+2. Obvodní soud pro Prahu 8 rozsudkem ze dne 6. 5. 2021, č. j. 26 C 107/2020-222, žalobu zamítl
+(výrok I.) a rozhodl o nákladech řízení (výrok II.).
+3. Soud prvního stupně vyšel z toho, že:
+1) Žalobkyně s pojišťovnou uzavřely dne 30. 12. 2013 pojistnou smlouvu č. 503 438 832 (dále
+jen „pojistná smlouva 2013“), s datem počátku pojištění 31. 12. 2013, jejímž předmětem bylo
+pojištění budov včetně budovy „výkrmna skotu jedna“ (dále jen „pojištěná budova“). Pojištění
+bylo sjednáno na dobu tří let. Součástí smlouvy byly Všeobecné pojistné podmínky pro pojištění
+podnikatelů VPP-P1/11 (dále jen „všeobecné podmínky“).
+2) Podle článku 5 odst. 1 všeobecných podmínek po uplynutí doby pojištění „se pojištění mění
+bez dalšího na pojištění na dobu neurčitou“.
+3) Pojišťovna upomínkou ze dne 16. 2. 2017 vyzvala žalobkyni k zaplacení dlužného pojistného
+41.558 Kč vzniklého na základě pojistné smlouvy 2013 a upozornila ji, že nebude-li dlužné
+pojistné zaplaceno ve stanovené lhůtě 35 dnů, pojištění zanikne. Upomínka byla žalobkyni
+doručena 21. 2. 2017.
+4) Žalobkyně dlužné pojistné ve stanovené lhůtě neuhradila, a proto ji pojišťovna dopisem ze
+dne 11. 5. 2017 informovala o zániku pojištění podle pojistné smlouvy 2013 k datu 28. 3. 2017
+s tím, že dlužné pojistné do data zániku pojištění činí 18.493 Kč.
+5) I za období po 28. 3. 2017 pojišťovna předkládala žalobkyni pravidelné vyúčtování
+pojistného.
+6) Dne 30. 5. 2017 B. P., pojišťovací makléř, (dále jen „B. P.“) zaslal zaměstnanci pojišťovny, M.
+K. (dále jen „M. K.“), e-mailovou zprávu ve znění: „V příloze zasílám zaniklou smlouvu pro
+neplacení (dnes by to měli zaplatit) – buď jestli půjde znovu aktivovat, nebo novou.“ K e-
+mailové zprávě byla jako příloha přiložena pojistná smlouva 2013. Nato M. K. požádal B. P. o
+doklad o zaplacení dlužného pojistného a zaslal formulář s čestným prohlášením, které měla
+žalobkyně učinit.
+7) Dne 30. 5. 2017 podepsala žalobkyně čestné prohlášení, v němž prohlásila, že v období od
+28. 3. 2017 do data zaplacení dlužného pojistného nebyla zjištěna žádná pojistná událost.
+8) V období od 30. 5. 2017 do 10. 2. 2020 žalobkyně neplatila pojistné. Od posledně uvedeného
+data hradila pojišťovně pojistné pravidelně.
+9) Dne 30. 5. 2017 žalobkyně uhradila dlužné pojistné ve výši 18.493 Kč.
+10) V důsledku škodní události, která vznikla 29. 10. 2017, vyplatila pojišťovna žalobkyni na
+základě pojistné smlouvy 2013 pojistné plnění ve výši 92.450 Kč.
+11) Dne 18. 11. 2019 uzavřely žalobkyně a pojišťovna dohodu nazvanou „Pojistná smlouva č.
+503 438 832 – změna“ (dále jen „dohoda o změně pojistné smlouvy“), na základě které mělo
+dojít ke změně pojistné smlouvy 2013.
+12) Dne 10. 2. 2020 žalobkyně nahlásila pojišťovně pojistnou událost, a to poškození střechy
+pojištěné budovy.
+13) Dne 19. 2. 2020 B. P. provedl prohlídku poškozené pojištěné budovy a učinil o ní zápis.
+4. Na takto ustaveném základě soud prvního stupně nejprve konstatoval, že věc posuzoval podle
+zákona č. 37/2004 Sb., o pojistné smlouvě a o změně souvisejících zákonů, ve znění účinném do 31.
+12. 2013 (dále jen „zákon o pojistné smlouvě“), a podle zákona č. 40/1964 Sb., občanského zákoníku,
+ve znění účinném do 31. 12. 2013.
+5. V projednávané věci pak podle soudu pojištění sjednané pojistnou smlouvou 2013 zaniklo 28. 3.
+2017, tj. dnem následujícím po marném uplynutí lhůty stanovené pojišťovnou v upomínce k zaplacení
+pojistného doručené žalobkyni 21. 2. 2017 (§ 20 zákona o pojistné smlouvě).
+6. Jelikož před zánikem pojištění „nedošlo k dohodě o prodloužení lhůty stanovené v upomínce k
+zaplacení pojistného, další právní jednání účastníků, kterými bylo po dobu tří let pokračováno ve
+smluvním vztahu, byla posouzena jako neplatná,“ dovodil soud.
+7. Dohoda o změně pojistné smlouvy je podle soudu prvního stupně „již dle názvu a obsahu smlouvy
+pouze změnou předmětné smlouvy – jedná se o totožné označení číslem smlouvy, shodně tak je
+uveden počátek smlouvy ke dni 31. 12. 2013.“ Mezi pojišťovnou a žalobkyní tak nebyla uzavřena
+nová pojistná smlouva.
+c) Odvolací řízení
+8. K odvolání žalobkyně Městský soud v Praze rozsudkem ze dne 2. 11. 2021, č. j. 30 Co
+338/2021-235, rozsudek soudu prvního stupně potvrdil (první výrok) a rozhodl o nákladech
+odvolacího řízení (druhý výrok).
+9. Odvolací soud, vycházeje ze skutkových zjištění soudu prvního stupně, doplnil dokazování a dále
+vyšel také z toho že:
+1) Žalobkyně 15. 11. 2019 požádala pojišťovnu o „úpravu“ pojistné smlouvy 2013 s tím, že se
+úpravy týkají zrušení pojištění budovy 1 a 9 (výkrm skotu 2, stodola), zvýšení pojistné částky u
+budovy 4, zvýšení limitu pojištění u budov u ostatních nebezpečí, zvýšení spoluúčasti na 10.000
+Kč, změny ročního obratu u pojištění odpovědnosti a snížení limitu pojištění – škody způsobené
+na věcech zaměstnanců.
+2) V dohodě o změně pojistné smlouvy je uvedeno „datum účinnosti změny 31. 12. 2019 a
+datum počátku 31. 12. 2013“. Dohoda dále vymezuje rozsah pojištění budov s limitem
+76.770.000 Kč; v příloze této dohody je označena pojištěná budova.
+10. Odvolací soud nejprve označil za správný závěr soudu prvního stupně, podle něhož pojistný vztah
+založený pojistnou smlouvou 2013 zanikl marným uplynutím lhůty k zaplacení dlužného pojistného
+dne 28. 3. 2017.
+11. Tvrzení žalobkyně o reaktivaci pojistné smlouvy 2013 je podle odvolacího soudu „zmatečné“.
+Obecně lze „v případě zaniklého právního vztahu ‚reaktivaci‘ vyložit jako nové založení vztahu, který
+je stejný (obdobný) jako vztah zaniklý.“
+12. Případné ústní, resp. konkludentní ujednání o vzniku nového pojistného vztahu po jeho zániku v
+roce 2017, by bylo podle odvolacího soudu neplatné pro nedostatek písemné formy podle § 582
+zákona č. 89/2012 Sb., občanského zákoníku (dále jen „o. z.“). Je tomu tak proto, že nejsou naplněny
+předpoklady pro aplikaci výjimky stanovené v § 2758 odst. 2 o. z.
+13. Z okolností popisovaných žalobkyní o doplacení pojistného za období do 28. 3. 2017, čestném
+prohlášení žalobkyně ze dne 30. 5. 2017, předpisech pojistného ze strany pojišťovny a výplatě
+pojistného plnění v prosinci 2017 pak „bez dalšího ani nelze učinit závěr, že vůbec došlo k uzavření
+ústní či konkludentní smlouvy, jak žalobkyně dovozuje (…) z úvahy o reaktivaci smlouvy včetně
+doplacení pojistného do 28. 3. 2017 (…) přepisu pojistného a výplaty pojistného plnění v prosinci
+2017“. Jako „možný, ba dokonce pravděpodobný“ důvod uvedených skutečností odvolací soud
+shledal, „že byly důsledkem pouze chybné evidence žalované, která do systému nezavedla zánik
+smlouvy pro neplacení pojistného.“ Za zásadní označil okolnost, že žalovaná nebyla pojišťovnou
+upomínána k placení pojistného.
+14. Ani dohoda o změně pojistné smlouvy podle odvolacího soudu nemůže obstát jako smlouva
+zakládající pojistný vztah. Je tomu tak jednak proto, že vůle stran při uzavření dohody nesměřovala
+ke vzniku nového pojistného vztahu, ale „jasně ke změně pojistného vztahu“ založeného pojistnou
+smlouvou 2013, a jednak proto, že v dohodě nebyla vůle stran založit nový pojistný vztah projevena
+písemně, a nebyla tak (opět) dodržena zákonná „obligatorní“ písemná forma pojistné smlouvy dle §
+2758 odst. 2 o. z.
+15. Skutečnost, že vůle stran dohody o změně pojistné smlouvy směřovala ke změně pojistného
+vztahu, odvolací soud dovodil ze znění žádosti žalobkyně o úpravu pojistné smlouvy ze dne 15. 11.
+2019 a ze znění dohody o změně pojistné smlouvy, ze kterého je „jasně zřetelné, že se jím mění
+podmínky pojistné smlouvy založené již smlouvou 2013“.
+II.
+Dovolání a vyjádření k němu
+16. Proti rozhodnutí odvolacího soudu podala žalobkyně dovolání, jehož přípustnost opírá o § 237 o.
+s. ř. zákona č. 99/1963 Sb., občanského soudního řádu (dále jen „o. s. ř.“), majíc za to, že napadené
+rozhodnutí závisí na vyřešení otázky (písemné) formy pojistné smlouvy, která v rozhodování
+dovolacího soudu dosud nebyla vyřešena, a otázky použití pravidel výkladu právního jednání, při
+jejímž řešení se odvolací soud odchýlil od ustálené rozhodovací praxe dovolacího soudu.
+17. Dovolatelka namítá, že napadené rozhodnutí spočívá na nesprávném právním posouzení věci
+(uplatňuje dovolací důvod podle § 241a odst. 1 o. s. ř.), a navrhuje, aby Nejvyšší soud rozhodnutí
+odvolacího soudu jakož i rozhodnutí soudu prvního stupně zrušil a věc vrátil soudu prvního stupně k
+dalšímu řízení.
+18. Odvolací soud podle dovolatelky při výkladu právních jednání porušil „základní principy
+občanského práva“ zdůrazňované zejména Ústavním soudem. Je totiž nutno dát přednost skutečné
+vůli účastníků smlouvy nad jejím formálním projevem. Právní jednání je třeba vykládat nejen podle
+jejich jazykového vyjádření, ale zejména podle vůle toho, kdo právní jednání učinil, není-li tato vůle v
+rozporu s jazykovým projevem.
+19.  Dovolatelka  především  nesouhlasí  s  výkladem  termínu  „reaktivace  smlouvy“,  učiněným
+odvolacím soudem. Reaktivací smlouvy v projednávané věci podle ní nepochybně dovolatelka i
+pojišťovna zamýšlely obnovení původního smluvního vztahu. Přitom je „lhostejné, zda by reálně měl
+původní vztah z pojistné smlouvy z roku 2013 pokračovat tím, že by odpadly účinky zrušení tohoto
+vztahu pro nezaplacení pojistného, nebo že by vztah skutečně zrušený byl ‚obnoven‘ založením nové
+smlouvy, ovšem za stejných podmínek stanovených původní smlouvou.“ Termín „reaktivace“ je běžně
+v praxi pojišťoven používán pro případy „obnovení“ smlouvy, která z jakýchkoli důvodů zanikla, a její
+smluvní strany mají zájem na tom, aby vznikl nový závazkový vztah s obdobným obsahem.
+20. Podle jejího výkladu zaměstnanec pojišťovny v e-mailové komunikaci s realitním makléřem
+dovolatelce stanovil dvě podmínky pro obnovení (reaktivaci) pojistného vztahu založeného pojistnou
+smlouvou 2013, a to, aby dovolatelka vyplnila prohlášení o tom, že v „mezidobí“ (od zániku pojištění)
+nenastala žádná pojistná událost, a dále aby doplatila dlužné pojistné. Obě podmínky dovolatelka
+splnila, čímž strany pojistné smlouvy 2013 shodně projevily vůli, aby jejich závazkový vztah „trval“.
+21. Skutečnost, že smluvní strany považovaly závazkový vztah založený pojistnou smlouvou 2013 i
+nadále za trvající, potvrzuje chování stran po reaktivaci pojistné smlouvy. Pojišťovna pravidelně
+zasílala dovolatelce předpisy vyúčtování pojistného a vyplatila dovolatelce pojistné plnění za
+pojistnou událost vzniklou po „obnovení“ pojistného vztahu. Argumentace odvolacího soudu, podle
+níž pojišťovna „měla nepořádek ve své evidenci, a proto žalobkyni zasílala předpisy pojistného, aniž
+by ji zároveň upomínala o neplacení pojistného a že žalobkyni vyplatila pojistné plnění vlastně
+omylem,“ nemůže podle dovolatelky obstát i z toho důvodu, že pojišťovna „je a byla v silnějším
+postavení vůči žalobkyni, a to jako podnikatel specializující se na oblast pojišťovnictví.“
+22. Dovolatelka je přesvědčena, že reaktivace pojistné smlouvy byla učiněna v písemné formě. I
+kdyby tomu tak nebylo a ujednání smluvních stran v rámci e-mailové komunikace by nebylo
+považováno za naplnění požadavku písemné formy, nelze podle jejího názoru – poté, kdy pojišťovna
+dovolatelce vyplatila v prosinci 2017 pojistné plnění – neplatnost smlouvy namítnout (§ 582 odst. 2 o.
+z.).
+23. Také dohoda o změně pojistné smlouvy obstojí dle dovolatelky jako (nová) pojistná smlouva,
+která mezi ní a pojišťovnou s účinností od 31. 12. 2019 zakládá závazkový právní vztah; obsahuje
+totiž všechny podstatné náležitostí pojistné smlouvy (§ 2758 a násl. o. z.).
+24. Odvolací soud se podle dovolatelky při výkladu této dohody odchýlil od ustálené judikatury
+dovolacího soudu „ve věcech sp. zn. 26 Cdo 557/2001  a sp. zn. 23 Cdo 3562/2012  a 28 Cdo
+2884/2009 “, neboť „dal přednost formálnímu projevení vůle nad skutečnou vůlí účastníků smlouvy“.
+Strany dohody totiž podle ní měly v úmyslu v pojistném vztahu založeném pojistnou smlouvou 2013
+pokračovat. Dohodu o změně pojistné smlouvy takto „označila, resp. připravila žalovaná jako silnější
+smluvní strana“, a dovolatelka tak nemohla ovlivnit, zda dohoda bude formálně pokračováním
+pojistné smlouvy 2013 v podobě její změny, nebo smlouvou novou. K tomu dovolatelka dodává, že
+pojistné za rok 2020 se zpožděním zaplatila.
+III.
+Přípustnost dovolání
+25. Dovolání bylo podáno včas, osobou oprávněnou a splňující podmínku podle § 241 odst. 1 o. s. ř.;
+dovolací soud se proto zabýval jeho přípustností.
+26. Dovolání je přípustné podle § 237 o. s. ř. pro řešení dovolatelkou formulovaných otázek formy
+pojistné smlouvy, která nebyla dosud dovolacím soudem vyřešena, a použití pravidel výkladu
+právního jednání, při jejímž řešení se odvolací soud odchýlil od ustálené rozhodovací praxe
+dovolacího soudu.
+IV.
+Důvodnost dovolání
+a) Použité právní předpisy
+27. Podle § 555 zákona o. z., se právní jednání posuzuje podle svého obsahu (první odstavec). Má-li
+být určitým právním jednáním zastřeno jiné právní jednání, posoudí se podle jeho pravé povahy
+(druhý odstavec).
+28. Podle § 556 o. z. co je vyjádřeno slovy nebo jinak, se vyloží podle úmyslu jednajícího, byl-li takový
+úmysl druhé straně znám, anebo musela-li o něm vědět. Nelze-li zjistit úmysl jednajícího, přisuzuje se
+projevu vůle význam, jaký by mu zpravidla přikládala osoba v postavení toho, jemuž je projev vůle
+určen (první odstavec). Při výkladu projevu vůle se přihlédne k praxi zavedené mezi stranami v
+právním styku, k tomu, co právnímu jednání předcházelo, i k tomu, jak strany následně daly najevo,
+jaký obsah a význam právnímu jednání přikládají (druhý odstavec).
+29. Podle § 559 o. z. má každý právo zvolit si pro právní jednání libovolnou formu, není-li ve volbě
+formy omezen ujednáním nebo zákonem.
+30. Podle § 582 o. z. není-li právní jednání učiněno ve formě ujednané stranami nebo stanovené
+zákonem, je neplatné, ledaže strany vadu dodatečně zhojí. Zahrnuje-li projev vůle současně více
+právních jednání, nepůsobí nedostatek formy vyžadované pro některé z nich sám o sobě neplatnost
+ostatních  (první  odstavec).  Není-li  dodržena  forma  právního  jednání  ujednaná  stranami,  lze
+neplatnost namítnout, jen nebylo-li již plněno. To platí i tehdy, vyžadují-li formu určitého právního
+jednání ustanovení části čtvrté tohoto zákona (druhý odstavec).
+31. Podle § 586 o. z. je-li neplatnost právního jednání stanovena na ochranu zájmu určité osoby,
+může vznést námitku neplatnosti jen tato osoba (první odstavec). Nenamítne-li oprávněná osoba
+neplatnost právního jednání, považuje se právní jednání za platné (druhý odstavec).
+32. Podle § 588 o. z. soud přihlédne i bez návrhu k neplatnosti právního jednání, které se zjevně příčí
+dobrým mravům, anebo které odporuje zákonu a zjevně narušuje veřejný pořádek. To platí i v
+případě, že právní jednání zavazuje k plnění od počátku nemožnému.
+33. Podle § 2758 o. z. se pojistnou smlouvou pojistitel zavazuje vůči pojistníkovi poskytnout jemu
+nebo třetí osobě pojistné plnění, nastane-li nahodilá událost krytá pojištěním (pojistná událost), a
+pojistník se zavazuje zaplatit pojistiteli pojistné (první odstavec). Není-li pojištění ujednáno na
+pojistnou dobu kratší než jeden rok, vyžaduje smlouva písemnou formu. Přijal-li pojistník nabídku
+včasným  zaplacením  pojistného,  považuje  se  písemná  forma  smlouvy  za  zachovanou  (druhý
+odstavec).
+b) K důsledkům nedodržení písemné formy stanovené § 2758 odst. 2 o. z.
+34. Nejvyšší soud se nejprve zabýval otázkou následků nedodržení písemné formy pojistné smlouvy v
+případech stanovených v § 2758 odst. 2 o. z. Kdyby totiž pojistná smlouva, která nebyla uzavřena ve
+formě stanovené tímto ustanovením, nevyvolávala právní účinky (jak dovodil odvolací soud), stalo by
+se řešení otázky, zda jednání pojišťovny a dovolatelky (které účastnice neučinily v písemné formě)
+bylo uzavřením pojistné smlouvy, bezpředmětné.
+35. Z judikatury Nejvyššího soudu se podává:
+1) I v případě nedodržení zákonem stanovené formy právního jednání (stejně jako v případě
+rozporu obsahu právního jednání se zákonem podle § 580 odst. 1 o. z.) je právní jednání podle §
+582 odst. 1 věty první o. z. neplatné toliko tehdy, vyžaduje-li to smysl a účel právní normy
+upravující formu právního jednání.
+2) Vyžaduje-li smysl a účel právní normy upravující formu právního jednání, aby její nedodržení
+bylo stiženo neplatností, pak tentýž smysl a účel právní normy je nutné zohlednit při
+posouzení, zda je důsledkem neplatnost relativní či absolutní (tedy, zda k ní má soud
+přihlédnout toliko k námitce oprávněné osoby či z úřední povinnosti).
+3) Ustanovení § 588 věty první o. z. určuje, že soud přihlédne k neplatnosti právního jednání,
+jež odporuje zákonu, pouze tehdy, je-li veřejný pořádek narušen zjevně.
+4) Veřejný pořádek představuje soubor pravidel, na nichž je třeba bezvýhradně trvat, majících
+původ v samotném právním řádu a nikoliv (oproti dobrým mravům) v etice. Jde o základní
+hodnotové a řídící principy, bez nichž nemůže demokratická společnost fungovat a které jsou
+základem budování právního státu. Pod pojmem veřejného pořádku lze chápat například zájem
+na stabilitě státu, zájem na potírání kriminality, ale též ochranu právního postavení třetích
+osob. V rozporu s veřejným pořádkem bude tedy taková situace, která se v daném čase bude
+jevit jako zcela společensky nepřijatelná. Jde tedy o pojem neurčitý, jehož konkrétní význam je
+v čase proměnlivý.
+36. Srovnej například usnesení Nejvyššího soudu ze dne 16. 8. 2018, sp. zn. 21 Cdo 1012/2016 ,
+uveřejněné pod číslem 95/2019 Sb. rozh. obč., rozsudek Nejvyššího soudu ze dne 10. 6. 2020, sen.
+zn. 31 ICdo 36/2020 , uveřejněný pod číslem 104/2020 Sb. rozh. obč., ze dne 22. 10. 2019, sp. zn. 21
+Cdo 1961/2019 , nebo ze dne 19. 5. 2021, sp. zn. 23 Cdo 693/2021 .
+37. V soukromém právu obecně platí (není-li stanoveno jinak), že každý má právo zvolit si pro právní
+jednání libovolnou formu (§ 559 o. z.). Pravidlo § 2758 odst. 2 věty první o. z. je tedy formulováno
+jako výjimka z (obecné) zásady bezformálnosti právního jednání v soukromém právu.
+38. Smyslem požadavku na písemnou formu u pojistných smluv ujednaných na dobu jednoho roku či
+na dobu delší je především potřeba varovat pojistníka před nepromyšleným či unáhleným jednáním
+při uzavírání těchto pojistných smluv (tzv. varovná funkce) [srov. Šimek, R. In Melzer, F., Tégl, P. a
+kol. Občanský zákoník: Velký komentář (§ 2716–2893), § 2758, marg. č. 374, 412]. U pojistných
+smluv (jako smluv odvážných), které nejsou sjednány na dobu kratší než jeden rok, je totiž namístě
+vycházet z toho, že pojistníkovi zpravidla vznikne závazek zaplatit (či průběžně platit) pojistné, které
+budou svojí výší odpovídat délce trvání závazků ze smlouvy – a tak půjde o pojistné, které bude
+relativně vysoké. V tomto kontextu je tedy písemná forma vyžadovaná § 2758 odst. 2 větou první o. z.
+vskutku stanovena na ochranu pojistníka před jeho ukvapeným jednáním.
+39. To se ostatně podává i z § 2758 odst. 2 věty druhé o. z. Stanoví-li se totiž písemná forma jako
+ochrana pojistníka před vznikem závazku k úhradě relativně vysokého pojistného, potom varovná
+funkce písemné formy ztrácí význam, jestliže pojistník k nabídce pojistitele včas zaplatil pojistné.
+Tedy pokud již ze své majetkové podstaty pojistník fakticky vydal finanční prostředky odpovídající
+(zpravidla relativně vysokému – viz výše) pojistnému.
+40. Vedle varovné funkce pak bylo úmyslem zákonodárce formulovat požadavek § 2758 odst. 2 věty
+první o. z. na písemnou formu i za tím účelem, aby pojistníkovi usnadnil (případný) důkaz ohledně
+toho, že k uzavření pojistné smlouvy došlo (tzv. důkazní funkce).
+41. Podle důvodové zprávy k návrhu § 2758 odst. 2 o. z. (v návrhu číslovaném jako § 2730) [sněmovní
+tisk 362, Poslanecká sněmovna Parlamentu České republiky, 6. volební období 2010 – 2013, s. 1092]
+se v tomto ustanovení „zachovává dosavadní pravidlo, podle něhož u krátkodobého pojištění není
+písemná forma smlouvy potřebná;“ s tím, že „v takovém případě postačí vystavení pojistky.“
+Odkazuje-li se přitom na „dosavadní pravidlo“, má se tím zjevně na mysli § 7 odst. 1 věta první
+zákona o pojistné smlouvě.
+42. Podle § 7 odst. 1 věty první zákona o pojistné smlouvě musela mít pojistná smlouva písemnou
+formu, s výjimkou případů, kdy zakládá pojištění s pojistnou dobou kratší než 1 rok (krátkodobé
+pojištění).
+43. Důvodová zpráva k návrhu tohoto ustanovení (sněmovní tisk 303, Poslanecká sněmovna, 4.
+volební období, 2002–2006, s. 45) stanovila, že „písemná forma se nevyžaduje v případě pojištění
+krátkodobého, kterým se rozumí pojištění sjednané na dobu kratší než 1 rok“, a sice proto, že „v
+případech krátkodobého pojištění, např. v pojištění cestovních výloh, kdy je třeba uzavřít pojistnou
+smlouvu během krátkého časového okamžiku, lze pojistnou smlouvu uzavřít např. telefonicky.“ K
+tomu se zde dodává, že „v takovém případě však musí pojistitel vydat pojistníkovi pojistku jako
+doklad o uzavření pojistné smlouvy“ a dále, že „pokud byla pojistná smlouva uzavřena v písemné
+formě, je povinností pojistitele vydat pojistníkovi stejnopis pojistné smlouvy.“
+44. Z toho je patrné, že ačkoli se u pojistných smluv sjednávaných na dobu kratší než jeden rok (při
+proporčním poměřování ochrany pojistníka) upřednostňuje bezformálnost právního styku, trvá
+zákonodárce na tom, aby byla k ochraně pojistníka zachována alespoň prostřednictvím povinnosti
+pojistitele vydat pojistníkovi pojistku (§ 2775 odst. 1 o. z.). Tím spíše pak plní důkazní funkci
+požadavek na písemnou formu pojistných smluv uzavíraných na dobu jednoho roku či na delší dobu.
+45. Ani v jednom z těchto případů ovšem není písemná forma vyžadovaná pro pojistné smlouvy
+uzavírané v režimu § 2758 odst. 2 věty první o. z. stanovena k ochraně veřejného zájmu. Nedodržení
+požadavku na písemnou formu pojistné smlouvy, jak je formulován v § 2758 odst. 2 věty první o. z.,
+tedy nemůže být (samo o sobě) důvodem pro závěr o absolutní neplatnosti pojistných smluv, které
+jsou uzavřeny v rozporu s tímto ustanovením. Jelikož má vykládané ustanovení za účel ochranu
+soukromých zájmů (plní toliko varovnou a důkazní funkci), spojuje s jejím nedodržením § 586 o. z.
+nanejvýš neplatnost relativní [srov. Šimek, R. In Melzer, F., Tégl, P. a kol. Občanský zákoník: Velký
+komentář (§ 2716–2893), § 2758, marg. č. 377].
+46. Pro poměry projednávané věci je přitom zapotřebí zdůraznit, že relativní neplatnost může
+namítnout pouze osoba, na ochranu jejíchž zájmů zákon neplatnost právního jednání stanoví (§ 586
+odst. 1 o. z.). Bylo-li přitom řečeno, že jak varovná, tak důkazní funkce požadavku na písemnou
+formu pojistné smlouvy (jak je formulován v § 2758 odst. 2 o. z.) slouží k toliko ochraně pojistníka,
+znamená to, že osobou, která může namítat neplatnost pojistné smlouvy pro nedostatek písemné
+formy určené § 2758 odst. 2 o. z., je zásadně jen pojistník.
+47. Vyšel-li tedy odvolací soud (bez dalšího) z toho, že „důvodem, pro který nelze smlouvu 2019
+posoudit jako smlouvu o založení nového pojistného vztahu, je obligatorně předepsaná písemná
+forma“, resp. z toho, že proto „smlouva 2019 nemůže být posouzena jako platně uzavřená nová
+smlouva o pojištění“, není jeho právní posouzení této právní otázky správné.
+c) K výkladu právního jednání
+48. Nejvyšší soud již v rozsudku ze dne 31. 10. 2017, sp. zn. 29 Cdo 61/2017  (uveřejněném pod
+číslem 4/2019 Sb. rozh. obč.), formuloval a odůvodnil závěry, podle kterých:
+1) Základní pravidlo výkladu adresovaných právních jednání formuluje ustanovení § 556 odst. 1
+věty první o. z. Soud nejprve zkoumá, jaká byla skutečná vůle (úmysl) jednajícího, a to při
+zohlednění všech v úvahu přicházejících (zjištěných) okolností.
+2) Ochrana dobré víry adresáta právního jednání, akcentovaná v § 556 odst. 1 větě první o. z.,
+pak vyžaduje, aby soud právní jednání vyložil jen podle takového úmyslu jednajícího, který byl
+anebo musel být adresátovi znám. Při zjišťování úmyslu jednajícího tudíž soud přihlíží toliko k
+těm okolnostem, které mohl vnímat i adresát právního jednání. Jinými slovy, pro výklad
+právního jednání je určující skutečná vůle (úmysl) jednajícího, která byla anebo musela být
+známa adresátovi, již je třeba upřednostnit před jejím vnějším projevem, např. objektivním
+významem užitých slov.
+3) Teprve tehdy, nelze-li zjistit skutečnou vůli (úmysl) jednajícího, postupuje soud podle
+pravidla vyjádřeného v § 556 odst. 1 větě druhé o. z.
+49. V rozsudku ze dne 25. 4. 2017, sp. zn. 21 Cdo 5281/2016 , pak Nejvyšší soud zdůraznil, že
+základním hlediskem pro výklad právního jednání podle právní úpravy účinné od 1. 1. 2014 je u
+vícestranných jednání společný úmysl jednajících stran.
+50. Srovnej dále např. rozsudek velkého senátu občanskoprávního a obchodního kolegia Nejvyššího
+soudu ze dne 9. 9. 2020, sp. zn. 31 Cdo 684/2020 , uveřejněný pod číslem 37/2021 Sb. rozh. obč.,
+jakož i rozsudky Nejvyššího soudu ze dne 22. 5. 2020, sp. zn. 23 Cdo 2126/2018 , ze dne 30. 8. 2021,
+sp. zn. 23 Cdo 107/2020 , ze dne 25. 5. 2022, sp. zn. 23 Cdo 764/2022 , nebo dne 29. 8. 2022, sp. zn.
+22 Cdo 2185/2022 .
+51. Právě uvedeným požadavkům na výklad právního jednání odvolací soud v napadeném rozhodnutí
+nedostál.
+52. Odvolací soud totiž na jedné straně dovodil, že vůle stran při uzavírání dohody o změně pojistné
+smlouvy směřovala „jasně ke změně pojistného vztahu založeného smlouvou 2013.“ Na druhé straně
+však odvolací soud odkázal na dílčí závěr, že pojistný vztah již v době uzavírání dohody o změně
+pojistné smlouvy neexistoval, a proto dovodil, že je jednání stran směřující k uzavření dohody o
+změně pojistné smlouvy neplatné (podle § 580 o. z.). Oba tyto závěry vedle sebe (bez dalšího)
+nemohou obstát.
+53. Je tomu tak proto, že směřovala-li (i podle závěrů odvolacího soudu) vůle stran k tomu, aby
+nadále trvaly jejich závazky z pojistné smlouvy 2013, nelze s odvoláním na tutéž vůli stran (bez
+dalšího) uzavřít, že pojištění nevzniklo (či netrvá). Jinak řečeno, směřovala-li vůle stran (a to i podle
+závěrů odvolacího soudu) k tomu, aby mezi stranami trvaly závazky z pojistné smlouvy 2013, nelze s
+odvoláním na totožnou vůli stran (bez dalšího) dojít k závěru, že jejich pojistný vztah neexistuje.
+54. Dospěl-li tedy odvolací soud k závěru, že vůle stran směřovala „ke změně pojistného vztahu
+založeného smlouvou 2013“, který již neexistoval, a z toho důvodu je dohoda o změně pojistné
+smlouvy (vedle vady spočívající v nedostatku formy) neplatná, což znamená, že mezi stranami není
+(navzdory jejich vůli) sjednáno žádné pojištění, je jeho posouzení této právní otázky nesprávné.
+d) Shrnutí
+55. Jelikož právní posouzení věci není správné a dovolací důvod podle § 241a odst. 1 o. s. ř. byl
+dovolatelkou uplatněn právem, Nejvyšší soud – aniž ve věci nařizoval jednání (§ 243a odst. 1 věta
+první o. s. ř.) – rozsudek odvolacího soudu podle § 243e odst. 1 o. s. ř. zrušil. Protože důvody, pro
+které nemohlo obstát rozhodnutí odvolacího soudu, dopadají i na rozsudek soudu prvního stupně,
+zrušil dovolací soud i je a věc vrátil v tomto rozsahu soudu prvního stupně k dalšímu řízení (§ 243e
+odst. 2 věta druhá o. s. ř.).
+56. Právní názor Nejvyššího soudu je pro odvolací soud i pro soud prvního stupně závazný (§ 243g
+odst. 1 část věty první za středníkem, § 226 odst. 1 o. s. ř.).

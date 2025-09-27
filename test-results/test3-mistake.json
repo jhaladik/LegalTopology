@@ -1,0 +1,42 @@
+{
+    "question": "If I signed a contract based on a fundamental mistake about the subject matter, can I void it?",
+    "facts": {
+        "mistake_type": "believed property had building permit",
+        "reality": "no building permit exists",
+        "other_party": "did not know about mistake"
+    },
+    "statutory_foundation": [
+        {
+            "section": "\u00c2\u00a7583",
+            "text": "Jednal-li n\u00c4\u203akdo v omylu o rozhoduj\u0102\u00adc\u0102\u00ad okolnosti a byl-li v omyl uveden druhou stranou, je pr\u0102\u02c7vn\u0102\u00ad jedn\u0102\u02c7n\u0102\u00ad neplatn\u0102\u00a9.",
+            "relevance": 0.35507035
+        },
+        {
+            "section": "\u00c2\u00a7718",
+            "text": "(1)\u00c2\u00a0\u00c2\u00a0\u00c2\u00a0 Smlouva m\u0139\u017b\u0139\u013ee obsahovat jak\u0102\u00a9koli ujedn\u0102\u02c7n\u0102\u00ad a t\u0102\u02ddkat se jak\u0102\u00a9koli v\u00c4\u203aci, leda\u0139\u013ee to z\u0102\u02c7kon zakazuje; m\u0139\u017b\u0139\u013ee se t\u0102\u02ddkat zejm\u0102\u00a9na rozsahu, obsahu, doby vzniku z\u0102\u02c7konn\u0102\u00a9ho nebo jin\u0102\u00a9ho re\u0139\u013eimu spole\u00c4\u0164n\u0102\u00a9ho jm\u00c4\u203an\u0102\u00ad, jednotliv\u0102\u02ddch v\u00c4\u203ac\u0102\u00ad i jejich soubor\u0139\u017b. Smlouvou lze zm\u00c4\u203anit za\u0139\u2122azen\u0102\u00ad ji\u0139\u013e existuj\u0102\u00adc\u0102\u00adch i upravit za\u0139\u2122azen\u0102\u00ad budouc\u0102\u00adch sou\u00c4\u0164\u0102\u02c7st\u0102\u00ad jm\u00c4\u203an\u0102\u00ad rozd\u0102\u00adln\u00c4\u203a od z\u0102\u02c7konn\u0102\u00a9ho re\u0139\u013eimu.\n\n(2)\u00c2\u00a0\u00c2\u00a0\u00c2\u00a0 Smlouvou lze rovn\u00c4\u203a\u0139\u013e uspo\u0139\u2122\u0102\u02c7dat majetkov\u0102\u00a9 pom\u00c4\u203ary pro p\u0139\u2122\u0102\u00adpad z\u0102\u02c7niku man\u0139\u013eelstv\u0102\u00ad; jedn\u0102\u02c7-li se o uspo\u0139\u2122\u0102\u02c7d\u0102\u02c7n\u0102\u00ad pro p\u0139\u2122\u0102\u00adpad z\u0102\u02c7niku man\u0139\u013eelstv\u0102\u00ad smrt\u0102\u00ad, pova\u0139\u013euje se v t\u0102\u00a9to \u00c4\u0164\u0102\u02c7sti smlouva za smlouvu d\u00c4\u203adickou, m\u0102\u02c7-li jej\u0102\u00ad n\u0102\u02c7le\u0139\u013eitosti.\n\n(3)\u00c2\u00a0\u00c2\u00a0\u00c2\u00a0 Smlouvou nelze vylou\u00c4\u0164it ani zm\u00c4\u203anit ustanoven\u0102\u00ad o obvykl\u0102\u00a9m vybaven\u0102\u00ad rodinn\u0102\u00a9 dom\u0102\u02c7cnosti, leda\u0139\u013ee jeden z man\u0139\u013eel\u0139\u017b opustil trvale dom\u0102\u02c7cnost a odm\u0102\u00adt\u0102\u02c7 se vr\u0102\u02c7tit.",
+            "relevance": 0.34510377
+        },
+        {
+            "section": "\u00c2\u00a7584",
+            "text": "(1)\u00c2\u00a0\u00c2\u00a0\u00c2\u00a0 T\u0102\u02ddk\u0102\u02c7-li se omyl vedlej\u0139\u02c7\u0102\u00ad okolnosti, kterou ani strany neprohl\u0102\u02c7sily za rozhoduj\u0102\u00adc\u0102\u00ad, je pr\u0102\u02c7vn\u0102\u00ad jedn\u0102\u02c7n\u0102\u00ad platn\u0102\u00a9, ale osoba uveden\u0102\u02c7 v omyl m\u0102\u02c7 v\u0139\u017b\u00c4\u0164i p\u0139\u017bvodci omylu pr\u0102\u02c7vo na p\u0139\u2122im\u00c4\u203a\u0139\u2122enou n\u0102\u02c7hradu.\n\n(2)\u00c2\u00a0\u00c2\u00a0\u00c2\u00a0 Bylo-li pr\u0102\u02c7vn\u00c4\u203a jedn\u0102\u02c7no v omylu vyvolan\u0102\u00a9m lst\u0102\u00ad, je pr\u0102\u02c7vn\u0102\u00ad jedn\u0102\u02c7n\u0102\u00ad neplatn\u0102\u00a9, t\u0139\u2122eba\u0139\u013ee se omyl t\u0102\u02ddk\u0102\u02c7 jen vedlej\u0139\u02c7\u0102\u00ad okolnosti.",
+            "relevance": 0.33990937
+        },
+        {
+            "section": "\u00c2\u00a71590",
+            "text": "Sv\u0102\u00a9 povinnosti z d\u00c4\u203adick\u0102\u00a9 smlouvy m\u0139\u017b\u0139\u013ee z\u0139\u017bstavitel zru\u0139\u02c7it i po\u0139\u2122\u0102\u00adzen\u0102\u00adm z\u0102\u02c7v\u00c4\u203ati. K \u0102\u015f\u00c4\u0164innosti zru\u0139\u02c7en\u0102\u00ad se vy\u0139\u013eaduje souhlas smluvn\u0102\u00adho d\u00c4\u203adice u\u00c4\u0164in\u00c4\u203an\u0102\u02dd ve form\u00c4\u203a ve\u0139\u2122ejn\u0102\u00a9 listiny.",
+            "relevance": 0.33198667
+        },
+        {
+            "section": "\u00c2\u00a71171",
+            "text": "Je-li smlouva o v\u0102\u02ddstavb\u00c4\u203a uzav\u0139\u2122ena v dob\u00c4\u203a, kdy je d\u0139\u017bm ji\u0139\u013e rozestav\u00c4\u203an, ale byty je\u0139\u02c7t\u00c4\u203a rozestav\u00c4\u203any nejsou, ujednaj\u0102\u00ad si strany velikost spoluvlastnick\u0102\u02ddch pod\u0102\u00adl\u0139\u017b k nemovit\u0102\u00a9 v\u00c4\u203aci ve velikosti odpov\u0102\u00addaj\u0102\u00adc\u0102\u00ad velikosti spoluvlastnick\u0102\u02ddch pod\u0102\u00adl\u0139\u017b budouc\u0102\u00adch vlastn\u0102\u00adk\u0139\u017b jednotek na spole\u00c4\u0164n\u0102\u02ddch \u00c4\u0164\u0102\u02c7stech.",
+            "relevance": 0.3298339
+        }
+    ],
+    "case_law": [],
+    "analysis": "### Statutory Foundation\n\nUnder Czech civil law, specifically \u00c2\u00a7583, a legal act is deemed invalid if one party was in error about a decisive circumstance and was misled by the other party. In this case, the decisive circumstance is the existence of a building permit for the property in question. \n\n### Judicial Interpretations\n\nWhile there is no relevant case law provided, the interpretation of \u00c2\u00a7583 suggests that if the mistake about the existence of the building permit is indeed fundamental, and if the other party was aware of the mistake or had a duty to disclose it, the contract could be voided. The law emphasizes the importance of the parties' intentions and the circumstances surrounding the agreement.\n\n### Application to the Specific Facts\n\n1. **Nature of the Mistake**: The client believed that the property had a building permit, which is a fundamental aspect of the contract concerning the property. The absence of a building permit significantly impacts the value and usability of the property, thus constituting a decisive circumstance.\n\n2. **Knowledge of the Other Party**: The other party did not know about the mistake. According to \u00c2\u00a7583, for the contract to be voided, the other party must have misled the client about the decisive circumstance. Since the other party was unaware of the mistake, this provision may not apply directly.\n\n3. **Potential for Validity**: According to \u00c2\u00a7584, if the mistake pertains to a secondary circumstance that neither party declared as decisive, the legal act remains valid, but the party misled has a right to reasonable compensation. However, since the mistake here pertains to a fundamental aspect (the existence of a building permit), the client may have a stronger argument for voiding the contract under \u00c2\u00a7583.\n\n### Confidence Assessment\n\nI am moderately confident in this analysis. The application of \u00c2\u00a7583 is clear in cases of fundamental mistakes, but the outcome may depend on the specific facts and evidence regarding the other party's knowledge or lack thereof. If the other party had any means to know about the absence of the building permit, this could strengthen the client's position.\n\n### Reasoning\n\nIn conclusion, the client may have grounds to void the contract based on a fundamental mistake regarding the existence of a building permit. However, the success of this claim will depend on whether the other party had any obligation to disclose the truth about the building permit. If the other party was genuinely unaware and had no duty to disclose, the client may face challenges in voiding the contract. It would be advisable for the client to gather any evidence that could suggest the other party should have known about the absence of the permit, as this could significantly impact the outcome.",
+    "metadata": {
+        "model": "gpt-4o-mini",
+        "statutes_found": 5,
+        "cases_found": 0
+    }
+}

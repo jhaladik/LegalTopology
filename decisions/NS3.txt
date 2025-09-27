@@ -1,0 +1,295 @@
+Rozsudek Nejvyššího soudu ze dne 12. 3.
+2024, sp. zn. 23 Cdo 2700/2023,
+ECLI:CZ:NS:2024:23.CDO.2700.2023.1
+Číslo:  2/2025
+Právní věta:
+Pojistitel má podle § 10 odst. 1 písm. c) zákona č. 168/1999 Sb., ve znění účinném od 23. 9. 2016,
+proti pojištěnému právo na náhradu toho, co za něho plnil, opustil-li pojištěný místo dopravní nehody
+bez zřetele hodného důvodu.
+Soud:  Nejvyšší soud
+Datum rozhodnutí:  12.03.2024
+Spisová značka:  23 Cdo 2700/2023
+Číslo rozhodnutí:  2
+Číslo sešitu:  1
+Typ rozhodnutí:  Rozsudek
+Hesla:  Pojištění
+Předpisy:  § 10 odst. 1 písm. c) zákona č. 168/1999 Sb. ve znění od 23. 9. 2016
+Druh:  Rozhodnutí ve věcech občanskoprávních, obchodních a správních
+Sbírkový text rozhodnutí:
+Nejvyšší soud zamítl dovolání žalovaného proti rozsudku Krajského soudu v Praze ze dne 19. 4.
+2023, sp. zn. 25 Co 19/2023.
+I.
+Dosavadní průběh řízení
+1. Žalobkyně se podanou žalobou domáhala zaplacení částky 110 022 Kč s příslušenstvím, kterou z
+titulu pojištění odpovědnosti z provozu vozidla uhradila poškozeným městu Kutná Hora a společnosti
+ARVAL CZ s. r. o. jako pojistné plnění v důsledku dopravní nehody ze dne 22. 10. 2019 a kterou
+uplatnila vůči žalovanému z titulu regresního nároku, neboť zaměstnanec žalovaného (řidič, který
+zavinil dopravní nehodu) opustil místo dopravní nehody bez zřetele hodného důvodu.
+2. Okresní soud v Kladně jako soud prvního stupně rozsudkem 19. 9. 2022, č. j. 214 C 193/2021-198,
+ve znění opravného usnesení ze dne 11. 11. 2022, č. j. 214 C 193/2021-203, uložil žalovanému
+zaplatit částku 109 662 Kč s příslušenstvím (výrok I), zamítl žalobu co do částky 360 Kč s
+příslušenstvím (výrok II) a rozhodl o náhradě nákladů řízení (výrok III).
+3. Soud prvního stupně vyšel ze skutkových zjištění, že dne 22. 10. 2019 zaměstnanec žalovaného, L.
+H., řídící vozidlo značky Škoda zavinil dopravní nehodu, při níž poškodil vozidlo Kia Ceed ve
+vlastnictví společnosti ARVAL CZ s. r. o. a kruhovou lavičku ve vlastnictví města Kutná Hora.
+Zaměstnanec žalovaného místo dopravní nehody opustil, což odůvodnil tím, že převážel větší
+množství peněz. Vozidlo žalovaného bylo v době dopravní nehody pojištěno u žalobkyně, která za
+poškození lavičky vyplatila městu Kutná Hora částku 2 177 Kč a za poškození vozidla Kia Ceed
+vyplatila společnosti ARVAL CZ s. r. o. částku 107 845 Kč.
+4. Po právní stránce soud prvního stupně dospěl k závěru, že ačkoliv zaměstnanec nesplnil svou
+povinnost ohlásit dopravní nehodu, tato skutečnost nevedla ke zmaření či ke ztížení možnosti
+řádného šetření pojistitele, a proto nárok žalobkyně vůči žalovanému nemůže být dán na základě §
+10 odst. 1 písm. b) zákona č. 168/1999 Sb., o pojištění odpovědnosti za újmu způsobenou provozem
+vozidla a o změně některých souvisejících zákonů, ve znění účinném ode dne 23. 9. 2016, dále jen
+„ZPOPV“. Oproti tomu však soud prvního stupně dospěl k závěru, že aplikace písm. c) téhož
+ustanovení nevyžaduje, aby pojistitel prokázal, že v důsledku toho, že pojištěný bez zřetele hodného
+důvodu opustí místo dopravní nehody, došlo ke znemožnění zjištění skutečných příčin vzniku
+dopravní nehody. Podle názoru soudu prvního stupně tak již samotné opuštění místa nehody v sobě
+zahrnuje znaky protiprávnosti, nebyl-li k tomu dán zřetele hodný důvod. Soud prvního stupně proto
+uzavřel, že postižní právo žalobkyně (pojistitele) vůči žalovanému (pojištěnému) vzniklo, a žalobě
+vyhověl.
+5. Krajský soud v Praze jako soud odvolací k odvolání žalovaného potvrdil rozsudek soudu prvního
+stupně v odvoláním napadených výrocích I a III (výrok I napadeného rozhodnutí) a rozhodl o náhradě
+nákladů odvolacího řízení (výrok II napadeného rozhodnutí).
+6. Odvolací soud vyšel ze skutkových zjištění učiněných soudem prvního stupně a ztotožnil se i s jeho
+právním posouzením, podle kterého regresní nárok pojistitele vůči pojištěnému podle § 10 odst. 1
+písm. c) ZPOPV vznikne už tím, že pojištěný bez zřetele hodného důvodu opustí místo dopravní
+nehody, aniž by již bylo nutno zjišťovat, zda tím bylo znemožněno zjištění skutečné příčiny vzniku
+dopravní nehody. Odvolací soud nepřisvědčil ani dalším odvolacím námitkám žalovaného, a proto
+potvrdil rozsudek soudu prvního stupně v odvoláním napadeném rozsahu jako věcně správný.
+II.
+Dovolání a vyjádření k němu
+7. Rozsudek odvolacího soudu (v rozsahu jeho výroku I) napadl žalovaný dovoláním, jež je podle něj
+přípustné, neboť odvolací soud se odchýlil od ustálené rozhodovací praxe dovolacího soudu
+(představované např. rozsudkem Nejvyššího soudu ze dne 28. 1. 2010, sp. zn. 25 Cdo 4585/2007 , a
+usneseními Nejvyššího soudu ze dne 20. 9. 2010, sp. zn. 23 Cdo 3349/2009 , a ze dne 3. 12. 2015, sp.
+zn. 23 Cdo 2431/2015 ) při posouzení otázky, zda opuštění místa dopravní nehody (bez zřetele
+hodného důvodu) podle § 10 odst. 1 písm. c) ZPOPV představuje samostatnou skutkovou podstatu
+(zahrnující v sobě ztížení šetření pojistitele bez dalšího), či zda pojišťovna musí v případě uplatnění
+postižního práva podle citovaného ustanovení prokázat také to, že došlo ke znemožnění zjištění
+skutečné příčiny vzniku dopravní nehody, a příčinnou souvislost mezi těmito skutečnostmi. Odvolací
+soud podle žalovaného uvedenou otázku posoudil nesprávně, a proto navrhuje, aby Nejvyšší soud
+napadené rozhodnutí ve výroku I zrušil a věc vrátil v daném rozsahu odvolacímu soudu k dalšímu
+řízení.
+8.  Žalobkyně  ve  vyjádření  k  dovolání  podala  obsáhlou  argumentaci  vyvracející  argumenty
+žalovaného, neboť podle jejího názoru jazykový, historický i teleologický výklad předmětného
+ustanovení svědčí pro závěr, že samotné opuštění místa dopravní nehody vede ke znemožnění
+zjištění skutečné příčiny dané nehody. Žalobkyně tak považuje napadené rozhodnutí za věcně
+správné a Nejvyššímu soudu navrhla, aby dovolání žalovaného zamítl.
+III.
+Přípustnost dovolání
+9. Nejvyšší soud v dovolacím řízení postupoval a o dovolání rozhodl podle zákona č. 99/1963 Sb.,
+občanský soudní řád, ve znění účinném od 1. 1. 2022 (viz čl. II a čl. XII. zákona č. 286/2021 Sb.).
+10. Dovolání bylo podáno včas, osobou k tomu oprávněnou, za splnění podmínky § 241 odst. 1 o. s. ř.
+Nejvyšší soud rovněž shledal, že dovolání obsahuje náležitosti vyžadované ustanovením § 241a odst.
+2 o. s. ř., a dále se proto zabýval jeho přípustností.
+11. Podle § 236 odst. 1 o. s. ř. lze dovoláním napadnout pravomocná rozhodnutí odvolacího soudu,
+jestliže to zákon připouští.
+12. Podle § 237 o. s. ř. není-li stanoveno jinak, je dovolání přípustné proti každému rozhodnutí
+odvolacího soudu, kterým se odvolací řízení končí, jestliže napadené rozhodnutí závisí na vyřešení
+otázky hmotného nebo procesního práva, při jejímž řešení se odvolací soud odchýlil od ustálené
+rozhodovací praxe dovolacího soudu nebo která v rozhodování dovolacího soudu dosud nebyla
+vyřešena nebo je dovolacím soudem rozhodována rozdílně anebo má-li být dovolacím soudem
+vyřešená právní otázka posouzena jinak.
+13. Dovolání je podle § 237 o. s. ř. přípustné pro posouzení otázky, zda v případě, že pojištěný opustí
+místo dopravní nehody bez zřetele hodného důvodu, musí pojistitel v souvislosti s uplatněním
+regresního nároku podle § 10 odst. 1 písm. c) ZPOPV prokázat, že tím došlo ke znemožnění šetření
+skutečné příčiny dopravní nehody, neboť jde o otázku, která v rozhodování dovolacího soudu dosud
+nebyla vyřešena.
+IV.
+Důvodnost dovolání
+14. Dovolání není důvodné, neboť rozhodnutí odvolacího soudu při vyřešení uvedené otázky
+nespočívá na nesprávném právním posouzení věci (§ 241a odst. 1 o. s. ř.).
+15. Právní posouzení věci je činnost soudu spočívající v podřazení zjištěného skutkového stavu pod
+hypotézu (skutkovou podstatu) vyhledané právní normy, jež vede k učinění závěru, zda a komu soud
+právo či povinnost přizná, či nikoliv.
+16. Nesprávným právním posouzením věci je obecně omyl soudu při aplikaci práva na zjištěný
+skutkový stav (skutková zjištění), tj. jestliže věc posoudil podle právní normy, jež na zjištěný skutkový
+stav nedopadá, nebo právní normu, sice správně určenou, nesprávně vyložil, případně ji na daný
+skutkový stav nesprávně aplikoval.
+a) Rozhodná právní úprava
+17. Podle § 10 odst. 1 písm. c) ZPOPV má pojistitel proti pojištěnému právo na náhradu toho, co za
+něho plnil, jestliže prokáže, že pojištěný bez zřetele hodného důvodu opustil místo dopravní nehody
+nebo jinak znemožnil zjištění skutečné příčiny vzniku dopravní nehody.
+18. Podle § 10 odst. 1 písm. d) ZPOPV, ve znění účinném do 22. 9. 2016, má pojistitel proti
+pojištěnému právo na náhradu toho, co za něho plnil, jestliže prokáže, že pojištěný bez zřetele
+hodného důvodu nesplnil povinnost podle zákona upravujícího provoz na pozemních komunikacích
+sepsat bez zbytečného odkladu společný záznam o dopravní nehodě nebo ohlásit dopravní nehodu,
+která je škodnou událostí, a v důsledku toho byla ztížena možnost řádného šetření pojistitele podle §
+9 odst. 3.
+19. Podle § 47 odst. 3 písm. b) zákona č. 361/2000 Sb., o provozu na pozemních komunikacích a o
+změnách některých zákonů (zákon o silničním provozu), jsou účastníci dopravní nehody povinni
+oznámit, v případech stanovených tímto zákonem, nehodu policii; došlo-li k zranění, poskytnout
+podle svých schopností první pomoc a k zraněné osobě přivolat poskytovatele zdravotnické
+záchranné služby.
+b) Judikatura k § 10 odst. 1 písm. d) ZPOPV, ve znění účinném do 22. 9. 2016
+20. Podle závěrů rozsudku Nejvyššího soudu ze dne 28. 1. 2010, sp. zn. 25 Cdo 4585/2007 , platí, že
+povinnost ohlásit dopravní nehodu policii [§ 47 odst. 3 písm. b) část věty před středníkem zákona o
+silničním provozu ve znění účinném do 30. 6. 2006], porušil i ten její účastník, který nesetrval na
+místě nehody až do příchodu policisty. Jestliže tak učinil bez zřetele hodného důvodu, má pojišťovna,
+která z titulu pojištění odpovědnosti za něj plnila poškozenému, proti němu právo na náhradu,
+prokáže-li, že právě v důsledku toho byla ztížena možnost řádného šetření pojistitele [§ 10 písm. d)
+ZPOPV ve znění účinném do 22. 9. 2016].
+21. V rozsudku ze dne 15. 4. 2010, sp. zn. 25 Cdo 1791/2008 , pak Nejvyšší soud vysvětlil, že
+ustanovení § 10 odst. 1 písm. d) ZPOPV, ve znění účinném do 22. 9. 2016, zakládá pojistiteli právo
+požadovat od pojištěného náhradu plnění, které za něj poskytl v souvislosti s jeho odpovědností za
+škodu  způsobenou  při  provozu  motorového  vozidla.  Předpokladem  pro  úspěšné  uplatnění
+postihového práva je současné naplnění obou podmínek stanovených v uvedeném ustanovení, a to
+nesplnění oznamovací povinnosti uložené § 47 odst. 3 písm. b) věta před středníkem zákona č.
+361/2000 Sb., o provozu na pozemních komunikacích a o změnách některých zákonů, ve znění
+účinném do 31. 12. 2003, a zároveň negativní dopad nesplnění této povinnosti na možnosti pojistitele
+osvětlit příčiny a mechanismus dopravní nehody, včetně případných podkladů pro uplatnění
+regresních nároků (srov. rozsudek Nejvyššího soudu ze dne 28. 1. 2010, sp. zn. 25 Cdo 4585/2007 ).
+Smyslem této úpravy je totiž vytvoření podmínek pro to, aby pojistitel mohl řádně a dostatečně
+posoudit všechny okolnosti v souvislosti s jeho zákonnou povinností poskytnout poškozenému plnění
+za  pojištěnou  osobu.  I  když  prvotním  je  samozřejmě  zjištění  údajů  potřebných  pro  plnění
+poškozenému,  patří  sem  i  okolnosti  promítající  se  do  práva  pojistitele  požadovat  náhradu
+poskytnutého plnění (jeho části) od pojištěné osoby, jsou-li splněny zákonem stanovené podmínky.
+Jde totiž o vypořádání trojstranného právního vztahu mezi poškozeným, pojištěným a pojistitelem,
+který vzniká ve specifické sféře povinného smluvního pojištění odpovědnosti za škodu. Z uvedeného
+tedy vyplývá, že ztížení možnosti řádného šetření pojistné události pojistitelem podle § 9 odst. 3 ve
+smyslu § 10 odst. 1 písm. d) ZPOPV, ve znění účinném do 22. 9. 2016, se vztahuje nejen k
+okolnostem významným pro plnění z pojištění odpovědnosti poškozenému, nýbrž i k důvodům, pro
+které může pojistitel vůči pojištěnému uplatnit regresní nárok.
+c) Důvodová zpráva k § 10 odst. 1 písm. c) ZPOPV
+22. Z důvodové zprávy k zákonu č. 304/2016 Sb., kterým se mění zákon č. 277/2009 Sb., o
+pojišťovnictví, ve znění pozdějších předpisů, a další související zákony, se podává, že zákonodárce
+ustanovením § 10 odst. 1 písm. c) ZPOPV sledoval zpřesnění ustanovení zakládajícího právo
+pojistitele na náhradu vyplaceného pojistného plnění „včetně doplnění těch případů, kdy řidič z
+místa nehody ujel nebo jinak postupoval s cílem vyhnout se např. dechové zkoušce nebo zcela
+znemožnil určení viníka nehody. Ujetí od nehody nebo nevrácení se na její místo, aniž by k tomu byla
+objektivní příčina, resp. neohlášení takové nehody, nemůže být beztrestným chováním viníka
+nehody“.
+d) Výklad právních předpisů v judikatuře
+23. Soudy se při výkladu právních předpisů nemohou omezovat na jejich doslovné znění, nýbrž jsou
+povinny je vykládat též podle jejich smyslu a účelu (podle jejich teleologie); vázanost soudu zákonem
+neznamená bezpodmínečně nutnost doslovného výkladu aplikovaného ustanovení, nýbrž zároveň
+vázanost smyslem a účelem zákona (srov. stanovisko pléna Ústavního soudu ze dne 21. 5. 1996, sp.
+zn. Pl. ÚS-st. l/96 , uveřejněné pod číslem 1/1997 Sbírky nálezů a usnesení Ústavního soudu, či nález
+Ústavního soudu ze dne 4. 2. 1997, sp. zn. Pl. ÚS 21/96 , uveřejněný pod číslem 13/1997 Sbírky
+nálezů a usnesení Ústavního soudu). Aplikace práva vycházející pouze z jeho jazykového výkladu je
+naprosto neudržitelným momentem používání práva; jazykový výklad představuje pouze prvotní
+přiblížení se k aplikované právní normě, je pouze východiskem pro objasnění a ujasnění si jejího
+smyslu a účelu (k čemuž slouží i řada dalších postupů, jako logický a systematický výklad, výklad  e
+ratione legis  atd.). Mechanická aplikace abstrahující, resp. neuvědomující si, a to buď úmyslně, nebo
+v důsledku nevzdělanosti, smysl a účel právní normy, činí z práva nástroj odcizení a absurdity (srov.
+nález Ústavního soudu ze dne 17. 12. 1997, sp. zn. Pl. ÚS 33/97 , uveřejněný pod číslem 163/1997
+Sbírky nálezů a usnesení Ústavního soudu). Z těchto závěrů ve své rozhodovací praxi vychází též
+Nejvyšší soud (srov. např. důvody rozsudku velkého senátu občanskoprávního a obchodního kolegia
+ze dne 9. 3. 2011, sp. zn. 31 Cdo 4545/2008 , uveřejněného pod číslem 84/2011 Sbírky soudních
+rozhodnutí a stanovisek, a důvody rozsudku ze dne 16. 12. 1998, sp. zn. 23 Cdo 1460/98 ,
+uveřejněného pod číslem 43/2000 Sbírky soudních rozhodnutí a stanovisek, důvody rozsudku ze dne
+31. 3. 2009, sp. zn. 29 Odo 1343/2006 , uveřejněného pod číslem 58/2010 Sbírky soudních rozhodnutí
+a stanovisek, a rozsudku ze dne 1. 6. 2016, sen. zn. 23 ICdo 19/2015 , uveřejněného tamtéž pod
+číslem 99/2017, či rozsudek Nejvyššího soudu ze dne 21. 5. 2020, sp. zn. 32 Cdo 2101/2018 ).
+24. Z rozhodovací praxe Nejvyššího soudu dále vyplývá, že pochybnosti o obsahu aplikované právní
+normy je třeba odstranit výkladem, a to zejména výkladem gramatickým, logickým, systematickým i
+historickým. Výkladem gramatickým (jazykovým) se právní norma vysvětluje podle zásad gramatiky s
+cílem vystihnout slovní znění právní normy a význam použitých pojmů. I když je gramatický výklad
+důležitý, nelze vystačit pouze s ním. Logický výklad sleduje vysvětlit zkoumanou právní normu podle
+zásad formální logiky s cílem objasnit její smysl, účel a vzájemnou vazbu použitých pojmů.
+Systematický výklad sleduje vykládat hlavní smysl a účel právní normy podle jejího řazení v systému
+ostatních právních norem. Historický výklad pak sleduje osvětlit zkoumanou právní normu podle
+doby jejího vzniku. V konkrétním případě pak je vždy třeba použít všechny druhy výkladu v jejich
+vzájemné souvislosti (srov. rozsudky Nejvyššího soudu ze dne 28. 7. 2004, sp. zn. 33 Odo 70/2004 , a
+ze dne 30. 11. 2011, sp. zn. 33 Cdo 2751/2010 , či rozsudek Nejvyššího soudu ze dne 10. 6. 2020, sp.
+zn. 31 Cdo 1050/2020 , uveřejněný pod číslem 3/2022 Sbírky soudních rozhodnutí a stanovisek).
+25. Z hlediska teleologického a historického výkladu dotčené právní normy představuje významnou
+pomůcku pro právní interpretaci důvodová zpráva, která, ačkoliv není pramenem práva, může
+osvětlit záměr zákonodárce, resp. záměr tvůrce příslušné normy (srov. rozsudek Nejvyššího soudu ze
+dne 21. 8. 2019, sp. zn. 22 Cdo 4348/2018 , uveřejněný pod číslem 45/2020 Sbírky soudních
+rozhodnutí a stanovisek, a rozsudek Nejvyššího soudu ze dne 28. 7. 2004, sp. zn. 33 Odo 70/2004 ).
+26. Konečně Nejvyšší soud ve své judikatuře zdůrazňuje, že nepřijatelným je takový způsob
+interpretace  a  aplikace  práva,  jenž  by  vedl  k  absurdním  důsledkům  či  jiným  důsledkům
+neslučitelným s účelem zákona (k principu rozumného a účelného uspořádání právních vztahů srov.
+např. odůvodnění rozsudku Nejvyššího soudu ze dne 16. 12. 1998, sp. zn. 23 Cdo 1460/98 ,
+uveřejněného pod číslem 43/2000 Sbírky soudních rozhodnutí a stanovisek, a rozsudku Nejvyššího
+soudu ze dne 31. 3. 2009, sp. zn. 29 Odo 1343/2006 , uveřejněného pod číslem 58/2010 Sbírky
+soudních rozhodnutí a stanovisek).
+e) Výklad ustanovení § 10 odst. 1 písm. c) ZPOPV
+27.  Pro  vyřešení  žalovaným  předložené  právní  otázky  je  nezbytné  prostřednictvím  výkladu
+předmětného ustanovení podle shora citovaných pravidel posoudit, zda zákon v případě, že pojištěný
+opustí místo dopravní nehody bez zřetele hodného důvodu, podmiňuje vznik postižního práva
+pojistitele vůči pojištěnému § 10 odst. 1 písm. c) ZPOPV prokázáním toho, že v důsledku takového
+chování došlo ke znemožnění zjištění skutečné příčiny vzniku dopravní nehody.
+28. Gramatický výklad naznačuje, že odpověď na shora uvedenou otázku je negativní. V prvé řadě
+totiž platí, že spojka „nebo“ má v případě, kdy jí nepředchází čárka, slabě disjunkční funkci. Z
+daného pohledu by tak pro naplnění rozsahu § 10 odst. 1 písm. c) ZPOPV stačilo, aby platila alespoň
+jedna z uvedených alternativ („opuštění místa dopravní nehody bez zřetele hodného důvodu“ nebo
+„jiné znemožnění zjištění skutečné příčiny vzniku dopravní nehody“); naplnění obou alternativ sice
+přichází v úvahu, ale není nezbytné.
+29. Pro srovnání, ve skutkových podstatách § 10 odst. 1 písmen b) a e) ZPOPV zákonodárce využil
+konjunkční spojku „a“ spolu s výslovně vyjádřením příčinné souvislosti mezi tam upravenými
+skutkovými podstatami a ztížením či znemožněním možnosti řádného šetření pojistitele podle § 9
+odst. 3 tohoto zákona, případně možnosti pojistitele uplatnit toto právo na náhradu pojistného plnění
+(srov. použité spojení „v důsledku toho“). Využití slovního spojení „jiné znemožnění“ v daném
+kontextu ale naznačuje, že v případě § 10 odst. 1 písm. c) ZPOPV má spojka „nebo“ vyjadřovat
+skutečnost, že samotné „bezdůvodné opuštění dopravní nehody pojištěným“ představuje jednu z
+možných forem znemožnění zjištění skutečné příčiny vzniku dopravní nehody. Jinými slovy, z
+jazykového vyjádření předmětné normy vyplývá, že opustil-li pojištěný bez zřetele hodného důvodu
+místo dopravní nehody, automaticky to znamená, že tím znemožnil zjištění skutečné příčiny vzniku
+dopravní nehody. Což je typické právě v případě vyhnutí se dechové zkoušce, jejž zmiňuje důvodová
+zpráva.
+30. Jak ale vyplývá ze shora citované judikatury, jazykový výklad představuje pouze prvotní přiblížení
+se k aplikované právní normě. Pro odstranění pochybnosti o obsahu zkoumaného ustanovení je proto
+dále nutno vyjít z historických souvislostí jeho vzniku a zjistit jeho smysl a účel, tedy využít výkladu
+historického a teleologického.
+31. Před účinností zákona č. 304/2016 Sb., jímž bylo znění § 10 odst. 1 písm. c) ZPOPV novelizováno,
+zákon o pojištění odpovědnosti z provozu vozidla opuštění místa dopravní nehody pojištěným bez
+zřetele hodného důvodu explicitně neupravoval. Rozhodovací praxe Nejvyššího soudu se však ustálila
+v závěru, že takovéto chování pojištěného je nutno považovat za porušení povinnosti ohlásit dopravní
+nehodu policii (srov. shora citovaný rozsudek sp. zn. 25 Cdo 4585/2007 ), které ustanovení § 10 odst.
+1 písm. d) ZPOPV ve znění účinném do 22. 9. 2016 (za předpokladu, že v jeho důsledku došlo ke
+ztížení možnosti řádného šetření pojistitele podle § 9 odst. 3 ZPOPV) sankcionovalo vznikem nároku
+pojistitele na regresní postih vůči pojištěnému.
+32. Úmyslu zákonodárce zachovat kontinuitu popsaného výkladu i po novelizaci předmětného
+ustanovení by tak odpovídalo, kdyby skutkovou podstatu bezdůvodného opuštění místa dopravní
+nehody začlenil do dnešního znění § 10 odst. 1 písm. b) ZPOPV [obdobně zákonodárce postupoval
+např. ve vztahu k závěrům rozsudku Nejvyššího soudu sp. zn. 25 Cdo 1791/2008 , když kritéria
+zakládající postižní právo pojistitele podle ustanovení § 10 odst. 1 písm. b) ZPOPV – oproti dřívějšímu
+znění písm. d) téhož odstavce – rozšířil o ztížení či znemožnění možnosti pojistitele uplatnit toto
+právo na náhradu pojistného plnění], případně kdyby požadavek na současné ztížení či znemožnění
+možnosti šetření pojistitele nebo možnosti pojistitele uplatnit postižný nárok výslovně uvedl [jak je
+tomu v případě písmen b) a e) téhož ustanovení].
+33. Jelikož se tak nestalo, podle dovolacího soudu rovněž historický výklad svědčí závěru, že aktuální
+znění předmětného ustanovení na dřívější judikaturu Nejvyššího soudu nenavazuje, což s sebou nese,
+že regresní nárok pojistitele v případě, že pojištěný bezdůvodně opustí místo dopravní nehody, není
+podmíněn naplněním předpokladu, že v důsledku takového chování pojištěného došlo ke znemožnění
+či ztížení možnosti řádného šetření pojistitele podle § 9 odst. 3 ZPOPV, případně možnosti pojistitele
+uplatnit toto právo na náhradu pojistného plnění.
+34. K témuž závěru pak dospěl Nejvyšší soud také na základě výkladu teleologického. Smyslem
+ustanovení § 10 odst. 1 písm. c) ZPOPV je sankcionování chování pojištěného, který zapříčinil
+dopravní nehodu a který bez objektivní příčiny opustil místo, kde k ní došlo, přiznáním regresního
+nároku pojistiteli. Oproti právním normám upraveným § 10 odst. 1 písm. b) a e) ZPOPV, které rovněž
+reagují na porušení povinností pojištěného po dopravní nehodě, jež mohly mít vliv na možnost
+pojistitele zjistit příčiny dopravní nehody či naplnění podmínek pro vznik postižného nároku
+pojistitele, ovšem § 10 odst. 1 písm. c) ZPOPV upravuje situace, které na zjištění reálných okolností
+vzniku dopravní nehody vliv měly [uvedené vyplývá již ze samotného jazykového vyjádření zmíněných
+norem, neboť zatímco § 10 odst. 1 písm. b) a e) ZPOPV zmiňují také možnost „ztížení“ šetření
+pojistitele, úprava ustanovení § 10 odst. 1 písm. c) ZPOPV operuje se „znemožněním“].
+35. Opustí-li totiž pojištěný místo dopravní nehody, znemožňuje tím např. provedení dechové zkoušky
+za účelem zjištění přítomnosti alkoholu nebo omamných látek v jeho krvi bezprostředně po dopravní
+nehodě [tedy určení, zda byly naplněny podmínky pro vznik postižního nároku pojistitele podle § 10
+odst. 1 písm. i) ZPOPV], zjištění technického stavu pojištěného vozidla bezprostředně po dopravní
+nehodě, apod. (viz shora citovaná důvodová zpráva k zákonu č. 304/2016 Sb.; z komentářové
+literatury srov. Kazda, P., Kazdová, K.: Zákon o pojištění odpovědnosti z provozu vozidla. Komentář.
+Praha: Wolters Kluwer, 2016, komentář k § 10; opačně Jandová, L., Vojtek, P. Zákon o pojištění
+odpovědnosti z provozu vozidla. Komentář. 2. vydání. Praha: C. H. Beck, 2019, § 10, marg. č. 15).
+36. Na základě výše uvedeného tak Nejvyšší soud dospěl k tomu, že gramatický, historický i
+teleologický výklad ustanovení § 10 odst. 1 písm. c) ZPOPV svědčí pro závěr, že opuštění místa
+dopravní nehody pojištěným bez zřetele hodného důvodu představuje nepřijatelné protiprávní
+chování, jež bez dalšího znemožňuje zjištění skutečné příčiny dopravní nehody, a které tak samo o
+sobě zakládá právo pojistitele požadovat po pojištěném to, co za něho plnil.
+f) Vztažení uvedených závěrů na posuzovanou věc
+37. V projednávané věci ze skutkových zjištění soudů nižších stupňů jednoznačně vyplynulo, že
+zaměstnanec žalovaného opustil místo dopravní nehody, aniž by pro to existoval zřetele hodný
+důvod. Jestliže za daných okolností odvolací soud dospěl k závěru, že žalobkyni vzniklo proti
+žalovanému postižní právo, je vzhledem ke shora uvedené argumentaci jeho právní posouzení
+správné.
+g) Posouzení vad řízení
+38. Vzhledem k přípustnosti dovolání Nejvyšší soud podle § 242 odst. 3 věty druhé o. s. ř. dále
+zkoumal, zda řízení nebylo postiženo vadami uvedenými v § 229 odst. 1, § 229 odst. 2 písm. a) a b) a
+§ 229 odst. 3 o. s. ř., respektive jinými vadami řízení, které mohly mít za následek nesprávné
+rozhodnutí ve věci, a shledal, že řízení takovou vadou zatíženo nebylo.
+39. Nejvyšší soud vzhledem k výše uvedenému dovolání žalovaného podle § 243d odst. 1 písm. a) o.
+s. ř. zamítl.
