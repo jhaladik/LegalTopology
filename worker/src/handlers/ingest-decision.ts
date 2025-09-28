@@ -59,7 +59,7 @@ export async function ingestDecision(
             case_id: parsed.case_id,
             court: parsed.court,
             date: parsed.date,
-            is_binding: true,
+            is_binding: parsed.court === 'Nejvyšší soud' || parsed.court === 'Supreme Court',
             citation_count: 0
           };
 

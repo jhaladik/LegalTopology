@@ -113,12 +113,21 @@ export async function queryTopology(
     const baseEmbedding = await getEmbedding(question, env);
 
     const baseResults = await env.VECTORIZE.query(baseEmbedding, {
-      topK: topK * 2,
+      topK: Math.min(topK * 3, 50),
       returnMetadata: true,
       returnValues: false
     });
 
-    console.log('[Topology Query] Base search top 3:', baseResults.matches.slice(0, 3).map((m: any) => `§${m.metadata.section} (${m.score.toFixed(3)})`).join(', '));
+    const weightedBaseResults = baseResults.matches.map((m: any) => ({
+      ...m,
+      raw_score: m.score,
+      score: m.score * (m.metadata.weight || 1.0),
+      weighted_score: m.score * (m.metadata.weight || 1.0)
+    })).sort((a: any, b: any) => b.weighted_score - a.weighted_score).slice(0, topK * 2);
+
+    baseResults.matches = weightedBaseResults;
+
+    console.log('[Topology Query] Base search top 3 (weighted):', weightedBaseResults.slice(0, 3).map((m: any) => `§${m.metadata.section} (raw:${m.raw_score.toFixed(3)} weighted:${m.weighted_score.toFixed(3)})`).join(', '));
 
     let doctrine_clusters: DoctrineCluster[] = [];
 
@@ -150,8 +159,12 @@ export async function queryTopology(
     for (let i = 0; i < unauthorizedEmbedding.length; i++) {
       unauthorizedVector[i] = (unauthorizedVector[i] + unauthorizedEmbedding[i]) / 2;
     }
-    const unauthorizedProbe = await env.VECTORIZE.query(normalizeVector(unauthorizedVector), { topK: 3, returnMetadata: true });
-    const unauthorizedScore = unauthorizedProbe.matches.reduce((sum: number, m: any) => sum + m.score, 0) / unauthorizedProbe.matches.length;
+    const unauthorizedProbe = await env.VECTORIZE.query(normalizeVector(unauthorizedVector), { topK: 10, returnMetadata: true });
+    const weightedUnauthorizedMatches = unauthorizedProbe.matches.map((m: any) => ({
+      ...m,
+      weighted_score: m.score * (m.metadata.weight || 1.0)
+    })).sort((a: any, b: any) => b.weighted_score - a.weighted_score).slice(0, 3);
+    const unauthorizedScore = weightedUnauthorizedMatches.reduce((sum: number, m: any) => sum + m.weighted_score, 0) / weightedUnauthorizedMatches.length;
     const hasUnauthorizedContext = unauthorizedScore > 0.52;
 
     console.log(`[Topology Query] Unauthorized context check: ${unauthorizedScore.toFixed(3)} -> ${hasUnauthorizedContext}`);
@@ -166,11 +179,20 @@ export async function queryTopology(
       queryVector = normalizeVector(queryVector);
 
       const probeResults = await env.VECTORIZE.query(queryVector, {
-        topK: 5,
+        topK: 15,
         returnMetadata: true
       });
 
-      const avgScore = probeResults.matches.reduce((sum: number, m: any) => sum + m.score, 0) / probeResults.matches.length;
+      const weightedProbeResults = probeResults.matches.map((m: any) => ({
+        ...m,
+        raw_score: m.score,
+        score: m.score * (m.metadata.weight || 1.0),
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score).slice(0, 5);
+
+      probeResults.matches = weightedProbeResults;
+
+      const avgScore = weightedProbeResults.reduce((sum: number, m: any) => sum + m.weighted_score, 0) / weightedProbeResults.length;
 
       console.log(`[Topology Query] Probe "${probe.name}": avg_score=${avgScore.toFixed(3)}, threshold=${probe.threshold}`);
 
@@ -207,16 +229,21 @@ export async function queryTopology(
 
       const enrichmentEmbedding = await getEmbedding(enrichmentQuery, env);
       const enrichmentResults = await env.VECTORIZE.query(enrichmentEmbedding, {
-        topK: 10,
+        topK: 30,
         returnMetadata: true
       });
+
+      const weightedEnrichmentResults = enrichmentResults.matches.map((m: any) => ({
+        ...m,
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score);
 
       doctrine_clusters.push({
         doctrine_name: 'unjust_enrichment',
         confidence: 0.85,
-        top_sections: enrichmentResults.matches.slice(0, 5).map((m: any) => ({
+        top_sections: weightedEnrichmentResults.slice(0, 5).map((m: any) => ({
           section: m.metadata.section,
-          score: m.score,
+          score: m.weighted_score,
           text: m.metadata.text,
           type: m.metadata.type
         })),
@@ -225,16 +252,21 @@ export async function queryTopology(
 
       const partnershipEmbedding = await getEmbedding('podíl na zisku společníci rozdělení výnosů', env);
       const partnershipResults = await env.VECTORIZE.query(partnershipEmbedding, {
-        topK: 10,
+        topK: 30,
         returnMetadata: true
       });
+
+      const weightedPartnershipResults = partnershipResults.matches.map((m: any) => ({
+        ...m,
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score);
 
       doctrine_clusters.push({
         doctrine_name: 'profit_sharing_partnership',
         confidence: 0.15,
-        top_sections: partnershipResults.matches.slice(0, 5).map((m: any) => ({
+        top_sections: weightedPartnershipResults.slice(0, 5).map((m: any) => ({
           section: m.metadata.section,
-          score: m.score,
+          score: m.weighted_score,
           text: m.metadata.text,
           type: m.metadata.type
         })),
@@ -246,16 +278,21 @@ export async function queryTopology(
 
       const partnershipEmbedding = await getEmbedding('podíl na zisku společníci rozdělení výnosů', env);
       const partnershipResults = await env.VECTORIZE.query(partnershipEmbedding, {
-        topK: 10,
+        topK: 30,
         returnMetadata: true
       });
+
+      const weightedPartnershipResults = partnershipResults.matches.map((m: any) => ({
+        ...m,
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score);
 
       doctrine_clusters.push({
         doctrine_name: 'profit_sharing_partnership',
         confidence: 0.80,
-        top_sections: partnershipResults.matches.slice(0, 5).map((m: any) => ({
+        top_sections: weightedPartnershipResults.slice(0, 5).map((m: any) => ({
           section: m.metadata.section,
-          score: m.score,
+          score: m.weighted_score,
           text: m.metadata.text,
           type: m.metadata.type
         })),
@@ -268,16 +305,21 @@ export async function queryTopology(
 
       const adversePossessionEmbedding = await getEmbedding('vydržení dlouhodobé užívání nabytí vlastnictví držba', env);
       const adversePossessionResults = await env.VECTORIZE.query(adversePossessionEmbedding, {
-        topK: 5,
+        topK: 15,
         returnMetadata: true
       });
+
+      const weightedAdverseResults = adversePossessionResults.matches.map((m: any) => ({
+        ...m,
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score);
 
       doctrine_clusters.push({
         doctrine_name: 'adverse_possession',
         confidence: 0.70,
-        top_sections: adversePossessionResults.matches.slice(0, 5).map((m: any) => ({
+        top_sections: weightedAdverseResults.slice(0, 5).map((m: any) => ({
           section: m.metadata.section,
-          score: m.score,
+          score: m.weighted_score,
           text: m.metadata.text,
           type: m.metadata.type
         })),
@@ -297,15 +339,20 @@ export async function queryTopology(
       enhancedVector = normalizeVector(enhancedVector);
 
       const enhancedResults = await env.VECTORIZE.query(enhancedVector, {
-        topK: topK,
+        topK: topK * 2,
         returnMetadata: true
       });
 
+      const weightedEnhancedResults = enhancedResults.matches.map((m: any) => ({
+        ...m,
+        weighted_score: m.score * (m.metadata.weight || 1.0)
+      })).sort((a: any, b: any) => b.weighted_score - a.weighted_score).slice(0, topK);
+
       context_enhanced_results = {
         modifiers_applied: patterns.suggested_modifiers,
-        top_sections: enhancedResults.matches.map((m: any) => ({
+        top_sections: weightedEnhancedResults.map((m: any) => ({
           section: m.metadata.section,
-          score: m.score,
+          score: m.weighted_score,
           text: m.metadata.text,
           type: m.metadata.type
         }))

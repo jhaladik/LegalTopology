@@ -1,10 +1,10 @@
 import { JudicialMetadata } from '../types/metadata';
 
 const COURT_WEIGHTS: Record<string, number> = {
-  'Nejvyšší soud': 10.0,
-  'Supreme Court': 10.0,
-  'Vrchní soud': 5.0,
-  'High Court': 5.0,
+  'Nejvyšší soud': 5.0,
+  'Supreme Court': 5.0,
+  'Vrchní soud': 3.0,
+  'High Court': 3.0,
   'Krajský soud': 2.0,
   'Regional Court': 2.0,
   'Okresní soud': 1.0,
@@ -20,7 +20,7 @@ export function calculateDecisionWeight(metadata: JudicialMetadata | Record<stri
   const decisionDate = new Date(metadata.date);
   const now = new Date();
   const yearsOld = (now.getTime() - decisionDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
-  const recency = Math.exp(-0.15 * yearsOld);
+  const recency = Math.exp(-0.08 * yearsOld);
   weight *= recency;
 
   const citationCount = metadata.citation_count || 0;
