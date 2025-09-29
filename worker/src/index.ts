@@ -6,6 +6,7 @@ import { recomputeWeights } from './handlers/recompute-weights';
 import { synthesizeInterpretation } from './handlers/synthesize';
 import { synthesizeMultiIssue } from './handlers/synthesize-multi';
 import { synthesizeMultiIssueV2 } from './handlers/synthesize-multi-v2';
+import { reviewDecisions } from './handlers/review-decisions';
 import { migrateClassifications } from './handlers/migrate-classifications';
 import { exploreTopology } from './handlers/explore-topology';
 import { queryTopology as queryTopologyV2 } from './handlers/query-topology';
@@ -62,6 +63,9 @@ export default {
 
         case '/api/synthesize-multi-v2':
           return await synthesizeMultiIssueV2(request, env, ctx);
+
+        case '/api/review-decisions':
+          return await reviewDecisions(request, env, ctx);
 
         case '/api/weights/recompute':
           return await recomputeWeights(request, env, ctx);

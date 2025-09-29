@@ -545,10 +545,10 @@ async function extractTensionResolutions(
   isCzech: boolean,
   env: Env
 ): Promise<Array<{tension: string, resolution: string}>> {
-  const resolutions = [];
+  console.log(`[Junior Lawyer] Processing ${topology.legal_tensions.length} tensions in parallel`);
 
-  // Process each tension separately with focused extraction
-  for (const tension of topology.legal_tensions) {
+  // Process tensions in PARALLEL to reduce total time
+  const resolutionPromises = topology.legal_tensions.map(async (tension) => {
     // Find statutes relevant to THIS specific tension
     const relevantStatutes = statutes.filter(s => {
       const sources = s.sources || [];
@@ -618,42 +618,64 @@ ${relevantCases.map(c => {
 
 Extract SPECIFIC resolution of this tension. Quote EXACTLY from case law.`;
 
-    try {
-      // Use GPT-4o-mini for extraction (junior lawyer)
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${env.OPENAI_API_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: userPrompt }
-          ],
-          temperature: 0.1, // Very low for precise extraction
-          max_tokens: 1000
-        })
-      });
+    // Retry logic for API calls
+    let retries = 3;
+    while (retries > 0) {
+      try {
+        // Use GPT-4o-mini for extraction (junior lawyer)
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${env.OPENAI_API_KEY}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: 'gpt-4o-mini',
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt }
+            ],
+            temperature: 0.1, // Very low for precise extraction
+            max_tokens: 1000
+          })
+        });
 
-      if (!response.ok) {
-        console.error(`Failed to extract resolution for tension ${tension.tension_type}`);
-        continue;
+        if (!response.ok) {
+          if (response.status === 503 && retries > 1) {
+            console.log(`[Junior Lawyer] 503 error for ${tension.tension_type}, retrying...`);
+            retries--;
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds
+            continue;
+          }
+          console.error(`Failed to extract resolution for tension ${tension.tension_type}: ${response.status}`);
+          return null;
+        }
+
+        const completion = await response.json() as any;
+        const resolution = completion.choices[0].message.content;
+
+        return {
+          tension: tension.tension_type,
+          resolution: `### 🎯 NAPĚTÍ: ${tension.tension_type}\n${resolution}`
+        };
+
+      } catch (error) {
+        retries--;
+        if (retries > 0) {
+          console.log(`[Junior Lawyer] Error for ${tension.tension_type}, retrying... (${retries} left)`);
+          await new Promise(resolve => setTimeout(resolve, 2000));
+        } else {
+          console.error(`Error extracting resolution for tension ${tension.tension_type}:`, error);
+          return null;
+        }
       }
-
-      const completion = await response.json() as any;
-      const resolution = completion.choices[0].message.content;
-
-      resolutions.push({
-        tension: tension.tension_type,
-        resolution: `### 🎯 NAPĚTÍ: ${tension.tension_type}\n${resolution}`
-      });
-
-    } catch (error) {
-      console.error(`Error extracting resolution for tension ${tension.tension_type}:`, error);
     }
-  }
+    return null;
+  });
 
-  return resolutions;
+  // Wait for all resolutions in parallel
+  const results = await Promise.all(resolutionPromises);
+
+  // Filter out nulls and return valid resolutions
+  return results.filter(r => r !== null) as Array<{tension: string, resolution: string}>;
 }
