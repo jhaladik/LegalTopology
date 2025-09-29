@@ -382,18 +382,51 @@ function buildStatuteContext(
 ): string {
   return statutes.map(s => {
     const section = `§${s.metadata.section}`;
+    // CRITICAL FIX: Don't truncate statute text, it's already concise
     const text = s.metadata.text;
+    const sources = s.sources || [];
+    const score = s.score || 0;
 
     // Find which doctrines this statute supports
     const relevantDoctrines = topology.competing_doctrines
       .filter(d => d.relevant_sections.includes(section))
       .map(d => d.doctrine);
 
-    const doctrineNote = relevantDoctrines.length > 0 ?
-      (isCzech ? `\n[Podporuje doktríny: ${relevantDoctrines.join(', ')}]` :
-                 `\n[Supports doctrines: ${relevantDoctrines.join(', ')}]`) : '';
+    // Find which tensions this statute helps resolve
+    const relevantTensions = topology.legal_tensions
+      .filter(t => {
+        // Check if statute was found via tension search or contains tension concepts
+        return sources.includes('tension') ||
+               t.competing_values.some(v => text.toLowerCase().includes(v.toLowerCase()));
+      })
+      .map(t => t.tension_type);
 
-    return `${section}: ${text}${doctrineNote}`;
+    // Build enriched statute context
+    let statuteContext = `${section}: ${text}`;
+
+    if (relevantTensions.length > 0) {
+      statuteContext += isCzech ?
+        `\n🎯 Řeší napětí: ${relevantTensions.join(', ')}` :
+        `\n🎯 Resolves tensions: ${relevantTensions.join(', ')}`;
+    }
+
+    if (relevantDoctrines.length > 0) {
+      statuteContext += isCzech ?
+        `\n📚 Podporuje doktríny: ${relevantDoctrines.join(', ')}` :
+        `\n📚 Supports doctrines: ${relevantDoctrines.join(', ')}`;
+    }
+
+    if (sources.length > 0) {
+      statuteContext += isCzech ?
+        `\n🔍 Nalezeno skrze: ${sources.join(', ')}` :
+        `\n🔍 Found via: ${sources.join(', ')}`;
+    }
+
+    statuteContext += isCzech ?
+      `\n📊 Relevance: ${(score * 100).toFixed(0)}%` :
+      `\n📊 Relevance: ${(score * 100).toFixed(0)}%`;
+
+    return statuteContext;
   }).join('\n\n');
 }
 
@@ -408,18 +441,63 @@ function buildCaseContext(
 ): string {
   const caseTexts = cases.map(c => {
     const caseId = c.metadata?.case_id || 'Unknown';
-    const text = c.metadata?.text?.substring(0, 800) || '';
+    const court = c.metadata?.court || '';
+    const weight = c.metadata?.weight || 1.0;
+
+    // CRITICAL FIX: Increase from 800 to 1500 chars to preserve legal reasoning
+    const text = c.metadata?.text?.substring(0, 1500) || '';
+
+    // Extract legal principle if available
+    const pravniVeta = c.metadata?.pravni_veta || '';
+    const sectionsReferenced = c.metadata?.sections_referenced || [];
+
+    // Find which tensions this case helps resolve
+    const relevantTensions = topology.legal_tensions
+      .filter(t => {
+        // Check if case relates to tension based on sources or content
+        const sources = c.sources || [];
+        return sources.includes('tension') ||
+               (t.competing_values.some(v => text.toLowerCase().includes(v.toLowerCase())));
+      })
+      .map(t => t.tension_type);
 
     // Find cluster membership
     const cluster = clusters.find((cl: any) =>
       cl.members.some((m: any) => m.id === c.id)
     );
 
+    // Build comprehensive case context
+    let caseContext = `${caseId} (${court})`;
+
+    if (pravniVeta) {
+      caseContext += isCzech ?
+        `\n📌 Právní věta: ${pravniVeta}` :
+        `\n📌 Legal principle: ${pravniVeta}`;
+    }
+
+    if (relevantTensions.length > 0) {
+      caseContext += isCzech ?
+        `\n🎯 Řeší napětí: ${relevantTensions.join(', ')}` :
+        `\n🎯 Resolves tensions: ${relevantTensions.join(', ')}`;
+    }
+
+    if (sectionsReferenced.length > 0) {
+      caseContext += isCzech ?
+        `\n📖 Interpretuje: §§${sectionsReferenced.join(', ')}` :
+        `\n📖 Interprets: §§${sectionsReferenced.join(', ')}`;
+    }
+
+    caseContext += isCzech ?
+      `\n⚖️ Váha: ${weight.toFixed(2)}` :
+      `\n⚖️ Weight: ${weight.toFixed(2)}`;
+
+    caseContext += `\n📝 ${text}`;
+
     const clusterNote = cluster ?
       (isCzech ? `\n[Doktrína: ${cluster.id}]` :
                  `\n[Doctrine: ${cluster.id}]`) : '';
 
-    return `${caseId}: ${text}${clusterNote}`;
+    return caseContext + clusterNote;
   }).join('\n\n');
 
   // Add cluster summary
