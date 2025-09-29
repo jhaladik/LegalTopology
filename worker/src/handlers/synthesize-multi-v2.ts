@@ -146,16 +146,33 @@ export async function synthesizeMultiIssueV2(
 
     // Step 9: Enhanced System Prompt
     const systemPrompt = isCzech
-      ? `Jsi senior právní poradce specializující se na české civilní právo s důrazem na strategické řešení skrze právní napětí.
+      ? `Jsi senior právní poradce INTEGRUJÍCÍ analýzy junior právníků do strategického doporučení.
 
-TVŮJ PŘÍSTUP:
-1. Analyzuješ právní situace skrze NAPĚTÍ, ne mechanicky skrze paragrafy
-2. Vidíš konkurující právní hodnoty a doktríny
-3. Rozumíš, PROČ určité instituty existují (jaká napětí řeší)
-4. Posktuješ strategické řešení, ne akademickou analýzu
+MÁŠ K DISPOZICI:
+1. Konkrétní řešení každého napětí od junior právníků (s citacemi)
+2. Kompletní právní rámec (zákony a judikatura)
+3. Absurdity test potvrzující správnou doktrínu
+
+TVŮJ ÚKOL:
+1. POUŽIJ konkrétní citace z junior analýz
+2. PROPOJ řešení různých napětí dohromady
+3. VYTVOŘ jasnou strategii pro klienta
+4. CITUJ konkrétní rozhodnutí a paragrafy
 
 STRUKTURA ODPOVĚDI:
-Pro každé identifikované napětí poskytni:
+
+## INTEGROVANÁ STRATEGIE
+
+### Klíčová zjištění junior právníků
+[Shrň KONKRÉTNÍ holdings z junior analýz - cituj přímo]
+
+### Aplikace na případ klienta
+[Jak konkrétně se tato rozhodnutí vztahují k situaci]
+
+### Doporučený postup
+[Jasné kroky na základě judikatury]
+
+Pro každé napětí MUSÍŠ:
 
 ## NAPĚTÍ: [Název napětí]
 
@@ -339,6 +356,7 @@ Provide comprehensive analysis through identified tensions with concrete strateg
           supreme_court_anchor: cluster.supreme_court_precedent?.case_id || null,
           statute_anchor: cluster.statute_anchor?.section || null
         })),
+        tension_resolutions: tensionResolutions,  // ADD THIS - Junior lawyer analysis
         analysis: analysis,
         metadata: {
           model: 'gpt-4o',
@@ -347,7 +365,8 @@ Provide comprehensive analysis through identified tensions with concrete strateg
           total_statutes: statutes.length,
           total_cases: judicialResults.length,
           analysis_depth: 'topological',
-          version: '2.0'
+          version: '2.0',
+          junior_lawyer_resolutions: tensionResolutions.length
         }
       }),
       {
@@ -567,14 +586,26 @@ async function extractTensionResolutions(
 
     // Build focused prompt for THIS tension
     const systemPrompt = isCzech ?
-      `Jsi junior právník analyzující JEDNO KONKRÉTNÍ napětí v českém právu.
-Tvůj úkol: Extrahuj PŘESNÁ ŘEŠENÍ z judikatury a zákonů.
+      `Jsi junior právník extrahující KONKRÉTNÍ řešení pro JEDNO napětí.
 
-PRAVIDLA:
-1. Cituj PŘESNÉ pasáže z rozhodnutí (ne parafráze)
-2. Ukaž JAK konkrétní případ řešil toto napětí
-3. Vyber NEJRELEVANTNĚJŠÍ holding pro toto napětí
-4. Buď STRUČNÝ ale PŘESNÝ` :
+TVŮJ ÚKOL:
+Najdi v judikatuře a zákonech PŘESNĚ jak se toto napětí řeší.
+
+VÝSTUP MUSÍ OBSAHOVAT:
+1. KONKRÉTNÍ rozhodnutí (např. "22 Cdo 2570/98 říká...")
+2. CITACE z textu (v uvozovkách)
+3. JAK to řeší napětí (ne obecně, ale specificky)
+4. KTERÉ paragrafy to aplikují
+
+NEPIŠ:
+- Obecné fráze typu "soudy často zvažují"
+- Akademické úvahy
+- Více než 5 vět
+
+PŘÍKLAD DOBRÉHO VÝSTUPU:
+"22 Cdo 2570/98 stanovil: 'pouhé strpění průchodu není dostačující pro vydržení'.
+Řeší napětí tím, že vyžaduje AKTIVNÍ výkon práva, ne pasivní toleranci.
+Aplikuje §1089-1090 NOZ pro vydržení služebnosti."` :
       `You are a junior lawyer analyzing ONE SPECIFIC tension in Czech law.
 Your task: Extract EXACT resolutions from case law and statutes.
 
