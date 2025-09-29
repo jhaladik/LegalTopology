@@ -1,3 +1,4 @@
+import { loadDiscoveredDoctrines } from '../services/doctrine-loader';
 import { Env, getEmbedding } from '../embedding/openai-client';
 
 const corsHeaders = {
@@ -87,7 +88,7 @@ function detectContextPatterns(question: string): {
 
 export async function queryTopology(
   request: Request,
-  env: Env & { VECTORIZE: any },
+  env: Env & { VECTORIZE: any; DB?: D1Database },
   ctx: ExecutionContext
 ): Promise<Response> {
   if (request.method !== 'POST') {
@@ -131,28 +132,37 @@ export async function queryTopology(
 
     let doctrine_clusters: DoctrineCluster[] = [];
 
-    const DOCTRINE_PROBES = [
-      {
-        name: 'unjust_enrichment',
-        query: 'bezdůvodné obohacení neoprávněný zisk bez právního důvodu vydání prospěchu',
-        threshold: 0.57
-      },
-      {
-        name: 'profit_sharing_partnership',
-        query: 'podíl na zisku společníci partnerství rozdělení výnosů dohoda smlouva',
-        threshold: 0.54
-      },
-      {
-        name: 'adverse_possession',
-        query: 'vydržení dlouhodobé užívání nabytí vlastnictví držba',
-        threshold: 0.50
-      },
-      {
-        name: 'prescription',
-        query: 'promlčení zánik nároku uplynulá doba',
-        threshold: 0.50
-      }
-    ];
+    const discoveredDoctrines = env.DB ? await loadDiscoveredDoctrines(env.DB) : [];
+    console.log(`[Topology Query] Loaded ${discoveredDoctrines.length} discovered doctrines`);
+
+    const DOCTRINE_PROBES = discoveredDoctrines.length > 0
+      ? discoveredDoctrines.map(d => ({
+          name: d.name,
+          query: `${d.display_name} ${d.description}`,
+          threshold: 0.54
+        }))
+      : [
+          {
+            name: 'unjust_enrichment',
+            query: 'bezdůvodné obohacení neoprávněný zisk bez právního důvodu vydání prospěchu',
+            threshold: 0.57
+          },
+          {
+            name: 'profit_sharing_partnership',
+            query: 'podíl na zisku společníci partnerství rozdělení výnosů dohoda smlouva',
+            threshold: 0.54
+          },
+          {
+            name: 'adverse_possession',
+            query: 'vydržení dlouhodobé užívání nabytí vlastnictví držba',
+            threshold: 0.50
+          },
+          {
+            name: 'prescription',
+            query: 'promlčení zánik nároku uplynulá doba',
+            threshold: 0.50
+          }
+        ];
 
     const unauthorizedEmbedding = await getEmbedding('bez souhlasu neoprávněný bez právního důvodu', env);
     const unauthorizedVector = [...baseEmbedding];

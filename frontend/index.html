@@ -1,980 +1,159 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Topology - Czech Law Research System</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        header {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            background: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            color: #666;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        .tab.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
-        }
-
-        .tab:hover {
-            transform: translateY(-2px);
-        }
-
-        .panel {
-            display: none;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .panel.active {
-            display: block;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        input[type="text"],
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border 0.3s;
-        }
-
-        input[type="text"]:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-            font-family: inherit;
-        }
-
-        button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 10px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(102,126,234,0.4);
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102,126,234,0.6);
-        }
-
-        button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .result {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .result h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #667eea;
-            font-size: 1.2em;
-        }
-
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .statute-item,
-        .case-item {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
-        }
-
-        .case-item {
-            border-left-color: #764ba2;
-        }
-
-        .relevance {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-left: 10px;
-        }
-
-        .weight {
-            display: inline-block;
-            background: #764ba2;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-left: 10px;
-        }
-
-        .analysis {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            line-height: 1.8;
-            white-space: pre-wrap;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .stat-label {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .error {
-            background: #fee;
-            border-left-color: #f44;
-            color: #c00;
-        }
-
-        .success {
-            background: #efe;
-            border-left-color: #4a4;
-            color: #060;
-        }
-
-        .file-input-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .file-input-wrapper input[type="file"] {
-            display: none;
-        }
-
-        .file-input-label {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            border: 2px dashed #667eea;
-            border-radius: 8px;
-            cursor: pointer;
-            color: #667eea;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .file-input-label:hover {
-            background: #f0f4ff;
-        }
-
-        .file-name {
-            margin-left: 15px;
-            color: #666;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Topology | Multi-Issue Analysis</title>
+  <meta name="description" content="Profesionální systém pro komplexní analýzu českého civilního práva">
+  <link rel="stylesheet" href="/src/styles/global.css">
 </head>
 <body>
+  <header class="header">
     <div class="container">
-        <header>
-            <h1>⚖️ Legal Topology</h1>
-            <p class="subtitle">Czech Civil Law Research System - Multi-layer legal reasoning with weighted semantic topology</p>
-            <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #e8f4f8 0%, #f0e6f8 100%); border-radius: 10px; border-left: 4px solid #667eea;">
-                <strong>🆕 New Features:</strong>
-                <ul style="margin: 10px 0 0 20px; color: #555;">
-                    <li><strong>Legal Concept Extraction:</strong> Automatically identifies legal terminology and relevant sections</li>
-                    <li><strong>Query Decomposition:</strong> Breaks complex questions into separate legal issues</li>
-                    <li><strong>Parallel Research:</strong> Searches each issue independently for comprehensive coverage</li>
-                    <li><strong>Adverse Possession Detection:</strong> Now correctly handles vydržení queries (§1089-§1091)</li>
-                </ul>
-            </div>
-        </header>
-
-        <div class="tabs">
-            <button class="tab active" onclick="switchTab('query', event)">🔍 Query System</button>
-            <button class="tab" onclick="switchTab('synthesize', event)">🧠 Legal Analysis</button>
-            <button class="tab" onclick="switchTab('multi-issue', event)">🎯 Multi-Issue Analysis</button>
-            <button class="tab" onclick="switchTab('ingest-code', event)">📚 Ingest Civil Code</button>
-            <button class="tab" onclick="switchTab('ingest-decision', event)">⚖️ Ingest Decision</button>
-            <button class="tab" onclick="switchTab('stats', event)">📊 System Stats</button>
-        </div>
-
-        <!-- Query Panel -->
-        <div id="query-panel" class="panel active">
-            <h2>Search Legal Database</h2>
-            <p style="margin-bottom: 20px; color: #666;">Search across statutes and judicial decisions using semantic similarity</p>
-
-            <div class="input-group">
-                <label for="query-input">Legal Question:</label>
-                <textarea id="query-input" placeholder="Např.: Může pojišťovna odepřít pojistné plnění, pokud pojištěný uvedl nepravdivé údaje?"></textarea>
-            </div>
-
-            <div class="two-column">
-                <div class="input-group">
-                    <label for="query-topk">Number of Results:</label>
-                    <input type="text" id="query-topk" value="10">
-                </div>
-                <div class="input-group">
-                    <label for="query-filter">Filter by Type:</label>
-                    <select id="query-filter" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em;">
-                        <option value="">All Types</option>
-                        <option value="statute">Statutes Only</option>
-                        <option value="judicial">Judicial Decisions Only</option>
-                    </select>
-                </div>
-            </div>
-
-            <button onclick="performQuery()">🔍 Search</button>
-
-            <div id="query-result"></div>
-        </div>
-
-        <!-- Synthesize Panel -->
-        <div id="synthesize-panel" class="panel">
-            <h2>Legal Analysis with AI</h2>
-            <p style="margin-bottom: 20px; color: #666;">Get comprehensive legal analysis combining statutes and case law (for simple queries)</p>
-
-            <div class="input-group">
-                <label for="synth-question">Legal Question:</label>
-                <textarea id="synth-question" placeholder="Např.: Může pojišťovna požadovat náhradu od pojištěného, pokud opustil místo dopravní nehody?"></textarea>
-            </div>
-
-            <div class="input-group">
-                <label for="synth-facts">Client Facts (Optional JSON):</label>
-                <textarea id="synth-facts" placeholder='{"contract_date": "2024-01-01", "incident_date": "2024-06-15"}'></textarea>
-            </div>
-
-            <button onclick="performSynthesis()">🧠 Analyze</button>
-
-            <div id="synth-result"></div>
-        </div>
-
-        <!-- Multi-Issue Analysis Panel -->
-        <div id="multi-issue-panel" class="panel">
-            <h2>🎯 Multi-Issue Legal Analysis</h2>
-            <p style="margin-bottom: 20px; color: #666;">Advanced analysis that decomposes complex questions into separate legal issues and researches each thoroughly</p>
-
-            <div class="input-group">
-                <label for="multi-question">Complex Legal Question:</label>
-                <textarea id="multi-question" placeholder="Např.: V březnu 2023 jsem koupil rodinný dům za 5 milionů Kč. Prodávající mi zatajil, že dům má vážné vady. Navíc soused tvrdí, že má právo cesty přes můj pozemek na základě ústní dohody z roku 2010, kterou prý užíval 13 let. Když jsem mu odpojil jeho přípojku vody, vyhrožoval mi a poškodil mi plot. Co mám dělat?" style="min-height: 200px;"></textarea>
-            </div>
-
-            <div class="input-group">
-                <label for="multi-facts">Client Facts (Optional JSON):</label>
-                <textarea id="multi-facts" placeholder='{"contract_date": "2023-03-01", "property_value": 5000000, "defect_estimate": 1500000}'></textarea>
-            </div>
-
-            <button onclick="performMultiIssue()">🎯 Analyze All Issues</button>
-
-            <div id="multi-result"></div>
-        </div>
-
-        <!-- Ingest Civil Code Panel -->
-        <div id="ingest-code-panel" class="panel">
-            <h2>Ingest Civil Code</h2>
-            <p style="margin-bottom: 20px; color: #666;">Upload Czech Civil Code document (DOCX or PDF)</p>
-
-            <div class="file-input-wrapper">
-                <input type="file" id="code-file" accept=".pdf,.docx" onchange="updateFileName('code-file', 'code-file-name')">
-                <label for="code-file" class="file-input-label">📄 Choose File</label>
-                <span id="code-file-name" class="file-name">No file selected</span>
-            </div>
-
-            <button onclick="ingestCivilCode()">📚 Upload & Process</button>
-
-            <div id="code-result"></div>
-        </div>
-
-        <!-- Ingest Decision Panel -->
-        <div id="ingest-decision-panel" class="panel">
-            <h2>Ingest Judicial Decision</h2>
-            <p style="margin-bottom: 20px; color: #666;">Upload Supreme Court decision or paste text</p>
-
-            <div class="input-group">
-                <label>Upload PDF or Paste Text:</label>
-                <div class="file-input-wrapper">
-                    <input type="file" id="decision-file" accept=".pdf" onchange="updateFileName('decision-file', 'decision-file-name')">
-                    <label for="decision-file" class="file-input-label">📄 Choose PDF</label>
-                    <span id="decision-file-name" class="file-name">No file selected</span>
-                </div>
-                <p style="margin: 10px 0; color: #666;">OR</p>
-                <textarea id="decision-text" placeholder="Paste decision text here..."></textarea>
-            </div>
-
-            <div class="two-column">
-                <div class="input-group">
-                    <label for="decision-caseid">Case ID (sp. zn.):</label>
-                    <input type="text" id="decision-caseid" placeholder="32 Cdo 3172/2020">
-                </div>
-                <div class="input-group">
-                    <label for="decision-court">Court:</label>
-                    <input type="text" id="decision-court" value="Nejvyšší soud">
-                </div>
-            </div>
-
-            <div class="two-column">
-                <div class="input-group">
-                    <label for="decision-date">Date (YYYY-MM-DD):</label>
-                    <input type="text" id="decision-date" placeholder="2021-03-02">
-                </div>
-                <div class="input-group">
-                    <label for="decision-citations">Citation Count:</label>
-                    <input type="text" id="decision-citations" value="0">
-                </div>
-            </div>
-
-            <button onclick="ingestDecision()">⚖️ Upload & Process</button>
-
-            <div id="decision-result"></div>
-        </div>
-
-        <!-- Stats Panel -->
-        <div id="stats-panel" class="panel">
-            <h2>System Statistics</h2>
-            <p style="margin-bottom: 20px; color: #666;">Real-time processing queue and system health</p>
-
-            <button onclick="loadStats()">🔄 Refresh Stats</button>
-
-            <div id="stats-result"></div>
-        </div>
+      <div class="header-content">
+        <h1 class="logo">Legal Topology</h1>
+        <nav class="nav">
+          <a href="/" class="nav-link active">Domů</a>
+          <a href="/how-it-works.html" class="nav-link">Jak to funguje</a>
+          <a href="/about.html" class="nav-link">O systému</a>
+        </nav>
+      </div>
     </div>
-
-    <script>
-        const API_BASE = 'https://legal-topology.jhaladik.workers.dev/api';
-
-        function switchTab(tabName, event) {
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-
-            if (event && event.target) {
-                event.target.classList.add('active');
-            } else {
-                const tabMap = {
-                    'query': '🔍 Query System',
-                    'synthesize': '🧠 Legal Analysis',
-                    'multi-issue': '🎯 Multi-Issue Analysis',
-                    'ingest-code': '📚 Ingest Civil Code',
-                    'ingest-decision': '⚖️ Ingest Decision',
-                    'stats': '📊 System Stats'
-                };
-                document.querySelectorAll('.tab').forEach(t => {
-                    if (t.textContent === tabMap[tabName]) {
-                        t.classList.add('active');
-                    }
-                });
-            }
-            document.getElementById(tabName + '-panel').classList.add('active');
-        }
-
-        function updateFileName(inputId, spanId) {
-            const input = document.getElementById(inputId);
-            const span = document.getElementById(spanId);
-            span.textContent = input.files[0] ? input.files[0].name : 'No file selected';
-        }
-
-        function showLoading(elementId) {
-            document.getElementById(elementId).innerHTML = `
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>Processing...</p>
-                </div>
-            `;
-        }
-
-        function showError(elementId, message) {
-            document.getElementById(elementId).innerHTML = `
-                <div class="result error">
-                    <h3>❌ Error</h3>
-                    <p>${message}</p>
-                </div>
-            `;
-        }
-
-        async function performQuery() {
-            const query = document.getElementById('query-input').value;
-            const topK = parseInt(document.getElementById('query-topk').value) || 10;
-            const filterType = document.getElementById('query-filter').value;
-
-            if (!query) {
-                showError('query-result', 'Please enter a query');
-                return;
-            }
-
-            showLoading('query-result');
-
-            try {
-                const body = { question: query, topK };
-                if (filterType) {
-                    body.filter = { type: filterType };
-                }
-
-                const response = await fetch(`${API_BASE}/query`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(body)
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Query failed');
-                }
-
-                displayQueryResults(data);
-            } catch (error) {
-                showError('query-result', error.message);
-            }
-        }
-
-        function displayQueryResults(data) {
-            const results = data.results.all || [];
-            let html = `<div class="result">
-                <h3>📊 Search Results (${data.total_results} found, showing top ${results.length})</h3>`;
-
-            results.forEach((result, i) => {
-                const isStatute = result.metadata.type === 'statute' || result.metadata.type === 'civil_code';
-                const itemClass = isStatute ? 'statute-item' : 'case-item';
-
-                html += `<div class="${itemClass}">
-                    <strong>${i + 1}. ${isStatute ? '§' + result.metadata.section : result.metadata.case_id}</strong>
-                    <span class="relevance">${(result.score * 100).toFixed(1)}% match</span>`;
-
-                if (!isStatute && result.metadata.weight) {
-                    html += `<span class="weight">Weight: ${result.metadata.weight.toFixed(1)}</span>`;
-                }
-
-                html += `<p style="margin-top: 10px;">${result.metadata.text?.substring(0, 300)}...</p>
-                </div>`;
-            });
-
-            html += '</div>';
-            document.getElementById('query-result').innerHTML = html;
-        }
-
-        async function performSynthesis() {
-            const question = document.getElementById('synth-question').value;
-            const factsText = document.getElementById('synth-facts').value.trim();
-
-            if (!question) {
-                showError('synth-result', 'Please enter a legal question');
-                return;
-            }
-
-            showLoading('synth-result');
-
-            try {
-                const body = { question, topK: 10 };
-
-                if (factsText) {
-                    try {
-                        body.facts = JSON.parse(factsText);
-                    } catch {
-                        throw new Error('Invalid JSON in facts field');
-                    }
-                }
-
-                const response = await fetch(`${API_BASE}/synthesize`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(body)
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Synthesis failed');
-                }
-
-                displaySynthesisResults(data);
-            } catch (error) {
-                showError('synth-result', error.message);
-            }
-        }
-
-        function displaySynthesisResults(data) {
-            let html = `<div class="result">
-                <h3>🧠 Legal Analysis</h3>
-                <p style="color: #666; margin-bottom: 20px;">
-                    Found: ${data.metadata.statutes_found} statutes, ${data.metadata.cases_found} judicial decisions
-                </p>`;
-
-            // Show legal reasoning if available
-            if (data.legal_reasoning) {
-                html += `<div style="background: #e8f4f8; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #667eea;">
-                    <h4 style="color: #333; margin-bottom: 10px;">🔍 Legal Concept Extraction</h4>
-                    <p><strong>Extracted Terms:</strong> ${data.legal_reasoning.extracted_concepts.join(', ')}</p>
-                    <p style="margin-top: 8px;"><strong>Suggested Sections:</strong> ${data.legal_reasoning.suggested_sections.join(', ')}</p>
-                    <p style="margin-top: 8px;"><strong>Legal Area:</strong> ${data.legal_reasoning.legal_area}</p>
-                    <details style="margin-top: 10px;">
-                        <summary style="cursor: pointer; color: #667eea; font-weight: 600;">Show Enriched Query</summary>
-                        <p style="margin-top: 10px; padding: 10px; background: white; border-radius: 5px; font-family: monospace; font-size: 0.9em;">
-                            ${data.legal_reasoning.enriched_query}
-                        </p>
-                    </details>
-                </div>`;
-            }
-
-            if (data.statutory_foundation.length > 0) {
-                html += '<h4 style="margin-top: 20px; color: #667eea;">📚 Statutory Foundation</h4>';
-                data.statutory_foundation.forEach(statute => {
-                    html += `<div class="statute-item">
-                        <strong>${statute.section}</strong>
-                        <span class="relevance">${(statute.relevance * 100).toFixed(1)}%</span>
-                        <p style="margin-top: 10px;">${statute.text}</p>
-                    </div>`;
-                });
-            }
-
-            if (data.case_law.length > 0) {
-                html += '<h4 style="margin-top: 20px; color: #764ba2;">⚖️ Case Law</h4>';
-                data.case_law.forEach(caseItem => {
-                    html += `<div class="case-item">
-                        <strong>${caseItem.case_id}</strong>
-                        <span class="weight">Weight: ${caseItem.weight.toFixed(1)}</span>
-                        <span class="relevance">${(caseItem.relevance * 100).toFixed(1)}%</span>
-                        <p style="margin-top: 10px;">${caseItem.text}</p>
-                    </div>`;
-                });
-            }
-
-            html += `<div class="analysis">
-                <h4 style="margin-bottom: 15px; color: #333;">📝 AI Analysis</h4>
-                ${data.analysis}
-            </div></div>`;
-
-            document.getElementById('synth-result').innerHTML = html;
-        }
-
-        async function performMultiIssue() {
-            const question = document.getElementById('multi-question').value;
-            const factsText = document.getElementById('multi-facts').value.trim();
-
-            if (!question) {
-                showError('multi-result', 'Please enter a legal question');
-                return;
-            }
-
-            showLoading('multi-result');
-
-            try {
-                const body = { question, topK: 10 };
-
-                if (factsText) {
-                    try {
-                        body.facts = JSON.parse(factsText);
-                    } catch {
-                        throw new Error('Invalid JSON in facts field');
-                    }
-                }
-
-                const response = await fetch(`${API_BASE}/synthesize-multi`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(body)
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Analysis failed');
-                }
-
-                displayMultiIssueResults(data);
-            } catch (error) {
-                showError('multi-result', error.message);
-            }
-        }
-
-        function displayMultiIssueResults(data) {
-            let html = `<div class="result">
-                <h3>🎯 Multi-Issue Legal Analysis</h3>`;
-
-            // Query Decomposition
-            if (data.query_decomposition) {
-                const complexity = data.query_decomposition.complexity;
-                const complexityColor = complexity === 'complex' ? '#e74c3c' : complexity === 'moderate' ? '#f39c12' : '#27ae60';
-                const complexityEmoji = complexity === 'complex' ? '🔴' : complexity === 'moderate' ? '🟡' : '🟢';
-
-                html += `
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid ${complexityColor};">
-                        <h4 style="color: #333; margin-bottom: 15px;">📋 Query Decomposition</h4>
-                        <p><strong>Complexity:</strong> ${complexityEmoji} ${complexity.toUpperCase()}</p>
-                        <p style="margin-top: 10px;"><strong>Identified ${data.query_decomposition.total_issues} Legal Issues:</strong></p>
-                        <ul style="margin: 10px 0; padding-left: 25px;">`;
-
-                data.query_decomposition.issues.forEach((issue, i) => {
-                    const priorityStars = '⭐'.repeat(6 - issue.priority);
-                    html += `<li style="margin: 8px 0;">
-                        <strong>#${i + 1}: ${issue.description}</strong><br>
-                        <span style="color: #666;">Type: ${issue.type} ${priorityStars}</span>
-                    </li>`;
-                });
-
-                html += `</ul></div>`;
-            }
-
-            // Legal Research Summary
-            if (data.legal_research) {
-                html += `<div style="background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="color: #333; margin-bottom: 15px;">🔍 Research Summary</h4>`;
-
-                data.legal_research.forEach((research, i) => {
-                    html += `<div style="margin: 10px 0; padding: 10px; background: white; border-radius: 5px;">
-                        <strong>Issue ${i + 1} (${research.issue}):</strong>
-                        ${research.statutes_found} statutes, ${research.cases_found} cases
-                        <span style="color: #667eea;"> → ${research.top_sections.join(', ')}</span>
-                    </div>`;
-                });
-
-                html += `</div>`;
-            }
-
-            // Statutory Foundation
-            if (data.statutory_foundation && data.statutory_foundation.length > 0) {
-                html += '<h4 style="margin-top: 20px; color: #667eea;">📚 Statutory Foundation (All Issues)</h4>';
-                data.statutory_foundation.forEach(statute => {
-                    const issuesBadges = statute.relevant_to_issues
-                        ? statute.relevant_to_issues.map(id => `<span style="background: #e8f4f8; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px;">${id}</span>`).join('')
-                        : '';
-
-                    html += `<div class="statute-item">
-                        <strong>${statute.section}</strong>
-                        <span class="relevance">${(statute.relevance * 100).toFixed(1)}%</span>
-                        <div style="margin-top: 5px;">${issuesBadges}</div>
-                        <p style="margin-top: 10px;">${statute.text}</p>
-                    </div>`;
-                });
-            }
-
-            // Case Law
-            if (data.case_law && data.case_law.length > 0) {
-                html += '<h4 style="margin-top: 20px; color: #764ba2;">⚖️ Case Law (All Issues)</h4>';
-                data.case_law.forEach(caseItem => {
-                    const issuesBadges = caseItem.relevant_to_issues
-                        ? caseItem.relevant_to_issues.map(id => `<span style="background: #f0e6f8; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px;">${id}</span>`).join('')
-                        : '';
-
-                    html += `<div class="case-item">
-                        <strong>${caseItem.case_id}</strong>
-                        <span class="weight">Weight: ${caseItem.weight.toFixed(1)}</span>
-                        <span class="relevance">${(caseItem.relevance * 100).toFixed(1)}%</span>
-                        <div style="margin-top: 5px;">${issuesBadges}</div>
-                        <p style="margin-top: 10px;">${caseItem.text}</p>
-                    </div>`;
-                });
-            }
-
-            // AI Analysis
-            html += `<div class="analysis">
-                <h4 style="margin-bottom: 15px; color: #333;">📝 Comprehensive AI Analysis</h4>
-                <div style="white-space: pre-wrap; line-height: 1.8;">${data.analysis}</div>
-            </div>`;
-
-            // Metadata
-            if (data.metadata) {
-                html += `<div style="margin-top: 20px; padding: 15px; background: #f0f4ff; border-radius: 8px; color: #666; font-size: 0.9em;">
-                    <strong>Research Metadata:</strong>
-                    ${data.metadata.total_statutes} unique statutes found, ${data.metadata.total_cases} unique cases,
-                    Model: ${data.metadata.model}
-                </div>`;
-            }
-
-            html += '</div>';
-            document.getElementById('multi-result').innerHTML = html;
-        }
-
-        async function ingestCivilCode() {
-            const fileInput = document.getElementById('code-file');
-
-            if (!fileInput.files[0]) {
-                showError('code-result', 'Please select a file');
-                return;
-            }
-
-            showLoading('code-result');
-
-            try {
-                const formData = new FormData();
-                formData.append('file', fileInput.files[0]);
-
-                const response = await fetch(`${API_BASE}/ingest/civil-code`, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Upload failed');
-                }
-
-                document.getElementById('code-result').innerHTML = `
-                    <div class="result success">
-                        <h3>✅ Upload Successful</h3>
-                        <p><strong>Total Chunks:</strong> ${data.total_chunks}</p>
-                        <p><strong>Queued for Processing:</strong> ${data.chunks_added}</p>
-                        <p style="margin-top: 10px; color: #666;">
-                            Chunks will be processed asynchronously by the cron job (50 chunks/minute).
-                        </p>
-                    </div>
-                `;
-            } catch (error) {
-                showError('code-result', error.message);
-            }
-        }
-
-        async function ingestDecision() {
-            const fileInput = document.getElementById('decision-file');
-            const textInput = document.getElementById('decision-text').value.trim();
-            const caseId = document.getElementById('decision-caseid').value.trim();
-            const court = document.getElementById('decision-court').value.trim();
-            const date = document.getElementById('decision-date').value.trim();
-            const citations = parseInt(document.getElementById('decision-citations').value) || 0;
-
-            if (!fileInput.files[0] && !textInput) {
-                showError('decision-result', 'Please upload a PDF or paste text');
-                return;
-            }
-
-            if (!caseId || !court || !date) {
-                showError('decision-result', 'Please fill in case ID, court, and date');
-                return;
-            }
-
-            showLoading('decision-result');
-
-            try {
-                const formData = new FormData();
-
-                if (fileInput.files[0]) {
-                    formData.append('file', fileInput.files[0]);
-                } else {
-                    formData.append('text', textInput);
-                }
-
-                formData.append('metadata', JSON.stringify({
-                    case_id: caseId,
-                    court: court,
-                    date: date,
-                    is_binding: true,
-                    citation_count: citations
-                }));
-
-                const response = await fetch(`${API_BASE}/ingest/decision`, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Upload failed');
-                }
-
-                document.getElementById('decision-result').innerHTML = `
-                    <div class="result success">
-                        <h3>✅ Decision Uploaded</h3>
-                        <p><strong>Case ID:</strong> ${data.case_id}</p>
-                        <p><strong>Chunks Created:</strong> ${data.chunks}</p>
-                        <p><strong>Weight:</strong> ${data.weight.toFixed(2)}</p>
-                        <p><strong>Queued:</strong> ${data.queued} chunks</p>
-                        <div style="margin-top: 15px; padding: 10px; background: #f0f4ff; border-radius: 5px;">
-                            <strong>Právní věta:</strong><br>
-                            ${data.pravni_veta}
-                        </div>
-                    </div>
-                `;
-            } catch (error) {
-                showError('decision-result', error.message);
-            }
-        }
-
-        async function loadStats() {
-            showLoading('stats-result');
-
-            try {
-                const response = await fetch(`${API_BASE}/queue/stats`);
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.error || 'Failed to load stats');
-                }
-
-                const completionRate = data.total > 0 ? ((data.completed / data.total) * 100).toFixed(1) : 0;
-                const failureRate = data.total > 0 ? ((data.failed / data.total) * 100).toFixed(1) : 0;
-
-                document.getElementById('stats-result').innerHTML = `
-                    <div class="result">
-                        <h3>📊 Processing Queue Statistics</h3>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-label">Pending</div>
-                                <div class="stat-number">${data.pending}</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-label">Processing</div>
-                                <div class="stat-number">${data.processing}</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-label">Completed</div>
-                                <div class="stat-number">${data.completed}</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-label">Failed</div>
-                                <div class="stat-number">${data.failed}</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-label">Total</div>
-                                <div class="stat-number">${data.total}</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-label">Completion Rate</div>
-                                <div class="stat-number">${completionRate}%</div>
-                            </div>
-                        </div>
-                        <div style="margin-top: 20px; padding: 15px; background: ${data.pending > 0 ? '#fff3cd' : '#d4edda'}; border-radius: 8px;">
-                            <strong>Status:</strong>
-                            ${data.pending > 0
-                                ? `⚙️ Processing queue (${data.pending} items remaining, ~${Math.ceil(data.pending / 50)} minutes)`
-                                : '✅ Queue is empty'}
-                        </div>
-                    </div>
-                `;
-            } catch (error) {
-                showError('stats-result', error.message);
-            }
-        }
-
-        // Load stats on page load
-        window.addEventListener('load', () => {
-            switchTab('query');
-        });
-    </script>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title">Multi-Issue Legal Analysis</h2>
+        <p class="hero-subtitle">Komplexní analýza českého civilního práva s automatickou detekcí souvisejících právních otázek</p>
+      </div>
+    </section>
+
+    <section class="seed-cases">
+      <div class="container">
+        <h3 class="section-title">Vyzkoušejte na připravených případech</h3>
+        <div class="cases-grid" id="seedCases">
+          <div class="case-card" data-case="rental-deposit">
+            <div class="case-icon">🏠</div>
+            <h4 class="case-title">Vrácení nájemní jistoty</h4>
+            <p class="case-description">Pronajímatel odmítá vrátit nájemní jistotu po ukončení nájmu. Tvrdí, že byt byl poškozen, ale dokumentaci nemá.</p>
+            <div class="case-tags">
+              <span class="tag">Nájemní právo</span>
+              <span class="tag">Bezdůvodné obohacení</span>
+            </div>
+          </div>
+
+          <div class="case-card" data-case="inheritance-dispute">
+            <div class="case-icon">⚖️</div>
+            <h4 class="case-title">Dědické vypořádání</h4>
+            <p class="case-description">Otec odkázal rodinný dům nejstaršímu synovi. Ostatní děti nebyli zmíněni v závěti, ale požadují podíl.</p>
+            <div class="case-tags">
+              <span class="tag">Dědické právo</span>
+              <span class="tag">Rodinné právo</span>
+            </div>
+          </div>
+
+          <div class="case-card" data-case="defective-product">
+            <div class="case-icon">🛒</div>
+            <h4 class="case-title">Vadné zboží a náhrada škody</h4>
+            <p class="case-description">Vadná pračka zapříčinila zatopení bytu. Prodejce uznává vadu, ale odmítá hradit následné škody na podlaze.</p>
+            <div class="case-tags">
+              <span class="tag">Kupní smlouva</span>
+              <span class="tag">Náhrada škody</span>
+            </div>
+          </div>
+
+          <div class="case-card" data-case="breach-of-contract">
+            <div class="case-icon">📋</div>
+            <h4 class="case-title">Nedodání díla</h4>
+            <p class="case-description">Zhotovitel nedokončil rekonstrukci v termínu. Objednatel požaduje slevu a náhradu nákladů na náhradní ubytování.</p>
+            <div class="case-tags">
+              <span class="tag">Smlouva o dílo</span>
+              <span class="tag">Smluvní pokuta</span>
+            </div>
+          </div>
+
+          <div class="case-card" data-case="easement-dispute">
+            <div class="case-icon">🚗</div>
+            <h4 class="case-title">Spor o věcné břemeno</h4>
+            <p class="case-description">Soused blokuje přístupovou cestu k pozemku. Věcné břemeno existuje, ale není zapsáno v katastru nemovitostí.</p>
+            <div class="case-tags">
+              <span class="tag">Věcná práva</span>
+              <span class="tag">Služebnost</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-query">
+      <div class="container">
+        <h3 class="section-title">Nebo zadejte vlastní případ</h3>
+        <form class="query-form" id="queryForm">
+          <div class="form-group">
+            <label for="queryInput" class="form-label">Popište právní situaci:</label>
+            <textarea
+              id="queryInput"
+              class="form-textarea"
+              rows="6"
+              placeholder="Příklad: Klient uzavřel kupní smlouvu na nemovitost, ale prodávající odmítá předat klíče..."
+              required
+            ></textarea>
+            <div class="form-hint">
+              ⚠️ Systém analyzuje pouze otázky českého civilního práva (§1-3081 NOZ)
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="analyzeBtn">
+            <span class="btn-text">Analyzovat případ</span>
+            <span class="btn-loader" style="display: none;">⏳ Probíhá analýza...</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="results" id="resultsSection" style="display: none;">
+      <div class="container">
+        <div id="resultsContent"></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">5,000+</div>
+            <div class="stat-label">Analyzovaných rozhodnutí</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3,081</div>
+            <div class="stat-label">Paragrafů NOZ</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">~30s</div>
+            <div class="stat-label">Průměrná doba analýzy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="domainCheckModal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle"></h3>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Legal Topology | Cloudflare Workers + Vectorize</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

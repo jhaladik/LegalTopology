@@ -1,5 +1,6 @@
 import { Env } from '../embedding/openai-client';
 import { decomposeQuery } from '../reasoning/query-decomposer';
+import { clusterQueryResults, enrichClustersWithAnchors, selectRepresentativesFromCluster } from '../clustering/query-clustering';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -47,7 +48,7 @@ export async function synthesizeMultiIssue(
         const embedding = await getEmbedding(issue.search_query, env);
 
         const results = await env.VECTORIZE.query(embedding, {
-          topK: topK,
+          topK: 50,
           returnMetadata: true
         });
 
@@ -55,16 +56,42 @@ export async function synthesizeMultiIssue(
           .filter((m: any) => m.metadata?.type === 'statute' || m.metadata?.type === 'civil_code')
           .slice(0, 5);
 
-        const cases = results.matches
+        const judicialResults = results.matches
           .filter((m: any) => m.metadata?.type === 'judicial')
-          .slice(0, 3);
+          .map((m: any) => ({
+            id: m.id,
+            score: m.score,
+            metadata: m.metadata,
+            sections_referenced: m.metadata.sections_referenced,
+            pravni_veta: m.metadata.pravni_veta
+          }));
 
-        console.log(`[Issue: ${issue.issue_id}] Found ${statutes.length} statutes, ${cases.length} cases`);
+        console.log(`[Issue: ${issue.issue_id}] Found ${statutes.length} statutes, ${judicialResults.length} judicial decisions`);
+
+        let clusters = [];
+        let cases = judicialResults.slice(0, 3);
+
+        if (judicialResults.length >= 10) {
+          console.log(`[Issue: ${issue.issue_id}] Clustering ${judicialResults.length} decisions...`);
+
+          clusters = clusterQueryResults(judicialResults, 0.4, 3);
+
+          console.log(`[Issue: ${issue.issue_id}] Found ${clusters.length} doctrine clusters`);
+
+          if (clusters.length > 0) {
+            clusters = await enrichClustersWithAnchors(clusters, env.VECTORIZE, getEmbedding, env);
+
+            cases = clusters.flatMap(cluster =>
+              selectRepresentativesFromCluster(cluster, 3)
+            ).slice(0, 5);
+          }
+        }
 
         return {
           issue,
           statutes,
-          cases
+          cases,
+          clusters
         };
       })
     );
@@ -99,9 +126,44 @@ export async function synthesizeMultiIssue(
         .map((s: any) => `§${s.metadata.section}: ${s.metadata.text}`)
         .join('\n');
 
+      let doctrineSection = '';
+      if (result.clusters && result.clusters.length > 0) {
+        doctrineSection = isCzech
+          ? `\nIDENTIFIKOVANÉ PRÁVNÍ DOKTRÍNY (${result.clusters.length}):\n` +
+            result.clusters.map((cluster: any, idx: number) => {
+              let clusterText = `\nDoktrina ${idx + 1}:\n`;
+              clusterText += `- Počet rozhodnutí: ${cluster.members.length}\n`;
+              clusterText += `- Společné paragrafy: ${cluster.common_sections.join(', ')}\n`;
+              if (cluster.statute_anchor) {
+                clusterText += `- Zákonné ukotvení: §${cluster.statute_anchor.section}\n`;
+              }
+              if (cluster.supreme_court_precedent) {
+                clusterText += `- Judikatura NS: ${cluster.supreme_court_precedent.case_id}\n`;
+              }
+              return clusterText;
+            }).join('\n')
+          : `\nIDENTIFIED LEGAL DOCTRINES (${result.clusters.length}):\n` +
+            result.clusters.map((cluster: any, idx: number) => {
+              let clusterText = `\nDoctrine ${idx + 1}:\n`;
+              clusterText += `- Decisions: ${cluster.members.length}\n`;
+              clusterText += `- Common sections: ${cluster.common_sections.join(', ')}\n`;
+              if (cluster.statute_anchor) {
+                clusterText += `- Statutory anchor: §${cluster.statute_anchor.section}\n`;
+              }
+              if (cluster.supreme_court_precedent) {
+                clusterText += `- Supreme Court: ${cluster.supreme_court_precedent.case_id}\n`;
+              }
+              return clusterText;
+            }).join('\n');
+      }
+
       const issueCases = result.cases.length > 0
         ? result.cases
-            .map((c: any) => `Case ${c.metadata.case_id}: ${c.metadata.text.substring(0, 500)}...`)
+            .map((c: any) => {
+              const caseId = c.metadata?.case_id || 'Unknown';
+              const text = c.metadata?.text || '';
+              return `Case ${caseId}: ${text.substring(0, 500)}...`;
+            })
             .join('\n')
         : 'Nebyla nalezena judikatura.';
 
@@ -110,16 +172,18 @@ export async function synthesizeMultiIssue(
 
 RELEVANTNÍ ZÁKONY:
 ${issueStatutes}
+${doctrineSection}
 
-RELEVANTNÍ JUDIKATURA:
+REPREZENTATIVNÍ JUDIKATURA:
 ${issueCases}
 `
         : `## LEGAL ISSUE: ${result.issue.description} (ID: ${result.issue.issue_id})
 
 RELEVANT STATUTES:
 ${issueStatutes}
+${doctrineSection}
 
-RELEVANT CASE LAW:
+REPRESENTATIVE CASE LAW:
 ${issueCases}
 `;
     }).join('\n\n---\n\n');

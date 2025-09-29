@@ -1,0 +1,438 @@
+/**
+ * Synthesize Multi V2 - Tension-based legal synthesis
+ * Uses topological analysis to provide deeper legal insights
+ */
+
+import { Env } from '../embedding/openai-client';
+import { analyzeTopology, TopologicalAnalysis } from '../reasoning/query-decomposer-v2';
+import {
+  createHybridSearchStrategy,
+  executeHybridSearch,
+  analyzeSearchProvenance
+} from '../reasoning/tension-vectorizer';
+import { clusterQueryResults, enrichClustersWithAnchors, selectRepresentativesFromCluster } from '../clustering/query-clustering';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+interface SynthesisRequest {
+  question: string;
+  facts?: Record<string, any>;
+  topK?: number;
+  use_tensions?: boolean; // Feature flag for gradual rollout
+}
+
+export async function synthesizeMultiIssueV2(
+  request: Request,
+  env: Env & { VECTORIZE: any; OPENAI_API_KEY: string },
+  ctx: ExecutionContext
+): Promise<Response> {
+  if (request.method !== 'POST') {
+    return new Response('Method not allowed', { status: 405 });
+  }
+
+  try {
+    const startTime = Date.now();
+    const body: SynthesisRequest = await request.json();
+    const { question, facts, topK = 20, use_tensions = true } = body;
+
+    if (!question) {
+      return new Response(
+        JSON.stringify({ error: 'Question is required' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    console.log('[Synthesis V2] Starting topological analysis');
+
+    // Step 1: Topological Analysis
+    const topology = await analyzeTopology(question, env);
+
+    console.log('[Synthesis V2] Identified tensions:', topology.legal_tensions.map(t => ({
+      type: t.tension_type,
+      strength: t.strength
+    })));
+
+    console.log('[Synthesis V2] Competing doctrines:', topology.competing_doctrines.map(d => ({
+      doctrine: d.doctrine,
+      weight: d.weight
+    })));
+
+    // Step 2: Vector Search Strategy
+    const { getEmbedding } = await import('../embedding/openai-client');
+
+    // Create hybrid search strategy
+    const searchStrategy = await createHybridSearchStrategy(
+      topology.vector_strategies,
+      topology.competing_doctrines.map(d => ({
+        doctrine: d.doctrine,
+        weight: d.weight
+      })),
+      topology.enriched_query,
+      getEmbedding,
+      env
+    );
+
+    // Step 3: Execute Hybrid Search
+    console.log('[Synthesis V2] Executing hybrid vector search');
+
+    const searchResults = await executeHybridSearch(
+      searchStrategy,
+      env.VECTORIZE,
+      topK * 3 // Get more results for better clustering
+    );
+
+    console.log(`[Synthesis V2] Found ${searchResults.length} results from hybrid search`);
+
+    // Step 4: Separate and Process Results
+    const statutes = searchResults
+      .filter((m: any) => m.metadata?.type === 'statute' || m.metadata?.type === 'civil_code')
+      .slice(0, 10);
+
+    const judicialResults = searchResults
+      .filter((m: any) => m.metadata?.type === 'judicial');
+
+    console.log(`[Synthesis V2] ${statutes.length} statutes, ${judicialResults.length} judicial decisions`);
+
+    // Step 5: Cluster Judicial Decisions
+    let clusters = [];
+    let representativeCases = judicialResults.slice(0, 5);
+
+    if (judicialResults.length >= 10) {
+      console.log('[Synthesis V2] Clustering judicial decisions');
+
+      clusters = clusterQueryResults(judicialResults, 0.4, 3);
+
+      if (clusters.length > 0) {
+        clusters = await enrichClustersWithAnchors(clusters, env.VECTORIZE, getEmbedding, env);
+        representativeCases = clusters.flatMap(cluster =>
+          selectRepresentativesFromCluster(cluster, 3)
+        ).slice(0, 8);
+      }
+
+      console.log(`[Synthesis V2] Found ${clusters.length} doctrine clusters`);
+    }
+
+    // Step 6: Analyze Search Provenance
+    const provenance = analyzeSearchProvenance(
+      searchResults,
+      topology.legal_tensions.map(t => t.tension_type)
+    );
+
+    console.log('[Synthesis V2] Search provenance:', provenance);
+
+    // Step 7: Build Enhanced Context for LLM
+    const isCzech = /[čďěňřšťůžá]/i.test(question);
+
+    const tensionContext = buildTensionContext(topology, isCzech);
+    const statuteContext = buildStatuteContext(statutes, topology, isCzech);
+    const caseContext = buildCaseContext(representativeCases, clusters, topology, isCzech);
+
+    // Step 8: Enhanced System Prompt
+    const systemPrompt = isCzech
+      ? `Jsi senior právní poradce specializující se na české civilní právo s důrazem na strategické řešení skrze právní napětí.
+
+TVŮJ PŘÍSTUP:
+1. Analyzuješ právní situace skrze NAPĚTÍ, ne mechanicky skrze paragrafy
+2. Vidíš konkurující právní hodnoty a doktríny
+3. Rozumíš, PROČ určité instituty existují (jaká napětí řeší)
+4. Posktuješ strategické řešení, ne akademickou analýzu
+
+STRUKTURA ODPOVĚDI:
+Pro každé identifikované napětí poskytni:
+
+## NAPĚTÍ: [Název napětí]
+
+### Konflikt hodnot
+- Jaké právní hodnoty jsou zde v konfliktu
+- Proč toto napětí vzniká v dané situaci
+- Síla napětí (${topology.legal_tensions.map(t => `${t.tension_type}: ${(t.strength * 100).toFixed(0)}%`).join(', ')})
+
+### Harmonizující doktrína
+- Která doktrína toto napětí nejlépe řeší
+- PROČ právě tato doktrína (test absurdity)
+- Relevantní ustanovení NOZ
+
+### Konkurující přístupy
+- Alternativní doktríny a jejich problémy
+- Proč jsou méně vhodné v této situaci
+
+### Judikatura
+- Jak soudy toto napětí řeší
+- Trendy v rozhodování
+- Klíčová rozhodnutí
+
+### Strategické doporučení
+- Konkrétní kroky klienta
+- Argumentační strategie
+- Vyjednávací pozice
+- Rizika a příležitosti
+
+## SYNTÉZA NAPŘÍČ NAPĚTÍMI
+
+### Dominantní topologie
+- Které napětí je primární
+- Jak se napětí vzájemně ovlivňují
+- Celková právní krajina případu
+
+### Integrovaná strategie
+- Jak koordinovat řešení různých napětí
+- Prioritizace kroků
+- Časování akcí
+
+### Ekonomická analýza
+- Náklady různých strategií
+- Pravděpodobnost úspěchu
+- ROI právních kroků
+
+DŮLEŽITÉ:
+- Neřeš mechanicky "§X říká Y"
+- Vysvětli PROČ určité řešení funguje
+- Ukaž jak napětí formují právní krajinu
+- Buď konkrétní a strategický, ne akademický`
+      : `You are a senior legal advisor analyzing Czech civil law through LEGAL TENSIONS, not mechanical rule application.
+
+YOUR APPROACH:
+1. Analyze situations through TENSIONS between competing legal values
+2. Understand WHY legal institutes exist (what tensions they resolve)
+3. Provide strategic solutions, not academic analysis
+
+For each identified tension, provide:
+- Competing values in conflict
+- Harmonizing doctrine and why it works
+- Alternative approaches and their problems
+- Case law trends
+- Strategic recommendations
+
+SYNTHESIZE across tensions to show the complete legal topology.`;
+
+    const userPrompt = isCzech
+      ? `PRÁVNÍ SITUACE:
+${question}
+${facts ? `\nKLIENTSKÉ FAKTY:\n${JSON.stringify(facts, null, 2)}` : ''}
+
+TOPOLOGICKÁ ANALÝZA:
+${tensionContext}
+
+RELEVANTNÍ PRÁVNÍ ÚPRAVA:
+${statuteContext}
+
+JUDIKATURA A DOKTRÍNY:
+${caseContext}
+
+ABSURDITY TEST:
+${topology.absurdity_test.without_primary_doctrine}
+→ Potvrzuje doktrínu: ${topology.absurdity_test.confirms_doctrine}
+
+Poskytni komplexní analýzu skrze identifikovaná napětí s konkrétními strategickými doporučeními.`
+      : `LEGAL SITUATION:
+${question}
+${facts ? `\nCLIENT FACTS:\n${JSON.stringify(facts, null, 2)}` : ''}
+
+TOPOLOGICAL ANALYSIS:
+${tensionContext}
+
+RELEVANT STATUTES:
+${statuteContext}
+
+CASE LAW AND DOCTRINES:
+${caseContext}
+
+ABSURDITY TEST:
+${topology.absurdity_test.without_primary_doctrine}
+→ Confirms doctrine: ${topology.absurdity_test.confirms_doctrine}
+
+Provide comprehensive analysis through identified tensions with concrete strategic recommendations.`;
+
+    // Step 9: Generate Enhanced Synthesis
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.3, // Slightly higher for nuanced tension analysis
+        max_tokens: 16000
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`OpenAI API error: ${response.statusText}`);
+    }
+
+    const completion = await response.json() as any;
+    const analysis = completion.choices[0].message.content;
+
+    const processingTime = Date.now() - startTime;
+
+    // Step 10: Return Enhanced Response
+    return new Response(
+      JSON.stringify({
+        question,
+        facts,
+        topological_analysis: {
+          tensions: topology.legal_tensions,
+          temporal_factors: topology.temporal_factors,
+          power_dynamics: topology.power_dynamics,
+          competing_doctrines: topology.competing_doctrines,
+          absurdity_test: topology.absurdity_test,
+          complexity: topology.complexity
+        },
+        search_strategy: {
+          used_tensions: use_tensions,
+          vector_strategies: topology.vector_strategies.length,
+          search_provenance: provenance
+        },
+        legal_research: {
+          statutes_found: statutes.length,
+          cases_found: judicialResults.length,
+          doctrine_clusters: clusters.length,
+          representative_cases: representativeCases.length
+        },
+        statutory_foundation: statutes.map((s: any) => ({
+          section: `§${s.metadata.section}`,
+          text: s.metadata.text,
+          relevance: s.score,
+          source: s.sources || ['unknown']
+        })),
+        case_law: representativeCases.map((c: any) => ({
+          case_id: c.metadata?.case_id || 'Unknown',
+          court: c.metadata?.court || 'Unknown',
+          weight: c.metadata?.weight || 1.0,
+          text: c.metadata?.text?.substring(0, 1500) || '',
+          relevance: c.score,
+          source: c.sources || ['unknown'],
+          cluster: c.cluster_id || null
+        })),
+        doctrine_clusters: clusters.map((cluster: any) => ({
+          doctrine_id: cluster.id,
+          member_count: cluster.members.length,
+          common_sections: cluster.common_sections,
+          supreme_court_anchor: cluster.supreme_court_precedent?.case_id || null,
+          statute_anchor: cluster.statute_anchor?.section || null
+        })),
+        analysis: analysis,
+        metadata: {
+          model: 'gpt-4o',
+          processing_time_ms: processingTime,
+          used_tension_analysis: use_tensions,
+          total_statutes: statutes.length,
+          total_cases: judicialResults.length,
+          analysis_depth: 'topological',
+          version: '2.0'
+        }
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      }
+    );
+  } catch (error: any) {
+    console.error('Error in topological synthesis:', error);
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      }
+    );
+  }
+}
+
+/**
+ * Build context from tensions for LLM
+ */
+function buildTensionContext(topology: TopologicalAnalysis, isCzech: boolean): string {
+  const tensions = topology.legal_tensions
+    .sort((a, b) => b.strength - a.strength)
+    .map(t => {
+      const label = isCzech ? 'Napětí' : 'Tension';
+      const values = t.competing_values.join(' vs. ');
+      const strength = `${(t.strength * 100).toFixed(0)}%`;
+      return `${label}: ${values} (síla: ${strength})`;
+    })
+    .join('\n');
+
+  const temporal = topology.temporal_factors.duration ?
+    (isCzech ? `Časový faktor: ${topology.temporal_factors.duration}` :
+               `Temporal factor: ${topology.temporal_factors.duration}`) : '';
+
+  const power = topology.power_dynamics.weaker_party ?
+    (isCzech ? `Slabší strana: ${topology.power_dynamics.weaker_party}` :
+               `Weaker party: ${topology.power_dynamics.weaker_party}`) : '';
+
+  return [tensions, temporal, power].filter(Boolean).join('\n');
+}
+
+/**
+ * Build statute context enhanced with tension relevance
+ */
+function buildStatuteContext(
+  statutes: any[],
+  topology: TopologicalAnalysis,
+  isCzech: boolean
+): string {
+  return statutes.map(s => {
+    const section = `§${s.metadata.section}`;
+    const text = s.metadata.text;
+
+    // Find which doctrines this statute supports
+    const relevantDoctrines = topology.competing_doctrines
+      .filter(d => d.relevant_sections.includes(section))
+      .map(d => d.doctrine);
+
+    const doctrineNote = relevantDoctrines.length > 0 ?
+      (isCzech ? `\n[Podporuje doktríny: ${relevantDoctrines.join(', ')}]` :
+                 `\n[Supports doctrines: ${relevantDoctrines.join(', ')}]`) : '';
+
+    return `${section}: ${text}${doctrineNote}`;
+  }).join('\n\n');
+}
+
+/**
+ * Build case law context with cluster information
+ */
+function buildCaseContext(
+  cases: any[],
+  clusters: any[],
+  topology: TopologicalAnalysis,
+  isCzech: boolean
+): string {
+  const caseTexts = cases.map(c => {
+    const caseId = c.metadata?.case_id || 'Unknown';
+    const text = c.metadata?.text?.substring(0, 800) || '';
+
+    // Find cluster membership
+    const cluster = clusters.find((cl: any) =>
+      cl.members.some((m: any) => m.id === c.id)
+    );
+
+    const clusterNote = cluster ?
+      (isCzech ? `\n[Doktrína: ${cluster.id}]` :
+                 `\n[Doctrine: ${cluster.id}]`) : '';
+
+    return `${caseId}: ${text}${clusterNote}`;
+  }).join('\n\n');
+
+  // Add cluster summary
+  const clusterSummary = clusters.length > 0 ?
+    (isCzech ?
+      `\nIDENTIFIKOVANÉ DOKTRÍNY (${clusters.length}):\n` +
+      clusters.map((cl: any) =>
+        `- ${cl.id}: ${cl.members.length} rozhodnutí, §§${cl.common_sections.join(', ')}`
+      ).join('\n') :
+      `\nIDENTIFIED DOCTRINES (${clusters.length}):\n` +
+      clusters.map((cl: any) =>
+        `- ${cl.id}: ${cl.members.length} decisions, §§${cl.common_sections.join(', ')}`
+      ).join('\n')) : '';
+
+  return caseTexts + clusterSummary;
+}

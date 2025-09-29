@@ -1,13 +1,18 @@
 import { ingestCivilCode } from './handlers/ingest-civil-code';
 import { ingestDecision } from './handlers/ingest-decision';
+import { ingestXMLDecisions } from './handlers/ingest-xml-decisions';
 import { queryTopology } from './handlers/query';
 import { recomputeWeights } from './handlers/recompute-weights';
 import { synthesizeInterpretation } from './handlers/synthesize';
 import { synthesizeMultiIssue } from './handlers/synthesize-multi';
+import { synthesizeMultiIssueV2 } from './handlers/synthesize-multi-v2';
 import { migrateClassifications } from './handlers/migrate-classifications';
 import { exploreTopology } from './handlers/explore-topology';
 import { queryTopology as queryTopologyV2 } from './handlers/query-topology';
 import { synthesizeTopology } from './handlers/synthesize-topology';
+import { getDecision } from './handlers/get-decision';
+import { discoverDoctrines } from './handlers/discover-doctrines';
+import { classifyDomain } from './handlers/classify-domain';
 import { QueueService } from './services/queue-service';
 import { ProcessorService } from './services/processor-service';
 
@@ -43,6 +48,9 @@ export default {
         case '/api/ingest/decision':
           return await ingestDecision(request, env, ctx);
 
+        case '/api/ingest/xml-decisions':
+          return await ingestXMLDecisions(request, env, ctx);
+
         case '/api/query':
           return await queryTopology(request, env, ctx);
 
@@ -51,6 +59,9 @@ export default {
 
         case '/api/synthesize-multi':
           return await synthesizeMultiIssue(request, env, ctx);
+
+        case '/api/synthesize-multi-v2':
+          return await synthesizeMultiIssueV2(request, env, ctx);
 
         case '/api/weights/recompute':
           return await recomputeWeights(request, env, ctx);
@@ -78,6 +89,12 @@ export default {
 
         case '/api/topology/synthesize':
           return await synthesizeTopology(request, env, ctx);
+
+        case '/api/topology/discover-doctrines':
+          return await discoverDoctrines(request, env, ctx);
+
+        case '/api/classify-domain':
+          return await classifyDomain(request, env);
 
         case '/api/health':
           return new Response(
@@ -110,6 +127,9 @@ export default {
           );
 
         default:
+          if (url.pathname.startsWith('/api/decision/')) {
+            return await getDecision(request, env, ctx);
+          }
           return new Response(
             JSON.stringify({ error: 'Not Found' }),
             {

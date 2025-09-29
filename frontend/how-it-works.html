@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jak to funguje | Legal Topology</title>
+  <meta name="description" content="Technický přehled systému Legal Topology pro multi-issue právní analýzu">
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <link rel="stylesheet" href="/src/styles/pages.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo"><a href="/">Legal Topology</a></h1>
+        <nav class="nav">
+          <a href="/" class="nav-link">Domů</a>
+          <a href="/how-it-works.html" class="nav-link active">Jak to funguje</a>
+          <a href="/about.html" class="nav-link">O systému</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <h2 class="page-title">Jak to funguje</h2>
+        <p class="page-subtitle">Technický přehled systému pro multi-issue právní analýzu</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="content-box">
+          <h3>🔍 1. Domain Pre-Check</h3>
+          <p>Před zahájením nákladné analýzy systém ověří, zda dotaz spadá do českého civilního práva (§1-3081 NOZ).</p>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <strong>Model:</strong> GPT-4o-mini
+            </div>
+            <div class="feature-item">
+              <strong>Rychlost:</strong> ~300ms
+            </div>
+            <div class="feature-item">
+              <strong>Náklady:</strong> ~$0.001/dotaz
+            </div>
+          </div>
+
+          <div class="code-block">
+            <strong>Příklad vstupu:</strong><br>
+            "Zaměstnavatel mi nezaplatil mzdu za poslední měsíc."
+          </div>
+
+          <div class="code-block">
+            <strong>Výstup:</strong><br>
+            {<br>
+            &nbsp;&nbsp;"is_civil_law": false,<br>
+            &nbsp;&nbsp;"recommendation": "reject",<br>
+            &nbsp;&nbsp;"detected_domains": ["Pracovní právo"],<br>
+            &nbsp;&nbsp;"reasoning": "Pracovní právo nespadá do NOZ"<br>
+            }
+          </div>
+
+          <p class="note">✅ Civilní právo → pokračuje analýza<br>❌ Jiné oblasti → odmítnutí s vysvětlením</p>
+        </div>
+
+        <div class="content-box">
+          <h3>🧠 2. Multi-Issue Detection</h3>
+          <p>Systém automaticky identifikuje všechny právní otázky obsažené v dotazu pomocí LLM reasoning.</p>
+
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <strong>Analýza kontextu</strong>
+                <p>LLM (GPT-4o) čte dotaz a identifikuje právní kontext</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <strong>Detekce otázek</strong>
+                <p>Systém rozpozná primární i vedlejší právní otázky</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <strong>Příklad</strong>
+                <p>"Vadná pračka zatopila byt" → detekuje:<br>
+                • Odpovědnost za vady<br>
+                • Náhrada škody<br>
+                • Vztah mezi vadou a škodou</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>📊 3. Vector Search s váhováním</h3>
+          <p>Pro každou detekovanou otázku systém vyhledá relevantní právní předpisy a judikaturu.</p>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <strong>Embeddings:</strong> text-embedding-3-large (3072D)
+            </div>
+            <div class="feature-item">
+              <strong>Index:</strong> Cloudflare Vectorize
+            </div>
+            <div class="feature-item">
+              <strong>Top-K:</strong> 20 výsledků/otázka
+            </div>
+          </div>
+
+          <h4>Vážené skóre podle hierarchie:</h4>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Typ dokumentu</th>
+                <th>Váha</th>
+                <th>Příklad (2020)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nejvyšší soud (binding)</td>
+                <td>5.0</td>
+                <td>Final: 6.2</td>
+              </tr>
+              <tr>
+                <td>Vrchní/Krajský soud</td>
+                <td>3.0</td>
+                <td>Final: 1.24</td>
+              </tr>
+              <tr>
+                <td>Okresní soud</td>
+                <td>2.0</td>
+                <td>Final: 0.62</td>
+              </tr>
+              <tr>
+                <td>Zákonné ustanovení</td>
+                <td>1.0</td>
+                <td>Final: 1.0</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="note">⚖️ Váhování zajišťuje, že závazná judikatura má přednost před nižšími soudy</p>
+        </div>
+
+        <div class="content-box">
+          <h3>🔗 4. Cross-Issue Synthesis</h3>
+          <p>Systém syntetizuje informace napříč všemi detekovanými otázkami a vytváří komplexní analýzu.</p>
+
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <strong>Individual Analysis</strong>
+                <p>Každá otázka je analyzována samostatně s relevantními prameny</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <strong>Cross-Analysis</strong>
+                <p>LLM identifikuje vazby, konflikty a synergii mezi otázkami</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <strong>Strategic Synthesis</strong>
+                <p>Doporučení akce zohledňují všechny identifikované otázky</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>📑 5. Three-Tier Output</h3>
+          <p>Výsledky jsou prezentovány ve třech úrovních detailu:</p>
+
+          <div class="tier-explanation">
+            <div class="tier-box tier-executive">
+              <h4>Tier 1: Executive Summary</h4>
+              <ul>
+                <li>✅ Stručné shrnutí (200-300 slov)</li>
+                <li>✅ Klíčové právní otázky</li>
+                <li>✅ Pravděpodobný výsledek</li>
+                <li>✅ Rychlé rozhodování</li>
+              </ul>
+            </div>
+
+            <div class="tier-box tier-legal">
+              <h4>Tier 2: Legal Foundation</h4>
+              <ul>
+                <li>⚖️ Detailní analýza každé otázky</li>
+                <li>⚖️ Relevantní §§ NOZ</li>
+                <li>⚖️ Top 3 rozhodnutí soudů</li>
+                <li>⚖️ Právní argumentace</li>
+              </ul>
+            </div>
+
+            <div class="tier-box tier-deep">
+              <h4>Tier 3: Deep Dive</h4>
+              <ul>
+                <li>🧩 Cross-issue analýza</li>
+                <li>🧩 Vztahy mezi otázkami</li>
+                <li>🧩 Procesní strategie</li>
+                <li>🧩 Recommended actions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>⚡ Performance</h3>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">~30s</div>
+              <div class="stat-label">Průměrná doba analýzy</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">5,000+</div>
+              <div class="stat-label">Rozhodnutí v databázi</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3,081</div>
+              <div class="stat-label">Paragrafů NOZ</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3072D</div>
+              <div class="stat-label">Embedding dimenze</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>🏗️ Technologický stack</h3>
+
+          <div class="tech-stack">
+            <div class="tech-category">
+              <h4>Frontend</h4>
+              <ul>
+                <li>Vite</li>
+                <li>TypeScript</li>
+                <li>Vanilla JS</li>
+                <li>Cloudflare Pages</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h4>Backend</h4>
+              <ul>
+                <li>Cloudflare Workers</li>
+                <li>D1 Database (SQLite)</li>
+                <li>R2 Storage</li>
+                <li>Vectorize Index</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h4>AI Models</h4>
+              <ul>
+                <li>GPT-4o (synthesis)</li>
+                <li>GPT-4o-mini (classification)</li>
+                <li>text-embedding-3-large</li>
+              </ul>
+            </div>
+
+            <div class="tech-category">
+              <h4>Features</h4>
+              <ul>
+                <li>Vector search</li>
+                <li>Weight system</li>
+                <li>Multi-issue detection</li>
+                <li>Cross-analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Legal Topology | Cloudflare Workers + Vectorize</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
