@@ -124,14 +124,27 @@ export async function synthesizeMultiIssueV2(
 
     console.log('[Synthesis V2] Search provenance:', provenance);
 
-    // Step 7: Build Enhanced Context for LLM
+    // Step 7: TWO-STAGE SYNTHESIS - Junior Lawyer Phase
     const isCzech = /[čďěňřšťůžá]/i.test(question);
+    console.log('[Synthesis V2] Starting two-stage synthesis - Junior Lawyer phase');
+
+    // Extract resolution for each tension separately (Junior Lawyer)
+    const tensionResolutions = await extractTensionResolutions(
+      topology,
+      statutes,
+      representativeCases,
+      isCzech,
+      env
+    );
 
     const tensionContext = buildTensionContext(topology, isCzech);
     const statuteContext = buildStatuteContext(statutes, topology, isCzech);
     const caseContext = buildCaseContext(representativeCases, clusters, topology, isCzech);
 
-    // Step 8: Enhanced System Prompt
+    // Step 8: TWO-STAGE SYNTHESIS - Senior Lawyer Phase
+    console.log('[Synthesis V2] Starting Senior Lawyer synthesis phase');
+
+    // Step 9: Enhanced System Prompt
     const systemPrompt = isCzech
       ? `Jsi senior právní poradce specializující se na české civilní právo s důrazem na strategické řešení skrze právní napětí.
 
@@ -223,6 +236,9 @@ ${statuteContext}
 JUDIKATURA A DOKTRÍNY:
 ${caseContext}
 
+🎯 ŘEŠENÍ JEDNOTLIVÝCH NAPĚTÍ (Junior Lawyer Analysis):
+${tensionResolutions.map(r => r.resolution).join('\n\n')}
+
 ABSURDITY TEST:
 ${topology.absurdity_test.without_primary_doctrine}
 → Potvrzuje doktrínu: ${topology.absurdity_test.confirms_doctrine}
@@ -241,13 +257,16 @@ ${statuteContext}
 CASE LAW AND DOCTRINES:
 ${caseContext}
 
+🎯 INDIVIDUAL TENSION RESOLUTIONS (Junior Lawyer Analysis):
+${tensionResolutions.map(r => r.resolution).join('\n\n')}
+
 ABSURDITY TEST:
 ${topology.absurdity_test.without_primary_doctrine}
 → Confirms doctrine: ${topology.absurdity_test.confirms_doctrine}
 
 Provide comprehensive analysis through identified tensions with concrete strategic recommendations.`;
 
-    // Step 9: Generate Enhanced Synthesis
+    // Step 10: Generate Enhanced Synthesis (Senior Lawyer integrates all tensions)
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -274,7 +293,7 @@ Provide comprehensive analysis through identified tensions with concrete strateg
 
     const processingTime = Date.now() - startTime;
 
-    // Step 10: Return Enhanced Response
+    // Step 11: Return Enhanced Response
     return new Response(
       JSON.stringify({
         question,
@@ -513,4 +532,128 @@ function buildCaseContext(
       ).join('\n')) : '';
 
   return caseTexts + clusterSummary;
+}
+
+/**
+ * TWO-STAGE SYNTHESIS: Extract specific resolutions for each tension
+ * Junior Lawyer phase - focused extraction per tension
+ */
+async function extractTensionResolutions(
+  topology: TopologicalAnalysis,
+  statutes: any[],
+  cases: any[],
+  isCzech: boolean,
+  env: Env
+): Promise<Array<{tension: string, resolution: string}>> {
+  const resolutions = [];
+
+  // Process each tension separately with focused extraction
+  for (const tension of topology.legal_tensions) {
+    // Find statutes relevant to THIS specific tension
+    const relevantStatutes = statutes.filter(s => {
+      const sources = s.sources || [];
+      const text = s.metadata?.text || '';
+      return sources.includes('tension') ||
+             tension.competing_values.some(v => text.toLowerCase().includes(v.toLowerCase()));
+    }).slice(0, 3); // Top 3 most relevant
+
+    // Find cases relevant to THIS specific tension
+    const relevantCases = cases.filter(c => {
+      const sources = c.sources || [];
+      const text = c.metadata?.text || '';
+      return sources.includes('tension') ||
+             tension.competing_values.some(v => text.toLowerCase().includes(v.toLowerCase()));
+    }).slice(0, 3); // Top 3 most relevant
+
+    // Build focused prompt for THIS tension
+    const systemPrompt = isCzech ?
+      `Jsi junior právník analyzující JEDNO KONKRÉTNÍ napětí v českém právu.
+Tvůj úkol: Extrahuj PŘESNÁ ŘEŠENÍ z judikatury a zákonů.
+
+PRAVIDLA:
+1. Cituj PŘESNÉ pasáže z rozhodnutí (ne parafráze)
+2. Ukaž JAK konkrétní případ řešil toto napětí
+3. Vyber NEJRELEVANTNĚJŠÍ holding pro toto napětí
+4. Buď STRUČNÝ ale PŘESNÝ` :
+      `You are a junior lawyer analyzing ONE SPECIFIC tension in Czech law.
+Your task: Extract EXACT resolutions from case law and statutes.
+
+RULES:
+1. Quote EXACT passages from decisions (not paraphrases)
+2. Show HOW specific case resolved this tension
+3. Select MOST RELEVANT holding for this tension
+4. Be CONCISE but PRECISE`;
+
+    const userPrompt = isCzech ?
+      `NAPĚTÍ: ${tension.tension_type}
+Konkurující hodnoty: ${tension.competing_values.join(' vs. ')}
+Síla: ${(tension.strength * 100).toFixed(0)}%
+
+RELEVANTNÍ ZÁKONY:
+${relevantStatutes.map(s => `§${s.metadata.section}: ${s.metadata.text}`).join('\n')}
+
+RELEVANTNÍ JUDIKATURA:
+${relevantCases.map(c => {
+  const caseId = c.metadata?.case_id || 'Unknown';
+  const text = c.metadata?.text?.substring(0, 2000) || ''; // Give MORE context for extraction
+  const pravniVeta = c.metadata?.pravni_veta || '';
+  return `${caseId}:\n${pravniVeta ? `Právní věta: ${pravniVeta}\n` : ''}${text}`;
+}).join('\n\n')}
+
+Extrahuj KONKRÉTNÍ řešení tohoto napětí. Cituj PŘESNĚ z judikatury.` :
+      `TENSION: ${tension.tension_type}
+Competing values: ${tension.competing_values.join(' vs. ')}
+Strength: ${(tension.strength * 100).toFixed(0)}%
+
+RELEVANT STATUTES:
+${relevantStatutes.map(s => `§${s.metadata.section}: ${s.metadata.text}`).join('\n')}
+
+RELEVANT CASE LAW:
+${relevantCases.map(c => {
+  const caseId = c.metadata?.case_id || 'Unknown';
+  const text = c.metadata?.text?.substring(0, 2000) || '';
+  const pravniVeta = c.metadata?.pravni_veta || '';
+  return `${caseId}:\n${pravniVeta ? `Legal principle: ${pravniVeta}\n` : ''}${text}`;
+}).join('\n\n')}
+
+Extract SPECIFIC resolution of this tension. Quote EXACTLY from case law.`;
+
+    try {
+      // Use GPT-4o-mini for extraction (junior lawyer)
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${env.OPENAI_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          temperature: 0.1, // Very low for precise extraction
+          max_tokens: 1000
+        })
+      });
+
+      if (!response.ok) {
+        console.error(`Failed to extract resolution for tension ${tension.tension_type}`);
+        continue;
+      }
+
+      const completion = await response.json() as any;
+      const resolution = completion.choices[0].message.content;
+
+      resolutions.push({
+        tension: tension.tension_type,
+        resolution: `### 🎯 NAPĚTÍ: ${tension.tension_type}\n${resolution}`
+      });
+
+    } catch (error) {
+      console.error(`Error extracting resolution for tension ${tension.tension_type}:`, error);
+    }
+  }
+
+  return resolutions;
 }
