@@ -1,8 +1,14 @@
 import { classifyDomain, synthesizeMultiIssue } from './api/client';
 import { renderDomainCheckModal, renderResults } from './utils/render-v2';
+import { renderAdminResults } from './utils/render-admin';
 import { SEED_CASES } from './utils/seed-cases';
+import './styles/admin.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://legal-topology.jhaladik.workers.dev';
+
+// Store last result for view switching
+let lastAnalysisResult: any = null;
+let isAdminView = false;
 
 async function handleAnalyze(question: string): Promise<void> {
   const analyzeBtn = document.getElementById('analyzeBtn') as HTMLButtonElement;
@@ -66,7 +72,15 @@ async function proceedWithAnalysis(question: string): Promise<void> {
 
   console.log('[Frontend] Analysis complete:', result);
 
-  renderResults(result);
+  // Store result for view switching
+  lastAnalysisResult = result;
+
+  // Render based on current view mode
+  if (isAdminView) {
+    renderAdminResults(result);
+  } else {
+    renderResults(result);
+  }
 
   const resultsSection = document.getElementById('resultsSection');
   if (resultsSection) {
@@ -119,8 +133,40 @@ function initQueryForm(): void {
   });
 }
 
+function initAdminToggle(): void {
+  // Create admin toggle button
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'admin-toggle';
+  toggleBtn.innerHTML = '👨‍💼 Admin View: OFF';
+  document.body.appendChild(toggleBtn);
+
+  toggleBtn.addEventListener('click', () => {
+    isAdminView = !isAdminView;
+    toggleBtn.innerHTML = isAdminView ? '👨‍💼 Admin View: ON' : '👨‍💼 Admin View: OFF';
+    toggleBtn.style.background = isAdminView ? '#10b981' : '#1f2937';
+
+    // Re-render last result if available
+    if (lastAnalysisResult) {
+      if (isAdminView) {
+        renderAdminResults(lastAnalysisResult);
+      } else {
+        renderResults(lastAnalysisResult);
+      }
+    }
+  });
+
+  // Check for admin mode in URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('admin') === 'true') {
+    isAdminView = true;
+    toggleBtn.innerHTML = '👨‍💼 Admin View: ON';
+    toggleBtn.style.background = '#10b981';
+  }
+}
+
 console.log('[Frontend] Initializing Legal Topology frontend');
 console.log('[Frontend] API Base URL:', API_BASE_URL);
 
 initSeedCases();
 initQueryForm();
+initAdminToggle();
